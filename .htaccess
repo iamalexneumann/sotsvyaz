@@ -12,12 +12,61 @@ ErrorDocument 404 /404.php
 <IfModule mod_rewrite.c>
   Options +FollowSymLinks
   RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^www.sotsvyaz.ru$ [NC]
+  RewriteRule ^(.*)$ https://sotsvyaz.ru/$1 [R=301,L]
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-l
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
   RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
   RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+
+  # Redirect 301 /usilenie-signala/
+
+  # Redirect 301 /operatorov/
+
+  # Redirect 301 /usilenie-svyazi-bilajn/
+  # Redirect 301 /usilenie-svyazi-megafon/
+  # Redirect 301 /usilenie-svyazi-yota/
+  # Redirect 301 /usilenie-svyazi-tele2/
+  # Redirect 301 /usilenie-svyazi-mts/
+
+  # Redirect 301 /v-pomeshheniyah/
+
+  # Redirect 301 /uluchshenie-svyazi-v-chastnom-dome/
+  # Redirect 301 /uluchshenie-svyazi-v-ofise/
+  # Redirect 301 /uluchshenie-svyazi-v-biznes-centre/
+  # Redirect 301 /uluchshenie-svyazi-v-torgovom-centre/
+  # Redirect 301 /uluchshenie-svyazi-v-kafe-i-restorane/
+  # Redirect 301 /uluchshenie-svyazi-v-podvalnom-pomeshhenii/
+  # Redirect 301 /uluchshenie-svyazi-v-parkinge/
+  # Redirect 301 /uluchshenie-svyazi-v-skladskom-pomeshhenii/
+  # Redirect 301 /uluchshenie-svyazi-v-chastnoj-kvartire/
+  # Redirect 301 /uluchshenie-svyazi-v-promyshlennom-pomeshhenii/
+
+  # Redirect 301 /tovary/
+
+  # Redirect 301 /internet/
+  # Redirect 301 /linearamplifiers/
+  # Redirect 301 /cables/
+  # Redirect 301 /repeaters/
+  # Redirect 301 /connectors/
+  # Redirect 301 /splitters/
+  # Redirect 301 /antennas/
+
+  # Redirect 301 /stati/
+
+  # Redirect 301 /5g-v-rossii/
+  # Redirect 301 /chastoty-operatorov-v-band/
+  # Redirect 301 /na-kakoj-chastote-rabotaet-tele2-v-moskve/
+  # Redirect 301 /ustanovka-sistemy/
+  # Redirect 301 /vreden-li-usilitel-sotovoj-svyazi/
+  # Redirect 301 /kontakty/
+
+  # Redirect 301 /cart/
 </IfModule>
 
 <IfModule mod_dir.c>
