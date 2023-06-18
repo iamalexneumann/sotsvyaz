@@ -27,7 +27,7 @@ use Bitrix\Main\Localization\Loc;
         </div>
         <?php endif; ?>
     </main>
-
+    <?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/main_form.php'); ?>
     <footer class="main-footer">
         <div class="footer-content">
             <div class="container">

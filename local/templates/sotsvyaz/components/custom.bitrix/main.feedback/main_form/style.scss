@@ -1,0 +1,39 @@
+.main-form {
+  max-width: 800px;
+  margin: 0 auto;
+
+  &__wrapper {
+    display: flex;
+    justify-content: stretch;
+    align-items: flex-end;
+
+    @media (max-width: 991.98px) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__item {
+    margin-right: 15px;
+    width: 50%;
+
+    @media (max-width: 991.98px) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__label {
+
+  }
+
+  &__form-control {
+
+  }
+
+  &__form-check {
+    margin-top: 15px;
+    font-size: var(--font-size-small);
+  }
+}
