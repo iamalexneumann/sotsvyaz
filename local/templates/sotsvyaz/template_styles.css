@@ -1,7 +1,239 @@
 :root {
-  --primary-color: #0073c0; }
+  --primary-color: #43cb83;
+  --primary-color-hover: #3cb776;
+  --secondary-color: #115cfa;
+  --secondary-color-hover: #0f53e1;
+  --white-color: #ffffff;
+  --white-color-opacity: 0.85;
+  --light-color: #f3f9fe;
+  --font-size-small: 0.95rem;
+  --light-gray-color: #777777;
+  --dark-color: #303133; }
 
-.navbar {
-  background: var(--primary-color); }
+body {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4;
+  font-family: 'Proxima Nova Rg', Arial, serif;
+  color: var(--light-gray-color);
+  background: var(--white-color); }
+
+::selection {
+  background: var(--primary-color);
+  color: var(--white-color); }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+figure {
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: all .25s ease-in-out; }
+  a:hover {
+    color: var(--primary-color-hover); }
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.025em;
+  color: var(--dark-color); }
+  @media (max-width: 767.98px) {
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
+      hyphens: auto;
+      -webkit-hyphens: auto; } }
+
+.btn {
+  padding: 15px 36px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 600;
+  border-width: 1px;
+  transition: color 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86), background-color 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86), border-color 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+
+.btn-sm {
+  padding: 12px 30px;
+  font-size: 14px; }
+
+.btn-lg {
+  padding: 18px 44px;
+  font-size: 1rem; }
+
+.btn-light {
+  --bs-btn-color: var(--secondary-color);
+  --bs-btn-bg: var(--white-color);
+  --bs-btn-border-color: var(--white-color);
+  --bs-btn-hover-color: var(--white-color);
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: var(--white-color);
+  --bs-btn-active-color: var(--light-color);
+  --bs-btn-active-bg: var(--btn-light-bg-color-active);
+  --bs-btn-active-border-color: var(--light-color);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: var(--light-color); }
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  color: var(--white-color);
+  margin-bottom: 20px; }
+  .footer-logo__img {
+    max-width: 270px; }
+  .footer-logo__description {
+    margin-bottom: 10px; }
+  .footer-logo:hover {
+    opacity: var(--white-color-opacity);
+    color: var(--light-color); }
+
+.footer-contacts__phone {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px; }
+  @media (max-width: 1199.98px) {
+    .footer-contacts__phone {
+      flex-direction: column;
+      align-items: flex-start; } }
+  @media (max-width: 991.98px) {
+    .footer-contacts__phone {
+      flex-direction: row;
+      align-items: center; } }
+  @media (max-width: 767.98px) {
+    .footer-contacts__phone {
+      flex-direction: column;
+      align-items: flex-start; } }
+.footer-contacts__wrapper {
+  flex-shrink: 0; }
+  @media (max-width: 1199.98px) {
+    .footer-contacts__wrapper {
+      margin-bottom: 20px; } }
+  @media (max-width: 991.98px) {
+    .footer-contacts__wrapper {
+      margin-bottom: 0; } }
+  @media (max-width: 767.98px) {
+    .footer-contacts__wrapper {
+      margin-bottom: 20px; } }
+.footer-contacts__phone-link {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-right: 15px;
+  color: var(--white-color); }
+  .footer-contacts__phone-link:hover {
+    color: var(--light-color); }
+.footer-contacts__messengers .messengers__link {
+  background: var(--white-color); }
+  .footer-contacts__messengers .messengers__link:hover {
+    background: var(--light-color); }
+  .footer-contacts__messengers .messengers__link::before {
+    font-size: 1.5rem !important; }
+  .footer-contacts__messengers .messengers__link_telegram::before {
+    color: #0088cc; }
+  .footer-contacts__messengers .messengers__link_whatsapp::before {
+    color: #25d366; }
+.footer-contacts__schedule {
+  font-size: var(--font-size-small);
+  color: var(--light-color); }
+.footer-contacts__callback-btn {
+  margin-bottom: 30px; }
+.footer-contacts__email-link {
+  display: block;
+  vertical-align: middle;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--white-color);
+  margin-bottom: 10px; }
+  .footer-contacts__email-link:hover {
+    color: var(--light-color); }
+  .footer-contacts__email-link .fa-solid {
+    font-size: 1rem;
+    margin-right: 5px; }
+.footer-contacts__address .fa-solid {
+  margin-right: 9px; }
+
+.messengers {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .messengers__item {
+    margin-right: 10px; }
+    .messengers__item:last-of-type {
+      margin-right: 0; }
+  .messengers__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; }
+    .messengers__link::before {
+      font-size: 1rem !important;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font: var(--fa-font-brands); }
+    .messengers__link_telegram::before {
+      content: "\f2c6"; }
+    .messengers__link_whatsapp::before {
+      content: "\f40c"; }
+
+.main-footer .footer-content {
+  padding: 80px 0;
+  background: linear-gradient(90deg, #2653F7, #3a35ce);
+  color: var(--white-color); }
+.main-footer .footer-copyright {
+  background: linear-gradient(90deg, #224bde, #3430b9);
+  color: var(--white-color);
+  padding: 20px 0;
+  font-size: var(--font-size-small);
+  text-align: center; }
+  .main-footer .footer-copyright__text {
+    margin-bottom: 10px; }
+  @media (max-width: 767.98px) {
+    .main-footer .footer-copyright__links {
+      display: flex;
+      flex-direction: column; } }
+  .main-footer .footer-copyright__link {
+    color: var(--white-color);
+    margin-right: 15px; }
+    @media (max-width: 767.98px) {
+      .main-footer .footer-copyright__link {
+        margin-right: 0;
+        margin-bottom: 10px; } }
+    .main-footer .footer-copyright__link:hover {
+      color: var(--light-color); }
+    .main-footer .footer-copyright__link:last-of-type {
+      margin-right: 0; }
+      @media (max-width: 767.98px) {
+        .main-footer .footer-copyright__link:last-of-type {
+          margin-bottom: 0; } }
 
 /*# sourceMappingURL=template_styles.css.map */

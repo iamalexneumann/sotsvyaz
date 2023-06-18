@@ -29,7 +29,7 @@ Loc::loadLanguageFile(__FILE__);
         [
             'ui.bootstrap5',
             'ui.fonts.font-awesome',
-            'ui.fonts.montserrat',
+            'ui.fonts.proxima_nova',
             'ui.lazysizes',
             'ui.scrollProgress',
         ]

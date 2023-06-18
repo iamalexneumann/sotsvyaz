@@ -9,6 +9,7 @@ $siteparam_logo_name = Option::get('askaron.settings', 'UF_LOGO_NAME', '');
 $siteparam_logo_description = Option::get('askaron.settings', 'UF_LOGO_DESCRIPTION', '');
 $siteparam_business_entity = Option::get('askaron.settings', 'UF_BUSINESS_ENTITY', '');
 $siteparam_main_logo = CFile::GetPath(Option::get('askaron.settings', 'UF_MAIN_LOGO', ''));
+$siteparam_footer_logo = CFile::GetPath(Option::get('askaron.settings', 'UF_FOOTER_LOGO', ''));
 $siteparam_main_phone = Option::get('askaron.settings', 'UF_MAIN_PHONE', '');
 $siteparam_whatsapp_number = Option::get('askaron.settings', 'UF_WHATSAPP_NUMBER', '');
 $siteparam_whatsapp_message = transform_text_to_whatsapp_link(Option::get('askaron.settings', 'UF_WHATSAPP_MESSAGE', ''));
