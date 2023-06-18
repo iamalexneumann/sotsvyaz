@@ -417,11 +417,30 @@ h6,
 
   &:focus {
     border-color: var(--primary-color);
-    outline: 0;
     box-shadow: 0 0 0 .25rem rgba(67, 203, 131, .25);
   }
 }
 
 .alert {
   border-radius: 2px;
+}
+
+.modal {
+  .modal-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--dark-color);
+  }
+  .modal-header {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+
+    .btn-close {
+      background: none;
+      font-size: 1.25rem;
+    }
+  }
+  .modal-content {
+    border-radius: 2px;
+  }
 }

@@ -1,0 +1,15 @@
+.modal-form {
+
+  &__item {
+    margin-bottom: 1rem;
+  }
+
+  &__form-control {
+    background: var(--light-bg-color) !important;
+
+    &:focus {
+      border-color: var(--secondary-color) !important;
+      box-shadow: 0 0 0 .25rem rgba(17, 92, 250, .25) !important;
+    }
+  }
+}

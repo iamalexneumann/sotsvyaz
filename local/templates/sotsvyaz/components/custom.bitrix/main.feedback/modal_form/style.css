@@ -1,0 +1,9 @@
+.modal-form__item {
+  margin-bottom: 1rem; }
+.modal-form__form-control {
+  background: var(--light-bg-color) !important; }
+  .modal-form__form-control:focus {
+    border-color: var(--secondary-color) !important;
+    box-shadow: 0 0 0 0.25rem rgba(17, 92, 250, 0.25) !important; }
+
+/*# sourceMappingURL=style.css.map */

@@ -12,5 +12,4 @@ $MESS['FOOTER_COPYRIGHT_RIGHTS_TEXT'] = 'Все права защищены';
 $MESS['FOOTER_COPYRIGHT_PRIVACY_LINK_TEXT'] = 'Политика конфиденциальности';
 $MESS['FOOTER_COPYRIGHT_SITEMAP_LINK_TEXT'] = 'Карта сайта';
 
-$MESS['ORDER_MODAL_ORDER_SUBTITLE'] = 'Напишите мне в мессенджеры';
-$MESS['ORDER_MODAL_FORM_SUBTITLE'] = 'Заполните форму ниже и я Вам перезвоню в рабочее время';
+$MESS['MODAL_FORM_OK_TEXT'] = 'Спасибо. Мы перезвоним Вам в течение дня!';

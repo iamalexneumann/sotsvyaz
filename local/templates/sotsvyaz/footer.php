@@ -123,5 +123,45 @@ use Bitrix\Main\Localization\Loc;
         </div>
     </footer>
     <?= $siteparam_scripts_body_after; ?>
+    <div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title"><?= Loc::getMessage('CALLBACK_MODAL_TITLE'); ?></div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="<?= Loc::getMessage('BTN_CLOSE_LABEL'); ?>">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <?php
+                    $APPLICATION->IncludeComponent(
+                        "custom.bitrix:main.feedback",
+                        "modal_form",
+                        array(
+                            "COMPOSITE_FRAME_MODE" => "A",
+                            "COMPOSITE_FRAME_TYPE" => "AUTO",
+                            "EMAIL_TO" => "alex@1click-oz.ru",
+                            "EVENT_MESSAGE_ID" => array(
+                                0 => "7",
+                            ),
+                            "OK_TEXT" => Loc::getMessage('MODAL_FORM_OK_TEXT'),
+                            "REQUIRED_FIELDS" => array(
+                                1 => "USER_PHONE",
+                            ),
+                            "USE_CAPTCHA" => "N",
+                            "COMPONENT_TEMPLATE" => "modal_form",
+                            "REDIRECT_URL" => "",
+                            "AJAX_MODE" => "Y",
+                            "AJAX_OPTION_SHADOW" => "N",
+                            "AJAX_OPTION_JUMP" => "N",
+                            "AJAX_OPTION_STYLE" => "Y",
+                            "AJAX_OPTION_HISTORY" => "N",
+                        ),
+                        false
+                    ); ?>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

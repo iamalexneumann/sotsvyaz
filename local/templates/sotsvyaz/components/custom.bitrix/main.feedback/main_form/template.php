@@ -46,7 +46,7 @@ if ($arResult['OK_MESSAGE'] <> ''):
 </div>
 <?php
     endif;
-endif;
+else:
 ?>
 <form action="<?= POST_FORM_ACTION_URI; ?>" method="POST" class="main-form">
     <?= bitrix_sessid_post(); ?>
@@ -87,3 +87,4 @@ endif;
 
     <input type="hidden" name="PARAMS_HASH" value="<?=$arResult['PARAMS_HASH']?>">
 </form>
+<?php endif; ?>

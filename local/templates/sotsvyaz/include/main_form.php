@@ -21,7 +21,9 @@ use Bitrix\Main\Localization\Loc;
                 "COMPOSITE_FRAME_MODE" => "A",
                 "COMPOSITE_FRAME_TYPE" => "AUTO",
                 "EMAIL_TO" => "info@sotsvyaz.ru",
-                "EVENT_MESSAGE_ID" => array(),
+                "EVENT_MESSAGE_ID" => array(
+                    0 => "7",
+                ),
                 "OK_TEXT" => Loc::getMessage('MAIN_FORM_OK_TEXT'),
                 "REQUIRED_FIELDS" => array("USER_PHONE"),
                 "USE_CAPTCHA" => "N",
