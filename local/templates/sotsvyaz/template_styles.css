@@ -236,6 +236,9 @@ h6,
   padding: 80px 0;
   background: linear-gradient(90deg, #2653F7, #3a35ce);
   color: var(--white-color); }
+  @media (max-width: 767.98px) {
+    .main-footer .footer-content__main-row {
+      flex-direction: column-reverse; } }
 .main-footer .footer-copyright {
   background: linear-gradient(90deg, #224bde, #3430b9);
   color: var(--white-color);

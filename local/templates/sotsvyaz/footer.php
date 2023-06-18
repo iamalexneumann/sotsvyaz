@@ -31,7 +31,7 @@ use Bitrix\Main\Localization\Loc;
     <footer class="main-footer">
         <div class="footer-content">
             <div class="container">
-                <div class="row">
+                <div class="row footer-content__main-row">
                     <div class="col-lg-8">
                         <?php
                         $APPLICATION->IncludeComponent(
@@ -140,7 +140,7 @@ use Bitrix\Main\Localization\Loc;
                         array(
                             "COMPOSITE_FRAME_MODE" => "A",
                             "COMPOSITE_FRAME_TYPE" => "AUTO",
-                            "EMAIL_TO" => "alex@1click-oz.ru",
+                            "EMAIL_TO" => "info@sotsvyaz.ru",
                             "EVENT_MESSAGE_ID" => array(
                                 0 => "7",
                             ),
