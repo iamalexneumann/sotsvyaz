@@ -36,7 +36,6 @@ Loc::loadLanguageFile(__FILE__);
             'ui.fonts.font-awesome',
             'ui.fonts.proxima_nova',
             'ui.lazysizes',
-            'ui.scrollProgress',
         ]
     );
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/main.js');
