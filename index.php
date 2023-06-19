@@ -16,8 +16,9 @@ $APPLICATION->SetTitle('Главная');
             </div>
             <div class="first-screen__media col-lg-4">
                 <figure class="first-screen__figure">
-                    <img src="/local/templates/sotsvyaz/img/first-screen.jpg"
-                         class="first-screen__img"
+                    <img src="/local/templates/sotsvyaz/img/first-screen-small.jpg"
+                         data-src="/local/templates/sotsvyaz/img/first-screen.jpg"
+                         class="first-screen__img lazyload blur-up"
                          alt="Усиление сигнала сотовой связи и монтаж систем видеонаблюдения">
                 </figure>
             </div>
@@ -25,15 +26,17 @@ $APPLICATION->SetTitle('Главная');
 
     </div>
 </div>
-<div class="container">
-    <?php
-    $APPLICATION->IncludeComponent(
-        "sprint.editor:blocks",
-        ".default",
-        Array(
-            "JSON" => \Bitrix\Main\Config\Option::get('askaron.settings', 'UF_PAGE_INDEX', '')
-        )
-    ); ?>
+<div class="main-section pb-0">
+    <div class="container">
+        <?php
+        $APPLICATION->IncludeComponent(
+            "sprint.editor:blocks",
+            ".default",
+            Array(
+                "JSON" => \Bitrix\Main\Config\Option::get('askaron.settings', 'UF_PAGE_INDEX', '')
+            )
+        ); ?>
+    </div>
 </div>
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');

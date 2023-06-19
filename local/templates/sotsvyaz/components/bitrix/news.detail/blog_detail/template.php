@@ -21,6 +21,17 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 $this->setFrameMode(true);
 use Bitrix\Main\Localization\Loc;
 ?>
-<div class="news-detail">
-    <?= $arResult['NAME']; ?>
+<div class="blog-detail">
+    <?php
+    $APPLICATION->IncludeComponent(
+        "sprint.editor:blocks",
+        ".default",
+        Array(
+            "JSON" => $arResult['DISPLAY_PROPERTIES']['ATT_DETAIL_TEXT']['~VALUE'],
+        ),
+        $component,
+        Array(
+            "HIDE_ICONS" => "Y"
+        )
+    ); ?>
 </div>
