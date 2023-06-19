@@ -21,25 +21,18 @@ $this->setFrameMode(true);
 use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\UI\Extension;
 
-$uf_seo_text_top = '';
-$uf_seo_text_bottom = '';
-if (Cmodule::IncludeModule('asd.iblock')) {
-    $iblock_ufs = CASDiblockTools::GetIBUF($arParams['IBLOCK_ID']);
-    $uf_seo_text_top = $iblock_ufs['UF_SEO_TEXT_TOP'] ?? '';
-    $uf_seo_text_bottom = $iblock_ufs['UF_SEO_TEXT_BOTTOM'] ?? '';
-    if ($uf_seo_text_top || $uf_seo_text_bottom) {
-        Extension::load('ui.show_more');
-    }
+if ($arResult['IBLOCK_SEO_TEXT_TOP'] || $arResult['IBLOCK_SEO_TEXT_BOTTOM']) {
+    Extension::load('ui.show_more');
 } ?>
 
-<?php if ($uf_seo_text_top): ?>
+<?php if ($arResult['IBLOCK_SEO_TEXT_TOP']): ?>
 <div class="seo-text seo-text_top mb-5">
 	<?php
 	$APPLICATION->IncludeComponent(
 		"sprint.editor:blocks",
 		".default",
 		Array(
-			"JSON" => $uf_seo_text_top,
+			"JSON" => $arResult['IBLOCK_SEO_TEXT_TOP'],
 		),
 		$component,
 		Array(
@@ -112,19 +105,19 @@ $APPLICATION->IncludeComponent(
 	$component
 ); ?>
 
-<?php if ($uf_seo_text_bottom): ?>
-<div class="seo-text seo-text_bottom mt-5">
+<?php if ($arResult['IBLOCK_SEO_TEXT_BOTTOM']): ?>
+<section class="seo-text seo-text_bottom mt-5">
 	<?php
 	$APPLICATION->IncludeComponent(
 		"sprint.editor:blocks",
 		".default",
 		Array(
-			"JSON" => $uf_seo_text_bottom,
+			"JSON" => $arResult['IBLOCK_SEO_TEXT_BOTTOM'],
 		),
 		$component,
 		Array(
 			"HIDE_ICONS" => "Y"
 		)
 	); ?>
-</div>
+</section>
 <?php endif; ?>

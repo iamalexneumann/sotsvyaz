@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     if (document.querySelector('.seo-section')) {
-        new ShowMore('.seo-section_top .seo-section__content', {
+        new ShowMore('.seo-text_top', {
             config: {
                 type: 'text',
                 limit: 256,
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        new ShowMore('.seo-section_bottom .seo-section__content', {
+        new ShowMore('.seo-text_bottom', {
             config: {
                 type: 'text',
                 limit: 1024,

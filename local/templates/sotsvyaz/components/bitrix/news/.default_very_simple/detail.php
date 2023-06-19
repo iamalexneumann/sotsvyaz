@@ -77,26 +77,32 @@ $APPLICATION->IncludeComponent(
 	),
 	$component
 ); ?>
-<div class="nav justify-content-center mt-3">
+<ul class="page-navigation">
     <?php if ($arResult['PREV_POST']): ?>
-    <li class="nav-item">
+    <li class="page-navigation__item">
         <a href="<?= $arResult['PREV_POST']['DETAIL_PAGE_URL']; ?>"
-           class="nav-link"
-           title="<?= $arResult['PREV_POST']['NAME']; ?>"><?= Loc::getMessage('DEFAULT_DETAIL_PREV_BTN_TEXT'); ?>
+           class="page-navigation__link"
+           title="<?= $arResult['PREV_POST']['NAME']; ?>">
+            <i class="page-navigation__icon fa-solid fa-angle-left"></i>
+            <?= Loc::getMessage('DEFAULT_DETAIL_PREV_BTN_TEXT'); ?>
         </a>
     </li>
     <?php endif; ?>
-    <li>
+    <li class="page-navigation__item">
         <a href="<?= $arResult['FOLDER'] . $arResult['URL_TEMPLATES']['news']; ?>"
-           class="nav-link"><?= Loc::getMessage('DEFAULT_DETAIL_BACK_BTN_TEXT'); ?>
+           class="page-navigation__link">
+            <i class="page-navigation__icon fa-solid fa-house"></i>
+            <?= Loc::getMessage('DEFAULT_DETAIL_BACK_BTN_TEXT'); ?>
         </a>
     </li>
     <?php if ($arResult['NEXT_POST']): ?>
-    <li class="nav-item">
+    <li class="page-navigation__item">
         <a href="<?= $arResult['NEXT_POST']['DETAIL_PAGE_URL']; ?>"
-           class="nav-link"
-           title="<?= $arResult['NEXT_POST']['NAME']; ?>"><?= Loc::getMessage('DEFAULT_DETAIL_NEXT_BTN_TEXT'); ?>
+           class="page-navigation__link"
+           title="<?= $arResult['NEXT_POST']['NAME']; ?>">
+            <?= Loc::getMessage('DEFAULT_DETAIL_NEXT_BTN_TEXT'); ?>
+            <i class="page-navigation__icon fa-solid fa-angle-right"></i>
         </a>
     </li>
     <?php endif; ?>
-</div>
+</ul>

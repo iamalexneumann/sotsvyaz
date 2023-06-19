@@ -8,35 +8,29 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  * @global CMain $APPLICATION
  * @global CUser $USER
  * @global CDatabase $DB
- * @var array $arLangMessages
  * @var CBitrixComponentTemplate $this
  * @var string $templateName
  * @var string $templateFile
  * @var string $templateFolder
  * @var string $componentPath
- * @var array $templateData
  * @var CBitrixComponent $component
  */
 $this->setFrameMode(true);
 use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\UI\Extension;
 
-$section_ufs = get_section_ufs_from_url($arParams["IBLOCK_ID"], $APPLICATION->GetCurPage());
-$uf_seo_text_top = $section_ufs['UF_SEO_TEXT_TOP'] ?? '';
-$uf_seo_text_bottom = $section_ufs['UF_SEO_TEXT_BOTTOM'] ?? '';
-
-if ($uf_seo_text_top || $uf_seo_text_bottom) {
+if ($arResult['SECTION_UFS']['UF_SEO_TEXT_TOP'] || $arResult['SECTION_UFS']['UF_SEO_TEXT_BOTTOM']) {
     Extension::load('ui.show_more');
 } ?>
 
-<?php if ($uf_seo_text_top): ?>
+<?php if ($arResult['SECTION_UFS']['UF_SEO_TEXT_TOP']): ?>
 <div class="seo-text seo-text_top mb-5">
     <?php
     $APPLICATION->IncludeComponent(
         "sprint.editor:blocks",
         ".default",
         Array(
-            "JSON" => $uf_seo_text_top,
+            "JSON" => $arResult['SECTION_UFS']['UF_SEO_TEXT_TOP'],
         ),
         $component,
         Array(
@@ -114,19 +108,19 @@ $APPLICATION->IncludeComponent(
 	$component
 ); ?>
 
-<?php if ($uf_seo_text_bottom): ?>
-<div class="seo-text seo-text_bottom mt-5">
+<?php if ($arResult['SECTION_UFS']['UF_SEO_TEXT_BOTTOM']): ?>
+<section class="seo-text seo-text_bottom mt-5">
     <?php
     $APPLICATION->IncludeComponent(
         "sprint.editor:blocks",
         ".default",
         Array(
-            "JSON" => $uf_seo_text_bottom,
+            "JSON" => $arResult['SECTION_UFS']['UF_SEO_TEXT_BOTTOM'],
         ),
         $component,
         Array(
             "HIDE_ICONS" => "Y"
         )
     ); ?>
-</div>
+</section>
 <?php endif; ?>

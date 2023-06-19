@@ -10,8 +10,18 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  * @global CDatabase $DB
  * @var CBitrixComponentTemplate $this
  */
+
+if (Cmodule::IncludeModule('asd.iblock')) {
+    $iblock_ufs = CASDiblockTools::GetIBUF($arParams['IBLOCK_ID']);
+    $arResult['IBLOCK_SEO_TEXT_TOP'] = $iblock_ufs['UF_SEO_TEXT_TOP'] ?? '';
+    $arResult['IBLOCK_SEO_TEXT_BOTTOM'] = $iblock_ufs['UF_SEO_TEXT_BOTTOM'] ?? '';
+}
+
+$arResult['SECTION_UFS'] = get_section_ufs_from_url($arParams['IBLOCK_ID'], $APPLICATION->GetCurPage());
+
 if ($arResult['VARIABLES']['ELEMENT_CODE']) {
-    $section = '';
+    $section_arr = get_section_ufs_from_url($arParams['IBLOCK_ID'], $arResult['VARIABLES']['SECTION_CODE']);
+
     if ($arResult['VARIABLES']['SECTION_CODE']) {
         $section = get_section_ufs_from_url($arParams['IBLOCK_ID'], $arResult['VARIABLES']['SECTION_CODE']);
     }
