@@ -24,30 +24,30 @@ ErrorDocument 404 /404.php
   RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
   RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
 
-  # Redirect 301 /usilenie-signala/
+  Redirect 301 /usilenie-signala/ https://sotsvyaz.ru/services/usilenie-signala/
 
   # Redirect 301 /operatorov/
 
-  # Redirect 301 /usilenie-svyazi-bilajn/
-  # Redirect 301 /usilenie-svyazi-megafon/
-  # Redirect 301 /usilenie-svyazi-yota/
-  # Redirect 301 /usilenie-svyazi-tele2/
-  # Redirect 301 /usilenie-svyazi-mts/
+  Redirect 301 /usilenie-svyazi-bilajn/ https://sotsvyaz.ru/services/usilenie-signala/usilenie-sotovogo-signala-bilayn/
+  Redirect 301 /usilenie-svyazi-megafon/ https://sotsvyaz.ru/services/usilenie-signala/usilenie-sotovogo-signala-megafon/
+  Redirect 301 /usilenie-svyazi-yota/ https://sotsvyaz.ru/services/usilenie-signala/usilenie-sotovogo-signala-yota/
+  Redirect 301 /usilenie-svyazi-tele2/ https://sotsvyaz.ru/services/usilenie-signala/usilenie-sotovogo-signala-tele2/
+  Redirect 301 /usilenie-svyazi-mts/ https://sotsvyaz.ru/services/usilenie-signala/usilenie-sotovogo-signala-mts/
 
   # Redirect 301 /v-pomeshheniyah/
 
-  # Redirect 301 /uluchshenie-svyazi-v-chastnom-dome/
-  # Redirect 301 /uluchshenie-svyazi-v-ofise/
-  # Redirect 301 /uluchshenie-svyazi-v-biznes-centre/
-  # Redirect 301 /uluchshenie-svyazi-v-torgovom-centre/
-  # Redirect 301 /uluchshenie-svyazi-v-kafe-i-restorane/
-  # Redirect 301 /uluchshenie-svyazi-v-podvalnom-pomeshhenii/
-  # Redirect 301 /uluchshenie-svyazi-v-parkinge/
-  # Redirect 301 /uluchshenie-svyazi-v-skladskom-pomeshhenii/
-  # Redirect 301 /uluchshenie-svyazi-v-chastnoj-kvartire/
-  # Redirect 301 /uluchshenie-svyazi-v-promyshlennom-pomeshhenii/
+  Redirect 301 /uluchshenie-svyazi-v-chastnom-dome/ https://sotsvyaz.ru/services/usilenie-signala/usilenie-sotovogo-signala-v-chastnykh-domakh/
+  Redirect 301 /uluchshenie-svyazi-v-ofise/ https://sotsvyaz.ru/services/usilenie-signala/usilenie-sotovogo-signala-v-ofisakh/
+  Redirect 301 /uluchshenie-svyazi-v-biznes-centre/ https://sotsvyaz.ru/services/usilenie-signala/usilenie-sotovogo-signala-v-biznes-tsentrakh/
+  Redirect 301 /uluchshenie-svyazi-v-torgovom-centre/ https://sotsvyaz.ru/services/usilenie-signala/usilenie-sotovogo-signala-v-torgovykh-tsentrakh/
+  Redirect 301 /uluchshenie-svyazi-v-kafe-i-restorane/ https://sotsvyaz.ru/services/usilenie-signala/usilenie-sotovogo-signala-v-kafe-i-restoranakh/
+  Redirect 301 /uluchshenie-svyazi-v-podvalnom-pomeshhenii/ https://sotsvyaz.ru/services/usilenie-signala/usilenie-sotovogo-signala-v-podvalnykh-pomeshcheniyakh/
+  Redirect 301 /uluchshenie-svyazi-v-parkinge/ https://sotsvyaz.ru/services/usilenie-signala/usilenie-sotovogo-signala-v-parkingakh/
+  Redirect 301 /uluchshenie-svyazi-v-skladskom-pomeshhenii/ https://sotsvyaz.ru/services/usilenie-signala/usilenie-sotovogo-signala-v-skladskikh-pomeshcheniyakh/
+  Redirect 301 /uluchshenie-svyazi-v-chastnoj-kvartire/ https://sotsvyaz.ru/services/usilenie-signala/usilenie-sotovogo-signala-v-kvartirakh/
+  Redirect 301 /uluchshenie-svyazi-v-promyshlennom-pomeshhenii/ https://sotsvyaz.ru/services/usilenie-signala/usilenie-sotovogo-signala-v-promyshlennykh-pomeshcheniyakh/
 
-  # Redirect 301 /tovary/
+  Redirect 301 /tovary/ https://sotsvyaz.ru/catalog/
 
   # Redirect 301 /internet/
   # Redirect 301 /linearamplifiers/
@@ -57,16 +57,14 @@ ErrorDocument 404 /404.php
   # Redirect 301 /splitters/
   # Redirect 301 /antennas/
 
-  # Redirect 301 /stati/
+  Redirect 301 /stati/ https://sotsvyaz.ru/blog/
 
-  # Redirect 301 /5g-v-rossii/
-  # Redirect 301 /chastoty-operatorov-v-band/
-  # Redirect 301 /na-kakoj-chastote-rabotaet-tele2-v-moskve/
-  # Redirect 301 /ustanovka-sistemy/
-  # Redirect 301 /vreden-li-usilitel-sotovoj-svyazi/
-  # Redirect 301 /kontakty/
-
-  # Redirect 301 /cart/
+  Redirect 301 /5g-v-rossii/ https://sotsvyaz.ru/blog/5g-v-rossii/
+  Redirect 301 /chastoty-operatorov-v-band/ https://sotsvyaz.ru/blog/chastoty-operatorov-v-band/
+  Redirect 301 /na-kakoj-chastote-rabotaet-tele2-v-moskve/ https://sotsvyaz.ru/blog/na-kakoy-chastote-rabotaet-tele2-v-moskve/
+  Redirect 301 /ustanovka-sistemy/ https://sotsvyaz.ru/blog/ustanovka-sistemy/
+  Redirect 301 /vreden-li-usilitel-sotovoj-svyazi/ https://sotsvyaz.ru/blog/vreden-li-usilitel-sotovoy-svyazi/
+  Redirect 301 /kontakty/ https://sotsvyaz.ru/contacts/
 </IfModule>
 
 <IfModule mod_dir.c>
