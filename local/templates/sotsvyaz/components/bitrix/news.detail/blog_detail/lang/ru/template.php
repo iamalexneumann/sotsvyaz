@@ -1,1 +1,4 @@
 <?php
+$MESS['BLOG_DETAIL_DECLENTION_ONE'] = 'просмотр';
+$MESS['BLOG_DETAIL_DECLENTION_FOUR'] = 'просмотра';
+$MESS['BLOG_DETAIL_DECLENTION_FIVE'] = 'просмотров';

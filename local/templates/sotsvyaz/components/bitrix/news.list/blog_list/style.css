@@ -9,8 +9,7 @@
   box-shadow: 0 50px 100px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
   margin-bottom: 30px;
-  width: 100%;
-  border: 1px solid var(--border-color); }
+  width: 100%; }
   .blog-list .blog-item__img-link {
     position: relative;
     overflow: hidden;
@@ -30,8 +29,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: 100%;
-    border-top: 1px solid var(--border-color); }
+    height: 100%; }
     @media (max-width: 1199.98px) {
       .blog-list .blog-item__wrapper {
         padding: 30px; } }

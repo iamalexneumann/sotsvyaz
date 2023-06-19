@@ -10,3 +10,19 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  * @global CDatabase $DB
  * @var CBitrixComponentTemplate $this
  */
+use Bitrix\Main\Localization\Loc;
+
+$component = $this->__component;
+
+$arResult['VIEW_COUNT'] = get_views_with_declension(
+    Loc::getMessage('BLOG_DETAIL_DECLENTION_ONE'),
+    Loc::getMessage('BLOG_DETAIL_DECLENTION_FOUR'),
+    Loc::getMessage('BLOG_DETAIL_DECLENTION_FIVE'),
+    $arResult['SHOW_COUNTER'] ?? 0
+);
+
+$component->SetResultCacheKeys(
+    [
+        'VIEW_COUNT',
+    ],
+);

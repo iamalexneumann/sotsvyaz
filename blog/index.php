@@ -26,7 +26,9 @@ $APPLICATION->IncludeComponent(
         "DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
         "DETAIL_DISPLAY_BOTTOM_PAGER" => "N",
         "DETAIL_DISPLAY_TOP_PAGER" => "N",
-        "DETAIL_FIELD_CODE" => array("", ""),
+        "DETAIL_FIELD_CODE" => array(
+            0 => "SHOW_COUNTER",
+        ),
         "DETAIL_PAGER_SHOW_ALL" => "N",
         "DETAIL_PAGER_TEMPLATE" => "",
         "DETAIL_PAGER_TITLE" => "",

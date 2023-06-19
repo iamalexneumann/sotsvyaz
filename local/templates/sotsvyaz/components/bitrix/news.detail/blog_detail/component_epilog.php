@@ -17,3 +17,19 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  * @var array $templateData
  * @var CBitrixComponent $component
  */
+use Bitrix\Main\UI\Extension;
+
+Extension::load(
+    [
+        'ui.fancybox',
+    ]
+);
+echo '<script>Fancybox.bind("[data-fancybox]", {});</script>';
+?>
+
+<?php if ($arResult['VIEW_COUNT']): ?>
+<div class="views-counter">
+    <i class="fa-solid fa-eye views-counter__icon"></i>
+    <span class="views-counter__text"><?= $arResult['VIEW_COUNT']; ?></span>
+</div>
+<?php endif; ?>

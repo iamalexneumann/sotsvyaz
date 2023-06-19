@@ -162,16 +162,7 @@ function is_empty_iblock (array $filter):array
 function use_wide_template (string $url):bool
 {
     $patterns = [
-        '#^/about/$#',
-        '#^/about/team/$#',
-        '#^/about/team/([0-9a-zA-Z_-]+)/$#',
-        '#^/about/reviews/$#',
-        '#^/portfolio/$#',
-        '#^/portfolio/([0-9a-zA-Z_-]+)/$#',
-        '#^/portfolio/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/$#',
-        '#^/services/$#',
-        '#^/services/([0-9a-zA-Z_-]+)/$#',
-        '#^/services/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/$#',
+        '#^/blog/([0-9a-zA-Z_-]+)/$#',
     ];
     for ($i = 0; $i < count($patterns); $i++) {
         preg_match($patterns[$i], $url, $matches);
@@ -180,4 +171,18 @@ function use_wide_template (string $url):bool
         }
     }
     return false;
+}
+
+/**
+ * Фукцния возвращает строку количества просмотров статьи с правильным окончанием
+ * @param string $one - склонение для "просмотр"
+ * @param string $four - склонение для "просмотра"
+ * @param string $five - склонение для "просмотров"
+ * @param int $views_counter - число просмотров
+ * @return string
+ */
+function get_views_with_declension (string $one, string $four, string $five, int $views_counter = 0):string
+{
+    $viewsDeclension = new Declension($one, $four, $five);
+    return $views_counter . ' ' . $viewsDeclension->get($views_counter);
 }
