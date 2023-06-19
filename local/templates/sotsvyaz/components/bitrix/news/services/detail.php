@@ -23,7 +23,7 @@ use Bitrix\Main\Localization\Loc;
 <?php
 $APPLICATION->IncludeComponent(
 	"bitrix:news.detail",
-	"",
+	"services_detail",
 	Array(
 		"DISPLAY_DATE" => $arParams["DISPLAY_DATE"],
 		"DISPLAY_NAME" => $arParams["DISPLAY_NAME"],

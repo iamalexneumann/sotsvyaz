@@ -22,8 +22,14 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  * @var COption $siteparam_scripts_body_after
  */
 use Bitrix\Main\Localization\Loc;
+
+$patterns = [
+    '#^/blog/([0-9a-zA-Z_-]+)/$#',
+    '#^/services/([0-9a-zA-Z_-]+)/$#',
+    '#^/services/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/$#',
+];
 ?>
-        <?php if ((!($CurDir === '/')) && !(use_wide_template($CurDir) === true)): ?>
+        <?php if ((!($CurDir === '/')) && !(use_wide_template($CurDir, $patterns) === true)): ?>
         </div>
         <?php endif; ?>
     </main>
@@ -96,7 +102,8 @@ use Bitrix\Main\Localization\Loc;
                         <button type="button"
                                 class="btn btn-sm btn-light footer-contacts__callback-btn"
                                 data-bs-toggle="modal"
-                                data-bs-target="#callbackModal"><?= Loc::getMessage('FOOTER_CALLBACK_BTN_TEXT'); ?></button>
+                                data-bs-target="#callbackModal"
+                                data-bs-modal-title="<?= Loc::getMessage('CALLBACK_MODAL_TITLE') ?>"><?= Loc::getMessage('FOOTER_CALLBACK_BTN_TEXT'); ?></button>
                         <a href="mailto:<?= $siteparam_email; ?>" class="footer-contacts__email-link">
                             <i class="fa-solid fa-envelope"></i>
                             <?= $siteparam_email; ?>
@@ -126,7 +133,7 @@ use Bitrix\Main\Localization\Loc;
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <div class="modal-title"><?= Loc::getMessage('CALLBACK_MODAL_TITLE'); ?></div>
+                    <div class="modal-title"></div>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="<?= Loc::getMessage('BTN_CLOSE_LABEL'); ?>">
                         <i class="fa-solid fa-xmark"></i>
                     </button>

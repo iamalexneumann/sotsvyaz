@@ -6,7 +6,7 @@ $APPLICATION->SetTitle("Услуги");
 <?php
 $APPLICATION->IncludeComponent(
     "bitrix:news",
-    ".default_simple",
+    "services",
     Array(
         "ADD_ELEMENT_CHAIN" => "Y",
         "ADD_SECTIONS_CHAIN" => "Y",
@@ -30,7 +30,7 @@ $APPLICATION->IncludeComponent(
         "DETAIL_PAGER_SHOW_ALL" => "N",
         "DETAIL_PAGER_TEMPLATE" => "",
         "DETAIL_PAGER_TITLE" => "",
-        "DETAIL_PROPERTY_CODE" => array("ATT_PREVIEW_TEXT", "ATT_DETAIL_TEXT", ""),
+        "DETAIL_PROPERTY_CODE" => array("ATT_PREVIEW_TEXT", "ATT_DETAIL_TEXT", "ATT_TITLE", "ATT_SUPTITLE", "ATT_SUBTITLE", ),
         "DETAIL_SET_CANONICAL_URL" => "N",
         "DISPLAY_BOTTOM_PAGER" => "Y",
         "DISPLAY_DATE" => "Y",

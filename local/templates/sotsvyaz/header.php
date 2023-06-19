@@ -21,6 +21,17 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  */
 use Bitrix\Main\Localization\Loc;
 Loc::loadLanguageFile(__FILE__);
+
+$patterns = [
+    '#^/blog/([0-9a-zA-Z_-]+)/$#',
+    '#^/services/([0-9a-zA-Z_-]+)/$#',
+    '#^/services/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/$#',
+];
+
+$services_patterns = [
+    '#^/services/([0-9a-zA-Z_-]+)/$#',
+    '#^/services/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/$#',
+]
 ?>
 <!DOCTYPE html>
 <html lang="<?= LANGUAGE_ID; ?>">
@@ -104,7 +115,8 @@ Loc::loadLanguageFile(__FILE__);
                             <button type="button"
                                     class="btn header-contacts__callback-btn"
                                     data-bs-toggle="modal"
-                                    data-bs-target="#callbackModal"><?= Loc::getMessage('HEADER_CALLBACK_BTN_TEXT'); ?></button>
+                                    data-bs-target="#callbackModal"
+                                    data-bs-modal-title="<?= Loc::getMessage('CALLBACK_MODAL_TITLE') ?>"><?= Loc::getMessage('HEADER_CALLBACK_BTN_TEXT'); ?></button>
                         </div>
                         <?php if ($siteparam_whatsapp_number || $siteparam_telegram_link): ?>
                             <ul class="header-contacts__messengers messengers">
@@ -130,8 +142,8 @@ Loc::loadLanguageFile(__FILE__);
             </div>
         </nav>
     </header>
-    <main class="<?php if (use_wide_template($CurDir) === false): ?>main-area<?php else: ?>wide-area<?php endif; ?>">
-        <?php if (!($CurDir === '/')): ?>
+    <main class="<?php if (use_wide_template($CurDir, $patterns) === false): ?>main-area<?php else: ?>wide-area<?php endif; ?>">
+        <?php if (!($CurDir === '/') && (use_wide_template($CurDir, $services_patterns) === false)): ?>
         <header class="page-header">
             <div class="container">
                 <?php
@@ -149,7 +161,7 @@ Loc::loadLanguageFile(__FILE__);
                 <?php $APPLICATION->ShowViewContent('MAIN_SUBTITLE'); ?>
             </div>
         </header>
-        <?php if (use_wide_template($CurDir) === false): ?>
+        <?php if (use_wide_template($CurDir, $patterns) === false): ?>
         <div class="container main-content">
         <?php endif; ?>
         <?php endif; ?>

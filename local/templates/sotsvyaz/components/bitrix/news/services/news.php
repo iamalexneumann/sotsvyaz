@@ -45,7 +45,7 @@ if ($arResult['IBLOCK_SEO_TEXT_TOP'] || $arResult['IBLOCK_SEO_TEXT_BOTTOM']) {
 <?php
 $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
-	"",
+	"services_list",
 	Array(
 		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 		"IBLOCK_ID" => $arParams["IBLOCK_ID"],

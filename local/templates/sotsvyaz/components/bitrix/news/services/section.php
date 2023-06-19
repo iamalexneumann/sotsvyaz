@@ -43,7 +43,7 @@ if ($arResult['SECTION_UFS']['UF_SEO_TEXT_TOP'] || $arResult['SECTION_UFS']['UF_
 <?php
 $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
-	".default",
+	"services_list",
 	Array(
 		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 		"IBLOCK_ID" => $arParams["IBLOCK_ID"],

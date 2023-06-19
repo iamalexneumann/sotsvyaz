@@ -17,3 +17,4 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  * @var array $templateData
  * @var CBitrixComponent $component
  */
+PHPInterface\ComponentHelper::handle($this);

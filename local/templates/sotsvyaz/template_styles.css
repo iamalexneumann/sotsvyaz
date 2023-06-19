@@ -508,6 +508,20 @@ h6,
   padding: 150px 0;
   color: var(--white-color);
   background: linear-gradient(90deg, #2653F7, #3a35ce); }
+  .first-screen .breadcrumb {
+    position: absolute;
+    top: -70px; }
+    @media (max-width: 991.98px) {
+      .first-screen .breadcrumb {
+        position: static;
+        margin-bottom: 30px; } }
+  .first-screen .breadcrumb .breadcrumb-item a,
+  .first-screen .breadcrumb .breadcrumb-item.active,
+  .first-screen .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: var(--white-color);
+    opacity: var(--opacity-85); }
+  .first-screen .breadcrumb .breadcrumb-item a:hover {
+    opacity: 0.65; }
   @media (max-width: 991.98px) {
     .first-screen {
       padding: 80px 0; } }

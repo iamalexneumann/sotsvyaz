@@ -1,6 +1,6 @@
 <?php
 $MESS['BTN_CLOSE_LABEL'] = 'Закрыть';
-$MESS['CALLBACK_MODAL_TITLE'] = 'Заказать обратный звонок';
+$MESS['CALLBACK_MODAL_TITLE'] = 'Заказать звонок';
 
 $MESS['FOOTER_MAIN_PHONE_TITLE'] = 'Позвонить';
 $MESS['FOOTER_CALLBACK_BTN_TEXT'] = 'Заказать звонок';

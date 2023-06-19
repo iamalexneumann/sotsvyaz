@@ -14,3 +14,17 @@ function navbarToggler() {
         navbarTogglerIcon.classList.add('fa-bars');
     }
 }
+
+const callbackModal = document.querySelector('#callbackModal');
+if (callbackModal) {
+    callbackModal.addEventListener('show.bs.modal', function (event) {
+        const callbackModalButton = event.relatedTarget
+        const callbackModalTitleVal = callbackModalButton.getAttribute('data-bs-modal-title');
+        const callbackModalTitle = callbackModal.querySelectorAll('.modal-title');
+        const callbackFormBtn = callbackModal.querySelectorAll('.btn');
+        console.log(callbackFormBtn);
+        callbackModalTitle.forEach(element => element.innerHTML = callbackModalTitleVal);
+        callbackFormBtn.forEach(element => element.textContent = callbackModalTitleVal);
+        callbackFormBtn.forEach(element => element.value = callbackModalTitleVal);
+    })
+}

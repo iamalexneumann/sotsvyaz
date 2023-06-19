@@ -157,13 +157,11 @@ function is_empty_iblock (array $filter):array
 /**
  * Функция для подключения широкого шаблона сайта (без контейнера).
  * @param string $url Шаблон ссылки, где использовать шаблон сайта без контейнера
+ * @param array $patterns Массив паттернов регулярных выражений для сверки
  * @return bool
  */
-function use_wide_template (string $url):bool
+function use_wide_template (string $url, array $patterns):bool
 {
-    $patterns = [
-        '#^/blog/([0-9a-zA-Z_-]+)/$#',
-    ];
     for ($i = 0; $i < count($patterns); $i++) {
         preg_match($patterns[$i], $url, $matches);
         if (count($matches) > 0) {
@@ -171,6 +169,25 @@ function use_wide_template (string $url):bool
         }
     }
     return false;
+}
+
+/**
+ * Функция выводит компонент хлебных крошек в кэшируемых компонентах
+ * @param string $template Шаблон хлебных крошек
+ */
+function ShowNavChain(string $template = '.default')
+{
+    global $APPLICATION;
+    $APPLICATION->IncludeComponent(
+        "bitrix:breadcrumb",
+        $template,
+        Array(
+            "START_FROM" => "0",
+            "PATH" => "",
+            "SITE_ID" => SITE_ID,
+        ),
+        false
+    );
 }
 
 /**

@@ -12,7 +12,8 @@ $APPLICATION->SetTitle('Главная');
                 <button type="button"
                         class="btn btn-success first-screen__btn"
                         data-bs-toggle="modal"
-                        data-bs-target="#callbackModal">Заказать звонок</button>
+                        data-bs-target="#callbackModal"
+                        data-bs-modal-title="Заказать консультацию">Получить консультацию</button>
             </div>
             <div class="first-screen__media col-lg-4">
                 <figure class="first-screen__figure">
@@ -23,9 +24,9 @@ $APPLICATION->SetTitle('Главная');
                 </figure>
             </div>
         </div>
-
     </div>
 </div>
+
 <div class="main-section pb-0">
     <div class="container">
         <?php
