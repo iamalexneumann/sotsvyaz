@@ -6,7 +6,7 @@ $APPLICATION->SetTitle("Статьи");
 <?php
 $APPLICATION->IncludeComponent(
     "bitrix:news",
-    ".default_very_simple",
+    "blog",
     Array(
         "ADD_ELEMENT_CHAIN" => "Y",
         "ADD_SECTIONS_CHAIN" => "Y",
