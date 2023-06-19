@@ -13,6 +13,11 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  * @var COption $siteparam_main_logo
  * @var COption $siteparam_main_phone
  * @var COption $siteparam_main_phone_tel
+ * @var COption $siteparam_schedule
+ * @var COption $siteparam_whatsapp_number
+ * @var COption $siteparam_whatsapp_number_tel
+ * @var COption $siteparam_whatsapp_message
+ * @var COption $siteparam_telegram_link
  */
 use Bitrix\Main\Localization\Loc;
 Loc::loadLanguageFile(__FILE__);
@@ -51,54 +56,81 @@ Loc::loadLanguageFile(__FILE__);
 <body>
     <?= $siteparam_scripts_body_before; ?>
     <?php $APPLICATION->ShowPanel(); ?>
-    <header class="main-header">
-        <div class="container">
-            <a class="main-header__logo logo"
-               title="<?= htmlspecialchars($arSite['SITE_NAME']); ?>"
-                <?php if ($CurDir !== '/'): ?> href="/"<?php endif; ?>>
-                <img src="<?= $siteparam_main_logo; ?>" class="logo__img" width="70" height="70" alt="<?= htmlspecialchars($arSite['SITE_NAME']); ?>">
-                <span class="logo__wrapper">
-                        <span class="logo__name"><?= $siteparam_logo_name; ?></span>
-                        <span class="logo__description"><?= $siteparam_logo_description; ?></span>
+    <header class="main-header sticky-top">
+        <nav class="navbar navbar-expand-xl">
+            <div class="container">
+                <a class="main-header__logo header-logo"
+                   title="<?= htmlspecialchars($arSite['SITE_NAME']); ?>"
+                    <?php if ($CurDir !== '/'): ?> href="/"<?php endif; ?>>
+                    <img src="<?= $siteparam_main_logo; ?>" class="header-logo__img" width="60" height="60" alt="<?= htmlspecialchars($arSite['SITE_NAME']); ?>">
+                    <span class="header-logo__wrapper">
+                        <span class="header-logo__description"><?= custom_lcfirst($siteparam_logo_description); ?></span>
+                        <span class="header-logo__name"><?= $siteparam_logo_name; ?></span>
                     </span>
-            </a>
-        </div>
-    </header>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-expanded="false"
-                    data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-label="<?= Loc::getMessage('HEADER_NAVBAR_ARIA_LABEL'); ?>">
-                <span class="navbar-toggler__text"><?= Loc::getMessage('HEADER_NAVBAR_TOGGLER_TEXT'); ?></span>
-                <span class="navbar-toggler__icon"><i class="fa-solid fa-bars"></i></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <div class="ms-auto me-auto navbar-wrapper">
-                    <?php
-                    $APPLICATION->IncludeComponent(
-                        "bitrix:menu",
-                        "main_menu",
-                        array(
-                            "ALLOW_MULTI_SELECT" => "N",
-                            "CHILD_MENU_TYPE" => "main_submenu",
-                            "COMPOSITE_FRAME_MODE" => "A",
-                            "COMPOSITE_FRAME_TYPE" => "AUTO",
-                            "DELAY" => "N",
-                            "MAX_LEVEL" => "2",
-                            "MENU_CACHE_GET_VARS" => array(
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-expanded="false"
+                        data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-label="<?= Loc::getMessage('HEADER_NAVBAR_ARIA_LABEL'); ?>">
+                    <span class="navbar-toggler__text"><?= Loc::getMessage('HEADER_NAVBAR_TOGGLER_TEXT'); ?></span>
+                    <span class="navbar-toggler__icon"><i class="fa-solid fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <div class="ms-auto me-auto navbar-wrapper">
+                        <?php
+                        $APPLICATION->IncludeComponent(
+                            "bitrix:menu",
+                            "main_menu",
+                            array(
+                                "ALLOW_MULTI_SELECT" => "N",
+                                "CHILD_MENU_TYPE" => "main_submenu",
+                                "COMPOSITE_FRAME_MODE" => "A",
+                                "COMPOSITE_FRAME_TYPE" => "AUTO",
+                                "DELAY" => "N",
+                                "MAX_LEVEL" => "2",
+                                "MENU_CACHE_GET_VARS" => array(
+                                ),
+                                "MENU_CACHE_TIME" => "3600",
+                                "MENU_CACHE_TYPE" => "A",
+                                "MENU_CACHE_USE_GROUPS" => "Y",
+                                "ROOT_MENU_TYPE" => "main_menu",
+                                "USE_EXT" => "Y",
+                                "COMPONENT_TEMPLATE" => "main_menu"
                             ),
-                            "MENU_CACHE_TIME" => "3600",
-                            "MENU_CACHE_TYPE" => "A",
-                            "MENU_CACHE_USE_GROUPS" => "Y",
-                            "ROOT_MENU_TYPE" => "main_menu",
-                            "USE_EXT" => "Y",
-                            "COMPONENT_TEMPLATE" => "main_menu"
-                        ),
-                        false
-                    ); ?>
-                </div>
+                            false
+                        ); ?>
+                    </div>
+                    <div class="main-header__contacts header-contacts">
+                        <div class="header-contacts__wrapper">
+                            <a class="header-contacts__phone-link" href="tel:<?= $siteparam_main_phone_tel; ?>"
+                               title="<?= Loc::getMessage('HEADER_MAIN_PHONE_TITLE'); ?>"><?= $siteparam_main_phone; ?></a>
+                            <button type="button"
+                                    class="btn header-contacts__callback-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#callbackModal"><?= Loc::getMessage('HEADER_CALLBACK_BTN_TEXT'); ?></button>
+                        </div>
+                        <?php if ($siteparam_whatsapp_number || $siteparam_telegram_link): ?>
+                            <ul class="header-contacts__messengers messengers">
+                                <?php if ($siteparam_telegram_link): ?>
+                                    <li class="messengers__item">
+                                        <a href="<?= $siteparam_telegram_link; ?>"
+                                           target="_blank"
+                                           class="messengers__link messengers__link_telegram"
+                                           title="<?= Loc::getMessage('HEADER_MESSENGERS_TELEGRAM_TITLE'); ?>">Telegram</a>
+                                    </li>
+                                <?php endif; ?>
+                                <?php if ($siteparam_whatsapp_number): ?>
+                                    <li class="messengers__item">
+                                        <a href="https://wa.me/<?php echo $siteparam_whatsapp_number_tel; echo $siteparam_whatsapp_message ?: '' ?>"
+                                           target="_blank"
+                                           class="messengers__link messengers__link_whatsapp"
+                                           title="<?= Loc::getMessage('HEADER_MESSENGERS_WHATSAPP_TITLE'); ?>">WhatsApp</a>
+                                    </li>
+                                <?php endif; ?>
+                            </ul>
+                        <?php endif; ?>
+                    </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
     <main class="<?php if (use_wide_template($CurDir) === false): ?>main-area<?php else: ?>wide-area<?php endif; ?>">
         <?php if (!($CurDir === '/')): ?>
         <header class="page-header">

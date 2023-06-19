@@ -1,14 +1,14 @@
 .navbar-nav {
   --bs-nav-link-color: var(--dark-color);
-  --bs-nav-link-hover-color: var(--primary-color);
-  --bs-nav-link-disabled-color: var(--light-gray-color); }
+  --bs-nav-link-hover-color: var(--gray-color);
+  --bs-nav-link-disabled-color: var(--gray-color); }
   .navbar-nav .nav-link {
     transition: all .25s ease-in-out;
-    padding: 15px 25px !important; }
-    @media (max-width: 1399.98px) {
+    padding: 15px 20px !important;
+    font-weight: 600; }
+    @media (max-width: 1198.98px) {
       .navbar-nav .nav-link {
-        padding: 15px 15px !important;
-        font-size: 0.95rem; } }
+        padding: 15px 0 !important; } }
     .navbar-nav .nav-link.active {
       font-weight: 700;
       color: var(--dark-color); }
@@ -31,20 +31,21 @@
   --bs-dropdown-bg: var(--white-color);
   --bs-dropdown-border-width: 0;
   --bs-dropdown-link-color: var(--dark-color);
-  --bs-dropdown-link-hover-color: var(--primary-color);
+  --bs-dropdown-link-hover-color: var(--gray-color);
   --bs-dropdown-link-hover-bg: transparent;
   --bs-dropdown-link-active-color: var(--dark-color);
   --bs-dropdown-link-active-bg: transparent;
   --bs-dropdown-item-padding-x: 30px;
   --bs-dropdown-item-padding-y: 15px;
   --bs-dropdown-spacer: 0;
-  border-radius: 0 0 12px 12px;
-  border-top: 1px solid rgba(177, 189, 202, 0.25);
-  box-shadow: 0 16px 40px rgba(177, 189, 202, 0.25); }
+  border-radius: 0 0 2px 2px;
+  border-top: 1px solid var(--border-color);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.075); }
   .dropdown-menu[data-bs-popper] {
-    top: calc(100% + 15px); }
+    top: calc(100% + 19px); }
   .dropdown-menu .dropdown-item {
-    font-weight: 500; }
+    font-weight: 600;
+    font-size: var(--font-size-small); }
     .dropdown-menu .dropdown-item.active {
       font-weight: 700; }
   @media (max-width: 1399.98px) {
@@ -68,6 +69,9 @@
     color: var(--light-gray-color);
     margin-right: 5px;
     text-transform: lowercase; }
+    @media (max-width: 349.98px) {
+      .navbar-toggler__text {
+        display: none; } }
   .navbar-toggler__icon {
     font-size: 1.5rem;
     color: var(--primary-color);

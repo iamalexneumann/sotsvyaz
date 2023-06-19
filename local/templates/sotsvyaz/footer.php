@@ -96,8 +96,7 @@ use Bitrix\Main\Localization\Loc;
                         <button type="button"
                                 class="btn btn-sm btn-light footer-contacts__callback-btn"
                                 data-bs-toggle="modal"
-                                data-bs-target="#callbackModal"
-                                data-bs-source="<?= Loc::getMessage('FOOTER_CALLBACK_BTN_DATA_SOURCE'); ?>"><?= Loc::getMessage('FOOTER_CALLBACK_BTN_TEXT'); ?></button>
+                                data-bs-target="#callbackModal"><?= Loc::getMessage('FOOTER_CALLBACK_BTN_TEXT'); ?></button>
                         <a href="mailto:<?= $siteparam_email; ?>" class="footer-contacts__email-link">
                             <i class="fa-solid fa-envelope"></i>
                             <?= $siteparam_email; ?>

@@ -4,7 +4,7 @@
   --secondary-color: #115cfa;
   --secondary-color-hover: #115cfa * 0.9;
   --white-color: #ffffff;
-  --white-color-opacity: 0.85;
+  --opacity-85: 0.85;
   --light-color: #f3f9fe;
   --font-size-small: 0.95rem;
   --gray-color: #777777;
@@ -63,7 +63,7 @@ h6,
 
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: 0.025em;
+  //letter-spacing: 0.025em;
   color: var(--dark-color);
 
   @media (max-width: 767.98px) {
@@ -172,8 +172,124 @@ h6,
   }
 
   &:hover {
-    opacity: var(--white-color-opacity);
+    opacity: var(--opacity-85);
     color: var(--light-color);
+  }
+}
+
+.main-header {
+  background: var(--white-color);
+  box-shadow: 0 0 30px rgba(0,0,0,.075);
+
+  .navbar {
+    padding: 15px 0;
+
+    @media (max-width: 575.98px) {
+      padding: 10px 0;
+    }
+  }
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+
+  &__img {
+    flex-shrink: 0;
+    margin-right: 15px;
+
+    @media (max-width: 575.98px) {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__description {
+    font-size: 14px;
+    color: var(--gray-color);
+    margin-bottom: -3px;
+
+    @media (max-width: 575.98px) {
+      font-size: 12px;
+      max-width: 155px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__name {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--dark-color);
+    letter-spacing: -0.02em;
+
+    @media (max-width: 575.98px) {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.header-contacts {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 767.98px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__wrapper {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 15px;
+
+    @media (max-width: 767.98px) {
+      //align-items: center;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__phone-link {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-color);
+
+    &:hover {
+      color: var(--secondary-color);
+    }
+  }
+
+  &__callback-btn {
+    padding: 0;
+    border: none;
+    color: var(--primary-color);
+    margin-top: 3px;
+
+    &:hover {
+      color: var(--primary-color-hover);
+    }
+  }
+
+  &__schedule {
+    font-size: var(--font-size-small);
+    color: var(--gray-color);
+    text-transform: lowercase;
+  }
+}
+
+@media (max-width: 1198.98px) {
+  .navbar-wrapper {
+    margin: 15px 0;
   }
 }
 
@@ -206,6 +322,9 @@ h6,
 
   &__wrapper {
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
 
     @media (max-width: 1199.98px) {
       margin-bottom: 20px;
@@ -223,38 +342,10 @@ h6,
   &__phone-link {
     font-size: 1.75rem;
     font-weight: 700;
-    margin-right: 15px;
     color: var(--white-color);
 
     &:hover {
       color: var(--light-color);
-    }
-  }
-
-  &__messengers {
-
-    .messengers__link {
-      background: var(--white-color);
-
-      &:hover {
-        background: var(--light-color);
-      }
-
-      &::before {
-        font-size: 1.5rem !important;
-      }
-
-      &_telegram::before {
-        color: #0088cc;
-      }
-
-      &_whatsapp::before {
-        color: #25d366;
-      }
-    }
-
-    @media (max-width: 1199.98px) {
-
     }
   }
 
@@ -313,24 +404,38 @@ h6,
     justify-content: center;
     align-items: center;
     font-size: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border-radius: 2px;
+    color: var(--white-color);
+
+    &:hover {
+      opacity: var(--opacity-85);
+      color: var(--white-color);
+    }
 
     &::before {
-      font-size: 1rem !important;
+      font-size: 1.25rem !important;
       display: inline-block;
       text-rendering: auto;
       -webkit-font-smoothing: antialiased;
       font: var(--fa-font-brands);
     }
 
-    &_telegram::before {
-      content: "\f2c6";
+    &_telegram {
+      background: #0088cc;;
+
+      &::before {
+        content: "\f2c6";
+      }
     }
 
-    &_whatsapp::before {
-      content: "\f40c";
+    &_whatsapp {
+      background: #25d366;
+
+      &::before {
+        content: "\f232";
+      }
     }
   }
 }
@@ -342,7 +447,7 @@ h6,
     color: var(--white-color);
 
     &__main-row {
-      @media (max-width: 767.98px) {
+      @media (max-width: 991.98px) {
         flex-direction: column-reverse;
       }
     }
