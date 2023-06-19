@@ -10,6 +10,7 @@
   --gray-color: #777777;
   --light-bg-color: #f7f7f7;
   --dark-color: #303133;
+  --border-color: #eaeaea
 }
 
 body {
@@ -120,6 +121,17 @@ h6,
   --bs-btn-disabled-color: var(--secondary-color-hover);
 }
 
+.btn-outline-primary {
+  --bs-btn-color: var(--secondary-color);
+  --bs-btn-border-color: var(--secondary-color);
+  --bs-btn-hover-color: var(--white-color);
+  --bs-btn-hover-bg: var(--secondary-color);
+  --bs-btn-hover-border-color: var(--secondary-color);
+  --bs-btn-active-color: var(--white-color);
+  --bs-btn-active-bg: var(--secondary-color-hover);
+  --bs-btn-active-border-color: var(--secondary-color-hover);
+}
+
 .btn-success {
   --bs-btn-color: var(--white-color);
   --bs-btn-bg: var(--primary-color);
@@ -133,6 +145,17 @@ h6,
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: var(--primary-color);
 }
+
+//.blur-up {
+//  -webkit-filter: blur(5px);
+//  filter: blur(5px);
+//  transition: all .25s ease-in-out;
+//
+//  &.lazyloaded {
+//    -webkit-filter: blur(0);
+//    filter: blur(0);
+//  }
+//}
 
 .footer-logo {
   display: flex;
@@ -152,6 +175,10 @@ h6,
     opacity: var(--white-color-opacity);
     color: var(--light-color);
   }
+}
+
+.main-area {
+  padding: 80px 0;
 }
 
 .footer-contacts {
@@ -420,7 +447,7 @@ h6,
   background: var(--white-color);
   padding: 14px 15px;
   border-radius: 2px;
-  border: 1px solid #eaeaea;
+  border: 1px solid var(--border-color);
 
   &:focus {
     border-color: var(--primary-color);
