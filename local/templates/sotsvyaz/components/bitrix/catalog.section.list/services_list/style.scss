@@ -1,0 +1,33 @@
+.services-sections {
+  .sections-item {
+    margin-bottom: 50px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &__title {
+      font-size: 2rem;
+      margin: 0 0 30px;
+
+      @media (max-width: 767.98px) {
+        font-size: 1.75rem;
+      }
+    }
+
+    &__link {
+      color: var(--dark-color);
+
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+
+    &__text {
+      color: var(--gray-color);
+      font-size: 1.125rem;
+      margin-bottom: 40px;
+    }
+  }
+}
+
