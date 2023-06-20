@@ -29,7 +29,7 @@ $param_form_element_id = $arParams['FORM_ELEMENT_ID'] ?? '';
 $param_form_position = $arParams['FORM_POSITION'] ?? '3';
 ?>
 <?php if (count($arResult['ITEMS']) > 0): ?>
-<div class="news-list">
+<div class="services-list row">
     <?php
     foreach ($arResult['ITEMS'] as $arItem_key => $arItem):
         $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem['IBLOCK_ID'], 'ELEMENT_EDIT'));
@@ -39,11 +39,28 @@ $param_form_position = $arParams['FORM_POSITION'] ?? '3';
             ]
         );
     ?>
-    <article class="news-item" id="<?= $this->GetEditAreaId($arItem['ID']) ;?>">
-        <h<?=$param_small_card_tag_title; ?>>
-            <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>"><?= $arItem['NAME']; ?></a>
-        </h<?=$param_small_card_tag_title; ?>>
-    </article>
+    <div class="col-lg-6 services-list__col">
+        <article class="services-item" id="<?= $this->GetEditAreaId($arItem['ID']) ;?>">
+            <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>"
+               class="services-item__img-link"
+               title="<?= $arItem['NAME']; ?>"
+               rel="nofollow">
+                <img src="<?= $arItem['PICTURE_LQIP']['SRC']; ?>"
+                     data-src="<?= $arItem['PICTURE']['SRC']; ?>"
+                     class="services-item__img lazyload blur-up"
+                     alt="<?= $arItem['NAME']; ?>"
+                     width="<?= $arItem['PICTURE']['WIDTH']; ?>"
+                     height="<?= $arItem['PICTURE']['HEIGHT']; ?>"></a>
+            <div class="services-item__wrapper">
+                <h<?=$param_small_card_tag_title; ?> class="services-item__title">
+                    <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>" class="services-item__link"><?= $arItem['NAME']; ?></a>
+                </h<?=$param_small_card_tag_title; ?>>
+                <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>"
+                   rel="nofollow"
+                   class="btn btn-sm btn-outline-primary services-item__btn"><?= Loc::getMessage('SERVICES_LIST_BTN_MORE_TEXT'); ?></a>
+            </div>
+        </article>
+    </div>
     <?php
     if ($param_show_form_block === 'Y' &&
         $param_form_iblock_type &&

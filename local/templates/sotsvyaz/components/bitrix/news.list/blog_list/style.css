@@ -1,4 +1,4 @@
-.blog-list .col-lg-6 {
+.blog-list__col {
   display: flex;
   align-items: stretch; }
 .blog-list .blog-item {

@@ -1,5 +1,5 @@
 .blog-list {
-  .col-lg-6 {
+  &__col {
     display: flex;
     align-items: stretch;
   }

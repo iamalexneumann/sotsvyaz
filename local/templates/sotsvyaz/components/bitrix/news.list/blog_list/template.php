@@ -39,7 +39,7 @@ $param_form_position = $arParams['FORM_POSITION'] ?? '3';
             ]
         );
     ?>
-    <div class="col-lg-6">
+    <div class="col-lg-6 blog-list__col">
         <article class="blog-item" id="<?= $this->GetEditAreaId($arItem['ID']) ;?>">
             <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>"
                class="blog-item__img-link"

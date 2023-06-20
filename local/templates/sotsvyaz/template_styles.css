@@ -505,6 +505,7 @@ h6,
 
 .first-screen {
   position: relative;
+  overflow: hidden;
   padding: 150px 0;
   color: var(--white-color);
   background: linear-gradient(90deg, #2653F7, #3a35ce); }
