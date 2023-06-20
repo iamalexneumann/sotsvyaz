@@ -61,3 +61,37 @@ if ($arResult['VARIABLES']['ELEMENT_CODE']) {
     );
     $arResult['NEXT_POST'] = $items_next->GetNext();
 }
+
+$item_picture = $arResult['SECTION_UFS']['DETAIL_PICTURE'];
+if ($item_picture) {
+    $arItemPictureFileTmp = \CFile::ResizeImageGet(
+        $item_picture,
+        [
+            'width' => 400,
+            'height' => 535,
+        ],
+        BX_RESIZE_IMAGE_EXACT,
+        true
+    );
+
+    $arItemPictureLqipFileTmp = \CFile::ResizeImageGet(
+        $item_picture,
+        [
+            'width' => 75,
+            'height' => 100,
+        ],
+        BX_RESIZE_IMAGE_EXACT,
+        true
+    );
+
+    if ($arItemPictureFileTmp['src']) {
+        $arItemPictureFileTmp['src'] = \CUtil::GetAdditionalFileURL($arItemPictureFileTmp['src'], true);
+    }
+
+    if ($arItemPictureLqipFileTmp['src']) {
+        $arItemPictureLqipFileTmp['src'] = \CUtil::GetAdditionalFileURL($arItemPictureLqipFileTmp['src'], true);
+    }
+
+    $arResult['SECTION_UFS']['PICTURE'] = array_change_key_case($arItemPictureFileTmp, CASE_UPPER);
+    $arResult['SECTION_UFS']['PICTURE_LQIP'] = array_change_key_case($arItemPictureLqipFileTmp, CASE_UPPER);
+}

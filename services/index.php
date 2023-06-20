@@ -69,7 +69,7 @@ $APPLICATION->IncludeComponent(
         "SET_TITLE" => "Y",
         "SHOW_404" => "N",
         "SHOW_FORM_BLOCK" => "N",
-        "SMALL_CARD_TAG_TITLE" => "2",
+        "SMALL_CARD_TAG_TITLE" => "3",
         "SORT_BY1" => "SORT",
         "SORT_BY2" => "ACTIVE_FROM",
         "SORT_ORDER1" => "ASC",
