@@ -25,7 +25,7 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Оборудование",
+		"Каталог",
 		"/catalog/",
 		Array(),
         Array(
@@ -36,6 +36,30 @@ $aMenuLinks = Array(
         ),
 		""
 	),
+    Array(
+        "Работы",
+        "/portfolio/",
+        Array(),
+        Array(
+            'FROM_IBLOCK' => 3,
+            'IS_PARENT' => '',
+            'DEPTH_LEVEL' => 2,
+            'CUSTOM_CLASS' => 'footer-menu__title',
+        ),
+        ""
+    ),
+    Array(
+        "Отзывы",
+        "/reviews/",
+        Array(),
+        Array(
+            'FROM_IBLOCK' => 3,
+            'IS_PARENT' => '',
+            'DEPTH_LEVEL' => 2,
+            'CUSTOM_CLASS' => 'footer-menu__title',
+        ),
+        ""
+    ),
 	Array(
 		"Статьи",
 		"/blog/",

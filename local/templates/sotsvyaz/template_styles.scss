@@ -203,6 +203,7 @@ h6,
 .header-logo {
   display: flex;
   align-items: center;
+  margin-right: 15px;
 
   &:hover {
     opacity: var(--opacity-85);
@@ -228,13 +229,17 @@ h6,
     font-size: 14px;
     color: var(--gray-color);
     margin-bottom: -3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    //@media (min-width: 1200px) and (max-width: 1399.98px) {
+    //  max-width: 200px;
+    //}
 
     @media (max-width: 575.98px) {
       font-size: 12px;
       max-width: 155px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
   }
 
@@ -243,6 +248,10 @@ h6,
     font-weight: bold;
     color: var(--dark-color);
     letter-spacing: -0.02em;
+
+    //@media (min-width: 1200px) and (max-width: 1399.98px) {
+    //  font-size: 1.5rem;
+    //}
 
     @media (max-width: 575.98px) {
       font-size: 1.25rem;
@@ -253,6 +262,11 @@ h6,
 .header-contacts {
   display: flex;
   align-items: center;
+  margin-left: 15px;
+
+  @media (max-width: 1199.98px) {
+    margin-left: 0;
+  }
 
   @media (max-width: 767.98px) {
     flex-direction: column;
@@ -277,6 +291,7 @@ h6,
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--dark-color);
+    line-height: 1;
 
     &:hover {
       color: var(--secondary-color);

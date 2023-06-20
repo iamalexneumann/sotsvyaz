@@ -4,7 +4,7 @@
   --bs-nav-link-disabled-color: var(--gray-color); }
   .navbar-nav .nav-link {
     transition: all .25s ease-in-out;
-    padding: 15px 20px !important;
+    padding: 15px !important;
     font-weight: 600; }
     @media (max-width: 1198.98px) {
       .navbar-nav .nav-link {

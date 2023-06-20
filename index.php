@@ -37,6 +37,10 @@ $APPLICATION->SetTitle('Главная');
             ".default",
             Array(
                 "JSON" => \Bitrix\Main\Config\Option::get('askaron.settings', 'UF_PAGE_INDEX', '')
+            ),
+            false,
+            Array(
+                "HIDE_ICONS" => "Y"
             )
         ); ?>
     </div>

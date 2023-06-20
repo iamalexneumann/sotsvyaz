@@ -84,12 +84,12 @@ $APPLICATION->IncludeComponent(
            class="page-navigation__link"
            title="<?= $arResult['PREV_POST']['NAME']; ?>">
             <i class="page-navigation__icon fa-solid fa-angle-left"></i>
-            <?= Loc::getMessage('DEFAULT_DETAIL_PREV_BTN_TEXT'); ?>
+            <?= Loc::getMessage('SERVICES_PREV_BTN_TEXT'); ?>
         </a>
     </li>
     <?php endif; ?>
     <li class="page-navigation__item">
-        <a href="<?= $arResult['FOLDER'] . $arResult['URL_TEMPLATES']['news']; ?>"
+        <a href="<?= $arResult['FOLDER'] . $arResult['VARIABLES']['SECTION_CODE']; ?>/#services-list"
            class="page-navigation__link">
             <i class="page-navigation__icon fa-solid fa-house"></i>
             <?= Loc::getMessage('DEFAULT_DETAIL_BACK_BTN_TEXT'); ?>
@@ -100,7 +100,7 @@ $APPLICATION->IncludeComponent(
         <a href="<?= $arResult['NEXT_POST']['DETAIL_PAGE_URL']; ?>"
            class="page-navigation__link"
            title="<?= $arResult['NEXT_POST']['NAME']; ?>">
-            <?= Loc::getMessage('DEFAULT_DETAIL_NEXT_BTN_TEXT'); ?>
+            <?= Loc::getMessage('SERVICES_NEXT_BTN_TEXT'); ?>
             <i class="page-navigation__icon fa-solid fa-angle-right"></i>
         </a>
     </li>

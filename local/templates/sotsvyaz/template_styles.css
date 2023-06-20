@@ -169,7 +169,8 @@ h6,
 
 .header-logo {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  margin-right: 15px; }
   .header-logo:hover {
     opacity: var(--opacity-85); }
   .header-logo__img {
@@ -186,14 +187,14 @@ h6,
   .header-logo__description {
     font-size: 14px;
     color: var(--gray-color);
-    margin-bottom: -3px; }
+    margin-bottom: -3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
     @media (max-width: 575.98px) {
       .header-logo__description {
         font-size: 12px;
-        max-width: 155px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis; } }
+        max-width: 155px; } }
   .header-logo__name {
     font-size: 1.75rem;
     font-weight: bold;
@@ -205,7 +206,11 @@ h6,
 
 .header-contacts {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  margin-left: 15px; }
+  @media (max-width: 1199.98px) {
+    .header-contacts {
+      margin-left: 0; } }
   @media (max-width: 767.98px) {
     .header-contacts {
       flex-direction: column;
@@ -223,7 +228,8 @@ h6,
   .header-contacts__phone-link {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--dark-color); }
+    color: var(--dark-color);
+    line-height: 1; }
     .header-contacts__phone-link:hover {
       color: var(--secondary-color); }
   .header-contacts__callback-btn {
