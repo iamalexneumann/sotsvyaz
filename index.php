@@ -29,6 +29,41 @@ $APPLICATION->SetTitle('Главная');
 
 <?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/features.php'); ?>
 
+<section class="main-section main-section_light-bg-color" id="services-list">
+    <div class="container">
+        <h2 class="main-section__title">Наши услуги</h2>
+        <?php
+        $APPLICATION->IncludeComponent(
+            "bitrix:catalog.section.list",
+            "services_list",
+            Array(
+                "ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
+                "ADD_SECTIONS_CHAIN" => "N",
+                "CACHE_FILTER" => "N",
+                "CACHE_GROUPS" => "Y",
+                "CACHE_TIME" => "36000000",
+                "CACHE_TYPE" => "A",
+                "COMPOSITE_FRAME_MODE" => "A",
+                "COMPOSITE_FRAME_TYPE" => "AUTO",
+                "COUNT_ELEMENTS" => "N",
+                "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
+                "FILTER_NAME" => "sectionsFilter",
+                "HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",
+                "IBLOCK_ID" => "3",
+                "IBLOCK_TYPE" => "primary_content",
+                "SECTION_CODE" => $_REQUEST["SECTION_CODE"],
+                "SECTION_FIELDS" => array("", ""),
+                "SECTION_ID" => "",
+                "SECTION_URL" => "",
+                "SECTION_USER_FIELDS" => array("UF_PREVIEW_TEXT", ""),
+                "SHOW_PARENT_NAME" => "Y",
+                "TOP_DEPTH" => "2",
+                "VIEW_MODE" => "LINE"
+            )
+        );?>
+    </div>
+</section>
+
 <section class="main-section">
     <div class="container">
         <?php
