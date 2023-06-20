@@ -657,4 +657,22 @@ h6,
     .share-section__subtitle span {
       display: block; }
 
+.features .features-item {
+  margin-bottom: 50px; }
+  .features .features-item__icon {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #2653F7, #3a35ce);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px; }
+  .features .features-item__title {
+    font-size: 1.75rem;
+    color: var(--dark-color);
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 30px; }
+    .features .features-item__title span {
+      display: block; }
+
 /*# sourceMappingURL=template_styles.css.map */

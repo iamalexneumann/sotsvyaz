@@ -941,3 +941,33 @@ h6,
 
   }
 }
+
+.features {
+  .features-item {
+    margin-bottom: 50px;
+    &__icon {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #2653F7, #3a35ce);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      font-size: 1.75rem;
+      color: var(--dark-color);
+      letter-spacing: -0.02em;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 30px;
+
+      span {
+        display: block;
+      }
+    }
+
+    &__text {
+
+    }
+  }
+}

@@ -27,7 +27,9 @@ $APPLICATION->SetTitle('Главная');
     </div>
 </div>
 
-<div class="main-section pb-0">
+<?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/features.php'); ?>
+
+<section class="main-section">
     <div class="container">
         <?php
         $APPLICATION->IncludeComponent(
@@ -38,7 +40,7 @@ $APPLICATION->SetTitle('Главная');
             )
         ); ?>
     </div>
-</div>
+</section>
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
 ?>
