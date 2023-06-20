@@ -13,8 +13,12 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 
 if (Cmodule::IncludeModule('asd.iblock')) {
     $iblock_ufs = CASDiblockTools::GetIBUF($arParams['IBLOCK_ID']);
-    $arResult['IBLOCK_SEO_TEXT_TOP'] = $iblock_ufs['UF_SEO_TEXT_TOP'] ?? '';
-    $arResult['IBLOCK_SEO_TEXT_BOTTOM'] = $iblock_ufs['UF_SEO_TEXT_BOTTOM'] ?? '';
+    $arResult['IBLOCK']['SEO_TEXT_TOP'] = $iblock_ufs['UF_SEO_TEXT_TOP'] ?? '';
+    $arResult['IBLOCK']['SEO_TEXT_BOTTOM'] = $iblock_ufs['UF_SEO_TEXT_BOTTOM'] ?? '';
+    $arResult['IBLOCK']['TITLE'] = $iblock_ufs['UF_TITLE'] ?? '';
+    $arResult['IBLOCK']['SUPTITLE'] = $iblock_ufs['UF_SUPTITLE'] ?? '';
+    $arResult['IBLOCK']['SUBTITLE'] = $iblock_ufs['UF_SUBTITLE'] ?? '';
+    $arResult['IBLOCK']['IMG'] = $iblock_ufs['UF_IMG'] ?? '';
 }
 
 $arResult['SECTION_UFS'] = get_section_ufs_from_url($arParams['IBLOCK_ID'], $APPLICATION->GetCurPage());
@@ -95,4 +99,38 @@ if ($item_picture) {
 
     $arResult['SECTION_UFS']['PICTURE'] = array_change_key_case($arItemPictureFileTmp, CASE_UPPER);
     $arResult['SECTION_UFS']['PICTURE_LQIP'] = array_change_key_case($arItemPictureLqipFileTmp, CASE_UPPER);
+}
+
+$iblock_picture = $arResult['IBLOCK']['IMG'];
+if ($iblock_picture) {
+    $arItemPictureFileTmp = \CFile::ResizeImageGet(
+        $iblock_picture,
+        [
+            'width' => 400,
+            'height' => 535,
+        ],
+        BX_RESIZE_IMAGE_EXACT,
+        true
+    );
+
+    $arItemPictureLqipFileTmp = \CFile::ResizeImageGet(
+        $iblock_picture,
+        [
+            'width' => 75,
+            'height' => 100,
+        ],
+        BX_RESIZE_IMAGE_EXACT,
+        true
+    );
+
+    if ($arItemPictureFileTmp['src']) {
+        $arItemPictureFileTmp['src'] = \CUtil::GetAdditionalFileURL($arItemPictureFileTmp['src'], true);
+    }
+
+    if ($arItemPictureLqipFileTmp['src']) {
+        $arItemPictureLqipFileTmp['src'] = \CUtil::GetAdditionalFileURL($arItemPictureLqipFileTmp['src'], true);
+    }
+
+    $arResult['IBLOCK']['PICTURE'] = array_change_key_case($arItemPictureFileTmp, CASE_UPPER);
+    $arResult['IBLOCK']['PICTURE_LQIP'] = array_change_key_case($arItemPictureLqipFileTmp, CASE_UPPER);
 }

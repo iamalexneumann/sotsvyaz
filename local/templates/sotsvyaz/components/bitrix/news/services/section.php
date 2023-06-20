@@ -54,6 +54,7 @@ use Bitrix\Main\Localization\Loc;
         </div>
     </div>
 </div>
+
 <?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/features.php'); ?>
 
 <section class="main-section main-section_light-bg-color" id="services-list">
