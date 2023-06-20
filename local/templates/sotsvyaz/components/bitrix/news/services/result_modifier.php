@@ -21,6 +21,7 @@ $arResult['SECTION_UFS'] = get_section_ufs_from_url($arParams['IBLOCK_ID'], $APP
 
 if ($arResult['VARIABLES']['ELEMENT_CODE']) {
     $section_arr = get_section_ufs_from_url($arParams['IBLOCK_ID'], $arResult['VARIABLES']['SECTION_CODE']);
+    $arResult['SECTION_NAME'] = $section_arr['NAME'];
 
     if ($arResult['VARIABLES']['SECTION_CODE']) {
         $section = get_section_ufs_from_url($arParams['IBLOCK_ID'], $arResult['VARIABLES']['SECTION_CODE']);

@@ -56,9 +56,12 @@ use Bitrix\Main\Localization\Loc;
 </div>
 <?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/features.php'); ?>
 
-<section class="main-section main-section_light-bg-color">
+<section class="main-section main-section_light-bg-color" id="services-list">
     <div class="container">
         <h2 class="main-section__title"><?= $arResult['SECTION_UFS']['UF_SECTION_TITLE'] ?: Loc::getMessage('SERVICES_SECTION_TITLE'); ?></h2>
+        <?php if ($arResult['SECTION_UFS']['UF_SECTION_SUBTITLE']): ?>
+        <div class="main-section__subtitle"><?= $arResult['SECTION_UFS']['UF_SECTION_SUBTITLE']; ?></div>
+        <?php endif; ?>
         <?php
         $APPLICATION->IncludeComponent(
             "bitrix:news.list",
