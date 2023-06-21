@@ -77,6 +77,8 @@ $APPLICATION->IncludeComponent(
 	),
 	$component
 ); ?>
+
+<?php /*
 <ul class="page-navigation">
     <?php if ($arResult['PREV_POST']): ?>
     <li class="page-navigation__item">
@@ -106,6 +108,12 @@ $APPLICATION->IncludeComponent(
     </li>
     <?php endif; ?>
 </ul>
+*/ ?>
+
+<?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/main_form.php'); ?>
+
+<?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/catalog_section.php'); ?>
+
 <section class="main-section main-section_light-bg-color mt-50">
     <div class="container">
         <h2 class="main-section__title"><?= Loc::getMessage('SERVICES_SECTION_TITLE'); ?></h2>
