@@ -755,4 +755,54 @@ h6,
       margin-right: 0;
       margin-bottom: 15px; } }
 
+.page-contacts {
+  display: flex;
+  align-items: center;
+  position: relative; }
+  @media (max-width: 991.98px) {
+    .page-contacts {
+      flex-direction: column-reverse; } }
+  .page-contacts__wrapper {
+    margin-bottom: 30px; }
+  .page-contacts__phone-link {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 30px; }
+  .page-contacts__address {
+    margin-bottom: 10px; }
+    .page-contacts__address .fa-solid {
+      margin-right: 5px; }
+  .page-contacts__schedule {
+    margin-bottom: 30px; }
+  .page-contacts__messengers {
+    margin-bottom: 30px; }
+    .page-contacts__messengers .messengers__item {
+      margin-bottom: 0;
+      margin-right: 15px; }
+      .page-contacts__messengers .messengers__item:last-of-type {
+        margin-right: 0; }
+    .page-contacts__messengers .messengers__link {
+      width: 50px;
+      height: 50px; }
+      .page-contacts__messengers .messengers__link::before {
+        font-size: 1.5rem !important; }
+  .page-contacts__email-link {
+    display: block;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--dark-color);
+    margin-bottom: 30px; }
+  .page-contacts__map {
+    flex-grow: 1;
+    width: 100%;
+    height: 600px;
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 0 auto; }
+    .page-contacts__map > ymaps {
+      border-radius: 8px;
+      overflow: hidden; }
+
 /*# sourceMappingURL=template_styles.css.map */

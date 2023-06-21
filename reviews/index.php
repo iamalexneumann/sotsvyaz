@@ -79,8 +79,36 @@ $APPLICATION->IncludeComponent(
         "VARIABLE_ALIASES" => Array(
             "ELEMENT_ID" => "ELEMENT_ID",
             "SECTION_ID" => "SECTION_ID"
-        )
+        ),
     )
 ); ?>
+
+<div class="main-section bg-none pb-0">
+    <header class="main-section__header">
+        <div class="main-section__wrapper">
+            <h2 class="main-section__title">Оставьте отзыв</h2>
+            <div class="main-section__subtitle">Напишите отзыв о работе наших инженеров</div>
+        </div>
+    </header
+    <?php
+    $APPLICATION->IncludeComponent(
+        "bitrix:main.feedback",
+        "main_feedback",
+        Array(
+            "COMPOSITE_FRAME_MODE" => "A",
+            "COMPOSITE_FRAME_TYPE" => "AUTO",
+            "EMAIL_TO" => 'info@1click-oz.ru',
+            "EVENT_MESSAGE_ID" => array("14"),
+            "OK_TEXT" => "Спасибо за отзыв! Он будет промодерирован и добавлен на сайт.",
+            "REQUIRED_FIELDS" => array("NAME", "MESSAGE"),
+            "USE_CAPTCHA" => "N",
+            "AJAX_MODE" => "Y",
+            "AJAX_OPTION_SHADOW" => "N",
+            "AJAX_OPTION_JUMP" => "N",
+            "AJAX_OPTION_STYLE" => "Y",
+            "AJAX_OPTION_HISTORY" => "N",
+        )
+    ); ?>
+</div>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
