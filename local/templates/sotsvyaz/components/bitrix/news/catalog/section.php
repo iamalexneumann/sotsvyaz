@@ -18,27 +18,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 $this->setFrameMode(true);
 use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\UI\Extension;
-
-if ($arResult['SECTION_UFS']['UF_SEO_TEXT_TOP'] || $arResult['SECTION_UFS']['UF_SEO_TEXT_BOTTOM']) {
-    Extension::load('ui.show_more');
-} ?>
-
-<?php if ($arResult['SECTION_UFS']['UF_SEO_TEXT_TOP']): ?>
-<div class="seo-text seo-text_top mb-5">
-    <?php
-    $APPLICATION->IncludeComponent(
-        "sprint.editor:blocks",
-        ".default",
-        Array(
-            "JSON" => $arResult['SECTION_UFS']['UF_SEO_TEXT_TOP'],
-        ),
-        $component,
-        Array(
-            "HIDE_ICONS" => "Y"
-        )
-    ); ?>
-</div>
-<?php endif; ?>
+?>
 
 <?php
 $APPLICATION->IncludeComponent(
@@ -109,7 +89,7 @@ $APPLICATION->IncludeComponent(
 ); ?>
 
 <?php if ($arResult['SECTION_UFS']['UF_SEO_TEXT_BOTTOM']): ?>
-<section class="seo-text seo-text_bottom mt-5">
+<section class="main-section pb-0">
     <?php
     $APPLICATION->IncludeComponent(
         "sprint.editor:blocks",
