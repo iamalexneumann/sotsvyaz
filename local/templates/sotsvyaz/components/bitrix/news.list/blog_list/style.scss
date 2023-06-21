@@ -10,15 +10,15 @@
     height: auto;
     background: var(--white-color);
     box-shadow: 0 50px 100px rgba(0,0,0,.1);
-    border-radius: 2px;
+    border-radius: 4px;
     margin-bottom: 30px;
     width: 100%;
 
     &__img-link {
       position: relative;
       overflow: hidden;
-      border-top-left-radius: 2px;
-      border-top-right-radius: 2px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
       flex-shrink: 0;
       z-index: 1;
 

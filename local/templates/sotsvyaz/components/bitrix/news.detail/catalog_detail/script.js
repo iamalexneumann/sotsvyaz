@@ -1,7 +1,7 @@
-function incrementValue(e) {
-    e.preventDefault();
-    let fieldName = e.target.getAttribute('data-field');
-    let parent = e.target.closest('div');
+function incrementValue(event) {
+    event.preventDefault();
+    let fieldName = event.target.getAttribute('data-field');
+    let parent = event.target.closest('div');
     let inputField = parent.querySelector('input[name="' + fieldName + '"]');
     let currentVal = parseInt(inputField.value, 10);
 
@@ -16,10 +16,10 @@ function incrementValue(e) {
     }
 }
 
-function decrementValue(e) {
-    e.preventDefault();
-    let fieldName = e.target.getAttribute('data-field');
-    let parent = e.target.closest('div');
+function decrementValue(event) {
+    event.preventDefault();
+    let fieldName = event.target.getAttribute('data-field');
+    let parent = event.target.closest('div');
     let inputField = parent.querySelector('input[name="' + fieldName + '"]');
     let currentVal = parseInt(inputField.value, 10);
 
@@ -55,11 +55,11 @@ document.querySelectorAll('.quantity').forEach(function(group) {
         }
     });
 
-    group.addEventListener('click', function(e) {
-        if (e.target.classList.contains('quantity__btn_plus')) {
-            incrementValue(e);
-        } else if (e.target.classList.contains('quantity__btn_minus')) {
-            decrementValue(e);
+    group.addEventListener('click', function(event) {
+        if (event.target.classList.contains('quantity__btn_plus')) {
+            incrementValue(event);
+        } else if (event.target.classList.contains('quantity__btn_minus')) {
+            decrementValue(event);
         }
     });
 });
@@ -67,8 +67,8 @@ document.querySelectorAll('.quantity').forEach(function(group) {
 let orderButton = document.querySelector('.catalog-detail__btn-order');
 let cartModal = new bootstrap.Modal('#cartModal');
 
-orderButton.addEventListener('click', (e) => {
-    e.preventDefault();
+orderButton.addEventListener('click', (event) => {
+    event.preventDefault();
     let productId = orderButton.dataset.productId;
     let productQuanity = document.querySelector('.catalog-detail__quantity .quantity__field').value;
 

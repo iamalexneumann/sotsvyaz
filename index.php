@@ -64,6 +64,8 @@ $APPLICATION->SetTitle('Главная');
     </div>
 </section>
 
+<?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/main_form.php'); ?>
+
 <section class="main-section">
     <div class="container">
         <?php

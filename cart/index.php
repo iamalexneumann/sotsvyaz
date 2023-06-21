@@ -6,7 +6,7 @@ $APPLICATION->SetTitle("Корзина");
 <?php
 $APPLICATION->IncludeComponent(
     "vladrix:basket.page",
-    "",
+    "basket_page",
     Array(
         "ADDRESS_AS_ONE_FIELD" => "Y",
         "ADDRESS_FIELDS" => array("CITY,STREET,HOUSE,PORCH,FLOOR,FLAT"),

@@ -97,7 +97,7 @@ $more_photos = $arResult['PROPERTIES']['MORE_PHOTO'];
             </header>
             */ ?>
             <div class="catalog-detail__price price">
-                <div class="price__title">Цена:</div>
+                <div class="price__title"><?= Loc::getMessage('CATALOG_DETAIL_PRICE_TITLE'); ?></div>
                 <div class="price__val"><?= $arResult['DISPLAY_PROPERTIES']['ATT_PRICE']['VALUE'] . ' ' . Loc::getMessage('CATALOG_DETAIL_CURRENCY'); ?></div>
             </div>
             <div class="catalog-detail__btns">
