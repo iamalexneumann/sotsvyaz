@@ -217,40 +217,49 @@ h6,
         font-size: 1.25rem; } }
 
 .header-contacts {
-  display: flex;
-  align-items: center;
   margin-left: 15px; }
   @media (max-width: 1199.98px) {
     .header-contacts {
-      margin-left: 0; } }
-  @media (max-width: 767.98px) {
-    .header-contacts {
-      flex-direction: column;
-      align-items: flex-start; } }
-  .header-contacts__wrapper {
-    flex-shrink: 0;
+      margin-left: 0;
+      display: flex;
+      flex-direction: column-reverse; } }
+  .header-contacts__nav-wrapper {
+    margin-bottom: 10px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-right: 15px; }
-    @media (max-width: 767.98px) {
-      .header-contacts__wrapper {
-        margin-right: 0;
-        margin-bottom: 15px; } }
+    justify-content: flex-end; }
+    @media (max-width: 1199.98px) {
+      .header-contacts__nav-wrapper {
+        justify-content: flex-start;
+        margin-bottom: 0;
+        margin-top: 15px; } }
+  .header-contacts__contacts-wrapper {
+    display: flex;
+    align-items: center; }
   .header-contacts__phone-link {
+    flex-shrink: 0;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--dark-color);
-    line-height: 1; }
+    line-height: 1;
+    margin-right: 15px; }
     .header-contacts__phone-link:hover {
       color: var(--secondary-color); }
   .header-contacts__callback-btn {
     padding: 0;
     border: none;
-    color: var(--primary-color);
-    margin-top: 3px; }
+    color: var(--secondary-color);
+    margin-right: 15px; }
     .header-contacts__callback-btn:hover {
-      color: var(--primary-color-hover); }
+      color: var(--secondary-color-hover); }
+  .header-contacts__cart-link {
+    font-weight: 600;
+    letter-spacing: .05em;
+    font-size: 14px;
+    color: var(--secondary-color); }
+    .header-contacts__cart-link:hover {
+      color: var(--secondary-color-hover); }
+    .header-contacts__cart-link .fa-solid {
+      margin-right: 3px; }
   .header-contacts__schedule {
     font-size: var(--font-size-small);
     color: var(--gray-color);

@@ -123,35 +123,39 @@ $services_patterns = [
                         ); ?>
                     </div>
                     <div class="main-header__contacts header-contacts">
-                        <div class="header-contacts__wrapper">
-                            <a class="header-contacts__phone-link" href="tel:<?= $siteparam_main_phone_tel; ?>"
-                               title="<?= Loc::getMessage('HEADER_MAIN_PHONE_TITLE'); ?>"><?= $siteparam_main_phone; ?></a>
+                        <div class="header-contacts__nav-wrapper">
                             <button type="button"
                                     class="btn header-contacts__callback-btn"
                                     data-bs-toggle="modal"
                                     data-bs-target="#callbackModal"
                                     data-bs-modal-title="<?= Loc::getMessage('CALLBACK_MODAL_TITLE') ?>"><?= Loc::getMessage('HEADER_CALLBACK_BTN_TEXT'); ?></button>
+                            <a href="/cart/" class="header-contacts__cart-link"><i class="fa-solid fa-cart-shopping"></i> Корзина</a>
                         </div>
-                        <?php if ($siteparam_whatsapp_number || $siteparam_telegram_link): ?>
+                        <div class="header-contacts__contacts-wrapper">
+                            <a class="header-contacts__phone-link" href="tel:<?= $siteparam_main_phone_tel; ?>"
+                               title="<?= Loc::getMessage('HEADER_MAIN_PHONE_TITLE'); ?>"><?= $siteparam_main_phone; ?></a>
+
+                            <?php if ($siteparam_whatsapp_number || $siteparam_telegram_link): ?>
                             <ul class="header-contacts__messengers messengers">
                                 <?php if ($siteparam_telegram_link): ?>
-                                    <li class="messengers__item">
-                                        <a href="<?= $siteparam_telegram_link; ?>"
-                                           target="_blank"
-                                           class="messengers__link messengers__link_telegram"
-                                           title="<?= Loc::getMessage('HEADER_MESSENGERS_TELEGRAM_TITLE'); ?>">Telegram</a>
-                                    </li>
+                                <li class="messengers__item">
+                                    <a href="<?= $siteparam_telegram_link; ?>"
+                                       target="_blank"
+                                       class="messengers__link messengers__link_telegram"
+                                       title="<?= Loc::getMessage('HEADER_MESSENGERS_TELEGRAM_TITLE'); ?>">Telegram</a>
+                                </li>
                                 <?php endif; ?>
                                 <?php if ($siteparam_whatsapp_number): ?>
-                                    <li class="messengers__item">
-                                        <a href="https://wa.me/<?php echo $siteparam_whatsapp_number_tel; echo $siteparam_whatsapp_message ?: '' ?>"
-                                           target="_blank"
-                                           class="messengers__link messengers__link_whatsapp"
-                                           title="<?= Loc::getMessage('HEADER_MESSENGERS_WHATSAPP_TITLE'); ?>">WhatsApp</a>
-                                    </li>
+                                <li class="messengers__item">
+                                    <a href="https://wa.me/<?php echo $siteparam_whatsapp_number_tel; echo $siteparam_whatsapp_message ?: '' ?>"
+                                       target="_blank"
+                                       class="messengers__link messengers__link_whatsapp"
+                                       title="<?= Loc::getMessage('HEADER_MESSENGERS_WHATSAPP_TITLE'); ?>">WhatsApp</a>
+                                </li>
                                 <?php endif; ?>
                             </ul>
-                        <?php endif; ?>
+                            <?php endif; ?>
+                        </div>
                     </div>
             </div>
         </nav>
