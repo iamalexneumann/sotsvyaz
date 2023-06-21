@@ -49,13 +49,13 @@ ErrorDocument 404 /404.php
 
   Redirect 301 /tovary/ https://sotsvyaz.ru/catalog/
 
-  # Redirect 301 /internet/
-  # Redirect 301 /linearamplifiers/
-  # Redirect 301 /cables/
-  # Redirect 301 /repeaters/
-  # Redirect 301 /connectors/
-  # Redirect 301 /splitters/
-  # Redirect 301 /antennas/
+  Redirect 301 /internet/ https://sotsvyaz.ru/catalog/usiliteli-interneta/
+  Redirect 301 /linearamplifiers/ https://sotsvyaz.ru/catalog/lineynye-usiliteli/
+  Redirect 301 /cables/ https://sotsvyaz.ru/catalog/kabeli/
+  Redirect 301 /repeaters/ https://sotsvyaz.ru/catalog/repitery/
+  Redirect 301 /connectors/ https://sotsvyaz.ru/catalog/razemy/
+  Redirect 301 /splitters/ https://sotsvyaz.ru/catalog/razvetviteli/
+  Redirect 301 /antennas/ https://sotsvyaz.ru/catalog/antenny/
 
   Redirect 301 /stati/ https://sotsvyaz.ru/blog/
 
