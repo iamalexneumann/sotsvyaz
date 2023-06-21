@@ -175,7 +175,10 @@ $APPLICATION->IncludeComponent(
                 "USE_FILTER" => "Y",
                 "FILTER_NAME" => "servicesFilter",
             ),
-            $component
+            $component,
+            Array(
+                "HIDE_ICONS" => "Y"
+            )
         ); ?>
         <div class="main-section__btn-wrapper">
             <a href="<?= $arResult['FOLDER'] . $arResult['VARIABLES']['SECTION_CODE']; ?>/#services-list"

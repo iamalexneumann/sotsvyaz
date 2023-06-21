@@ -6,7 +6,7 @@ $APPLICATION->SetTitle("Каталог");
 <?php
 $APPLICATION->IncludeComponent(
     "bitrix:news",
-    ".default_simple",
+    "catalog",
     Array(
         "ADD_ELEMENT_CHAIN" => "Y",
         "ADD_SECTIONS_CHAIN" => "Y",
@@ -40,7 +40,7 @@ $APPLICATION->IncludeComponent(
         "DISPLAY_TOP_PAGER" => "N",
         "HIDE_LINK_WHEN_NO_DETAIL" => "N",
         "IBLOCK_ID" => "4",
-        "IBLOCK_TYPE" => "primary_content",
+        "IBLOCK_TYPE" => "catalog",
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
         "LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
         "LIST_FIELD_CODE" => array("", ""),

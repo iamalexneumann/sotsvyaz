@@ -139,10 +139,22 @@ h6,
   --bs-btn-disabled-color: var(--primary-color); }
 
 .mt-50 {
-  margin-top: 50px; }
+  margin-top: 50px !important; }
 
 .mt-80 {
-  margin-top: 80px; }
+  margin-top: 80px !important; }
+
+.mt-100 {
+  margin-top: 100px !important; }
+
+.mb-50 {
+  margin-bottom: 50px !important; }
+
+.mb-80 {
+  margin-bottom: 80px !important; }
+
+.mb-100 {
+  margin-bottom: 100px !important; }
 
 .footer-logo {
   display: flex;
@@ -602,7 +614,7 @@ h6,
 
 .figure-media {
   border-radius: 4px;
-  width: 700px;
+  max-width: 700px;
   margin: 0 auto 30px; }
   .figure-media_float-left {
     width: 400px;
@@ -681,5 +693,57 @@ h6,
     margin-bottom: 30px; }
     .features .features-item__title span {
       display: block; }
+
+.table {
+  --bs-table-border-color: var(--border-color);
+  --bs-table-color: var(--gray-color); }
+  .table th {
+    color: var(--dark-color); }
+
+.quantity {
+  display: flex;
+  align-items: center;
+  border-radius: 2px; }
+  .quantity__btn {
+    width: 47px;
+    height: 47px;
+    padding: 0;
+    border: none;
+    background: var(--light-bg-color);
+    font-weight: 600;
+    color: var(--dark-color); }
+    .quantity__btn:hover {
+      background: #dedede;
+      color: var(--dark-color); }
+  .quantity__field {
+    width: 47px;
+    text-align: center;
+    height: 47px;
+    border: none;
+    background: var(--light-bg-color); }
+    .quantity__field:focus {
+      outline: none; }
+    .quantity__field::-webkit-outer-spin-button, .quantity__field::-webkit-inner-spin-button {
+      /* display: none; <- Crashes Chrome on hover */
+      -webkit-appearance: none;
+      margin: 0; }
+    .quantity__field[type=number] {
+      -moz-appearance: textfield; }
+
+.cart-modal__btns {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0; }
+  @media (max-width: 575.98px) {
+    .cart-modal__btns {
+      padding: 15px;
+      align-items: stretch;
+      flex-direction: column; } }
+.cart-modal__btn-close {
+  margin-right: 15px; }
+  @media (max-width: 575.98px) {
+    .cart-modal__btn-close {
+      margin-right: 0;
+      margin-bottom: 15px; } }
 
 /*# sourceMappingURL=template_styles.css.map */

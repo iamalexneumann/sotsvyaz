@@ -148,11 +148,27 @@ h6,
 }
 
 .mt-50 {
-  margin-top: 50px;
+  margin-top: 50px !important;
 }
 
 .mt-80 {
-  margin-top: 80px;
+  margin-top: 80px !important;
+}
+
+.mt-100 {
+  margin-top: 100px !important;
+}
+
+.mb-50 {
+  margin-bottom: 50px !important;
+}
+
+.mb-80 {
+  margin-bottom: 80px !important;
+}
+
+.mb-100 {
+  margin-bottom: 100px !important;
 }
 
 //.blur-up {
@@ -865,7 +881,7 @@ h6,
 
 .figure-media {
   border-radius: 4px;
-  width: 700px;
+  max-width: 700px;
 
   margin: 0 auto 30px;
 
@@ -985,5 +1001,93 @@ h6,
     &__text {
 
     }
+  }
+}
+
+.table {
+  --bs-table-border-color: var(--border-color);
+  --bs-table-color: var(--gray-color);
+
+  th {
+    color: var(--dark-color);
+  }
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+
+  &__btn {
+    width: 47px;
+    height: 47px;
+    padding: 0;
+    border: none;
+    background: var(--light-bg-color);
+    font-weight: 600;
+    color: var(--dark-color);
+
+    &:hover {
+      background: #f7f7f7 * 0.9;
+      color: var(--dark-color);
+    }
+
+    &_minus {
+
+    }
+
+    &_plus {
+
+    }
+  }
+  &__field {
+    width: 47px;
+    text-align: center;
+    height: 47px;
+    border: none;
+    background: var(--light-bg-color);
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      /* display: none; <- Crashes Chrome on hover */
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &[type=number] {
+      -moz-appearance:textfield;
+    }
+  }
+}
+
+.cart-modal {
+  &__btns {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+
+
+    @media (max-width: 575.98px) {
+      padding: 15px;
+      align-items: stretch;
+      flex-direction: column;
+    }
+  }
+
+  &__btn-close {
+    margin-right: 15px;
+
+    @media (max-width: 575.98px) {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__btn-cart {
+
   }
 }

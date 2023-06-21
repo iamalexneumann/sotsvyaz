@@ -169,5 +169,24 @@ $patterns = [
             </div>
         </div>
     </div>
+
+    <div class="modal cart-modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title"><?= Loc::getMessage('CART_MODAL_TITLE'); ?></div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="<?= Loc::getMessage('BTN_CLOSE_LABEL'); ?>">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="cart-modal__btns">
+                        <button type="button" class="btn btn-sm btn-outline-primary cart-modal__btn-close" data-bs-dismiss="modal"><?= Loc::getMessage('CART_MODAL_BTN_CLOSE_TEXT'); ?></button>
+                        <a href="/cart/" class="btn btn-sm btn-primary cart-modal__btn-cart"><?= Loc::getMessage('CART_MODAL_BTN_CART_TEXT'); ?></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

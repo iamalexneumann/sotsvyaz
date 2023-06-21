@@ -12,3 +12,6 @@ $MESS['FOOTER_COPYRIGHT_PRIVACY_LINK_TEXT'] = 'Политика конфиден
 $MESS['FOOTER_COPYRIGHT_SITEMAP_LINK_TEXT'] = 'Карта сайта';
 
 $MESS['MODAL_FORM_OK_TEXT'] = 'Спасибо. Мы перезвоним Вам в течение дня!';
+$MESS['CART_MODAL_TITLE'] = 'Товар добавлен в корзину';
+$MESS['CART_MODAL_BTN_CLOSE_TEXT'] = 'Продолжить покупки';
+$MESS['CART_MODAL_BTN_CART_TEXT'] = 'Перейти в корзину';
