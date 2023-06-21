@@ -34,10 +34,10 @@ figure {
 
 a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   transition: all .25s ease-in-out; }
   a:hover {
-    color: var(--primary-color-hover); }
+    color: var(--secondary-color-hover); }
 
 h1,
 .h1,
@@ -475,7 +475,7 @@ h6,
     font-family: "Proxima Nova Lt", Arial, serif;
     font-size: 1.25rem;
     font-weight: 300;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     max-width: 800px;
     margin: 0 auto 20px; }
   .main-section__subtitle {
