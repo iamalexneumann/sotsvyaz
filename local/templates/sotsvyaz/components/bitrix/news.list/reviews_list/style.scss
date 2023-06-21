@@ -1,0 +1,31 @@
+.reviews-list {
+  &__item {
+    margin-bottom: 50px;
+  }
+
+  &__header {
+    margin-bottom: 10px;
+    color: var(--dark-color);
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 1.375rem;
+  }
+
+  &__date {
+    color: var(--gray-color);
+    font-size: var(--font-size-small);
+  }
+
+  &__text {
+
+  }
+
+  &__img-link {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 10px;
+    border: 1px solid var(--border-color);
+  }
+}

@@ -6,7 +6,7 @@ $APPLICATION->SetTitle("Отзывы");
 <?php
 $APPLICATION->IncludeComponent(
     "bitrix:news",
-    ".default_very_simple",
+    "reviews",
     Array(
         "ADD_ELEMENT_CHAIN" => "N",
         "ADD_SECTIONS_CHAIN" => "N",
@@ -44,7 +44,7 @@ $APPLICATION->IncludeComponent(
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
         "LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
         "LIST_FIELD_CODE" => array("", ""),
-        "LIST_PROPERTY_CODE" => array("ATT_DATE", "PREVIEW_TEXT", ""),
+        "LIST_PROPERTY_CODE" => array("ATT_DATE", "ATT_PREVIEW_TEXT", ""),
         "MESSAGE_404" => "",
         "META_DESCRIPTION" => "-",
         "META_KEYWORDS" => "-",
@@ -64,8 +64,8 @@ $APPLICATION->IncludeComponent(
         "SHOW_404" => "N",
         "SHOW_FORM_BLOCK" => "N",
         "SMALL_CARD_TAG_TITLE" => "2",
-        "SORT_BY1" => "ACTIVE_FROM",
-        "SORT_BY2" => "SORT",
+        "SORT_BY1" => "property_ATT_DATE",
+        "SORT_BY2" => "ACTIVE_FROM",
         "SORT_ORDER1" => "DESC",
         "SORT_ORDER2" => "ASC",
         "STRICT_SECTION_CHECK" => "N",
