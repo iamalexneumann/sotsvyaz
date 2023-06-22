@@ -4,9 +4,11 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 }
 use Bitrix\Main\Localization\Loc;
 ?>
-<div class="main-section main-section_light-bg-color">
+<section class="main-section main-section_light-bg-color">
     <div class="container">
-        <h2 class="main-section__title"><?= Loc::getMessage('REVIEWS_SECTION_TITLE'); ?></h2>
+        <header class="main-section__header">
+            <h2 class="main-section__title"><?= Loc::getMessage('REVIEWS_SECTION_TITLE'); ?></h2>
+        </header>
         <?php
         $APPLICATION->IncludeComponent(
             "bitrix:news",
@@ -86,8 +88,8 @@ use Bitrix\Main\Localization\Loc;
                 ),
             )
         ); ?>
-        <div class="text-center">
-            <a href="/reviews/" class="btn btn-sm btn-outline-primary">Все отзывы</a>
-        </div>
+        <footer class="main-section__footer">
+            <a href="/reviews/" class="btn btn-sm btn-outline-primary"><?= Loc::getMessage('REVIEWS_SECTION_CATALOG_BTN'); ?></a>
+        </footer>
     </div>
-</div>
+</section>

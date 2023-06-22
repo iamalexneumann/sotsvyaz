@@ -26,13 +26,15 @@ use Bitrix\Main\Localization\Loc;
                 $helper = new PHPInterface\ComponentHelper($component);
                 $helper->deferredCall('ShowNavChain', array('breadcrumb'));
                 ?>
-                <?php if ($arResult['SECTION_UFS']['UF_SUPTITLE']): ?>
-                <div class="first-screen__suptitle"><?= $arResult['SECTION_UFS']['UF_SUPTITLE']; ?></div>
-                <?php endif; ?>
-                <h1 class="first-screen__title"><?= $arResult['SECTION_UFS']['UF_TITLE']?: $arResult['SECTION_UFS']['NAME']; ?></h1>
-                <?php if ($arResult['SECTION_UFS']['UF_SUBTITLE']): ?>
-                <div class="first-screen__subtitle"><?= $arResult['SECTION_UFS']['UF_SUBTITLE']; ?></div>
-                <?php endif; ?>
+                <header class="first-screen__header">
+                    <?php if ($arResult['SECTION_UFS']['UF_SUPTITLE']): ?>
+                    <div class="first-screen__suptitle"><?= $arResult['SECTION_UFS']['UF_SUPTITLE']; ?></div>
+                    <?php endif; ?>
+                    <h1 class="first-screen__title"><?= $arResult['SECTION_UFS']['UF_TITLE']?: $arResult['SECTION_UFS']['NAME']; ?></h1>
+                    <?php if ($arResult['SECTION_UFS']['UF_SUBTITLE']): ?>
+                    <div class="first-screen__subtitle"><?= $arResult['SECTION_UFS']['UF_SUBTITLE']; ?></div>
+                    <?php endif; ?>
+                </header>
                 <button type="button"
                         class="btn btn-success first-screen__btn"
                         data-bs-toggle="modal"
@@ -59,10 +61,12 @@ use Bitrix\Main\Localization\Loc;
 
 <section class="main-section main-section_light-bg-color" id="services-list">
     <div class="container">
-        <h2 class="main-section__title"><?= $arResult['SECTION_UFS']['UF_SECTION_TITLE'] ?: Loc::getMessage('SERVICES_SECTION_TITLE'); ?></h2>
-        <?php if ($arResult['SECTION_UFS']['UF_SECTION_SUBTITLE']): ?>
-        <div class="main-section__subtitle"><?= $arResult['SECTION_UFS']['UF_SECTION_SUBTITLE']; ?></div>
-        <?php endif; ?>
+        <header class="main-section__header">
+            <h2 class="main-section__title"><?= $arResult['SECTION_UFS']['UF_SECTION_TITLE'] ?: Loc::getMessage('SERVICES_SECTION_TITLE'); ?></h2>
+            <?php if ($arResult['SECTION_UFS']['UF_SECTION_SUBTITLE']): ?>
+            <div class="main-section__subtitle"><?= $arResult['SECTION_UFS']['UF_SECTION_SUBTITLE']; ?></div>
+            <?php endif; ?>
+        </header>
         <?php
         $APPLICATION->IncludeComponent(
             "bitrix:news.list",

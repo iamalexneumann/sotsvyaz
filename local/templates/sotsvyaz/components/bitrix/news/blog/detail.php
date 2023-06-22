@@ -118,8 +118,10 @@ use Bitrix\Main\Localization\Loc;
 </div>
 <section class="main-section main-section_light-bg-color mt-50">
     <div class="container">
-        <h2 class="main-section__title"><?= Loc::getMessage('BLOG_SECTION_TITLE'); ?></h2>
-        <div class="main-section__subtitle"><?= Loc::getMessage('BLOG_SECTION_SUBTITLE'); ?></div>
+        <header class="main-section__header">
+            <h2 class="main-section__title"><?= Loc::getMessage('BLOG_SECTION_TITLE'); ?></h2>
+            <div class="main-section__subtitle"><?= Loc::getMessage('BLOG_SECTION_SUBTITLE'); ?></div>
+        </header>
         <?php
         $GLOBALS['blogFilter'] = [
             '!CODE' => $arResult["VARIABLES"]["ELEMENT_CODE"]
@@ -190,9 +192,9 @@ use Bitrix\Main\Localization\Loc;
                 "HIDE_ICONS" => "Y"
             )
         ); ?>
-        <div class="main-section__btn-wrapper">
+        <footer class="main-section__footer">
             <a href="<?= $arResult['FOLDER'] . $arResult['URL_TEMPLATES']['news']; ?>"
                class="btn btn-outline-primary main-section__btn"><?= Loc::getMessage('BLOG_SECTION_BTN_TEXT'); ?></a>
-        </div>
+        </footer>
     </div>
 </section>

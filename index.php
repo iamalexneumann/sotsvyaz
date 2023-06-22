@@ -6,9 +6,11 @@ $APPLICATION->SetTitle('Главная');
     <div class="container">
         <div class="row">
             <div class="first-screen__content col-lg-8">
-                <div class="first-screen__suptitle">Оставайтесь на связи и под наблюдением с нашей компанией!</div>
-                <h1 class="first-screen__title">Усиление сигнала сотовой связи <span>и монтаж систем видеонаблюдения</span></h1>
-                <div class="first-screen__subtitle">Профессиональные услуги для обеспечения надежной связи <span>и контроля за безопасностью в любом месте.</span></div>
+                <header class="first-screen__header">
+                    <div class="first-screen__suptitle">Оставайтесь на связи и под наблюдением с нашей компанией!</div>
+                    <h1 class="first-screen__title">Усиление сигнала сотовой связи <span>и монтаж систем видеонаблюдения</span></h1>
+                    <div class="first-screen__subtitle">Профессиональные услуги для обеспечения надежной связи <span>и контроля за безопасностью в любом месте.</span></div>
+                </header>
                 <button type="button"
                         class="btn btn-success first-screen__btn"
                         data-bs-toggle="modal"
@@ -31,7 +33,9 @@ $APPLICATION->SetTitle('Главная');
 
 <section class="main-section main-section_light-bg-color" id="services-list">
     <div class="container">
-        <h2 class="main-section__title">Наши услуги</h2>
+        <header class="main-section__header">
+            <h2 class="main-section__title">Наши услуги</h2>
+        </header>
         <?php
         $APPLICATION->IncludeComponent(
             "bitrix:catalog.section.list",

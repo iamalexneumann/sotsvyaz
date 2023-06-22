@@ -40,7 +40,7 @@ $param_form_position = $arParams['FORM_POSITION'] ?? '3';
         );
     ?>
     <div class="col-lg-6 services-list__col">
-        <article class="services-item" id="<?= $this->GetEditAreaId($arItem['ID']) ;?>">
+        <article class="services-item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
             <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>"
                class="services-item__img-link"
                title="<?= $arItem['NAME']; ?>"
@@ -50,11 +50,14 @@ $param_form_position = $arParams['FORM_POSITION'] ?? '3';
                      class="services-item__img lazyload blur-up"
                      alt="<?= $arItem['NAME']; ?>"
                      width="<?= $arItem['PICTURE']['WIDTH']; ?>"
-                     height="<?= $arItem['PICTURE']['HEIGHT']; ?>"></a>
+                     height="<?= $arItem['PICTURE']['HEIGHT']; ?>">
+            </a>
             <div class="services-item__wrapper">
-                <h<?=$param_small_card_tag_title; ?> class="services-item__title">
-                    <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>" class="services-item__link"><?= $arItem['NAME']; ?></a>
-                </h<?=$param_small_card_tag_title; ?>>
+                <header class="services-item__header">
+                    <h<?=$param_small_card_tag_title; ?> class="services-item__title">
+                        <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>" class="services-item__link"><?= $arItem['NAME']; ?></a>
+                    </h<?=$param_small_card_tag_title; ?>>
+                </header>
                 <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>"
                    rel="nofollow"
                    class="btn btn-sm btn-outline-primary services-item__btn"><?= Loc::getMessage('SERVICES_LIST_BTN_MORE_TEXT'); ?></a>

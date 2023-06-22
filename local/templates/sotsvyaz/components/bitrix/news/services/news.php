@@ -29,13 +29,15 @@ use Bitrix\Main\UI\Extension;
                 $helper = new PHPInterface\ComponentHelper($component);
                 $helper->deferredCall('ShowNavChain', array('breadcrumb'));
                 ?>
-                <?php if ($arResult['IBLOCK']['SUPTITLE']): ?>
-                <div class="first-screen__suptitle"><?= $arResult['IBLOCK']['SUPTITLE']; ?></div>
-                <?php endif; ?>
-                <h1 class="first-screen__title"><?= $arResult['IBLOCK']['TITLE']; ?></h1>
-                <?php if ($arResult['IBLOCK']['SUBTITLE']): ?>
-                <div class="first-screen__subtitle"><?= $arResult['IBLOCK']['SUBTITLE']; ?></div>
-                <?php endif; ?>
+                <header class="first-screen__header">
+                    <?php if ($arResult['IBLOCK']['SUPTITLE']): ?>
+                    <div class="first-screen__suptitle"><?= $arResult['IBLOCK']['SUPTITLE']; ?></div>
+                    <?php endif; ?>
+                    <h1 class="first-screen__title"><?= $arResult['IBLOCK']['TITLE']; ?></h1>
+                    <?php if ($arResult['IBLOCK']['SUBTITLE']): ?>
+                    <div class="first-screen__subtitle"><?= $arResult['IBLOCK']['SUBTITLE']; ?></div>
+                    <?php endif; ?>
+                </header>
                 <button type="button"
                         class="btn btn-success first-screen__btn"
                         data-bs-toggle="modal"
@@ -62,7 +64,9 @@ use Bitrix\Main\UI\Extension;
 
 <section class="main-section main-section_light-bg-color" id="services-list">
     <div class="container">
-        <h2 class="main-section__title"><?= Loc::getMessage('SERVICES_SECTION_TITLE'); ?></h2>
+        <header class="main-section__header">
+            <h2 class="main-section__title"><?= Loc::getMessage('SERVICES_SECTION_TITLE'); ?></h2>
+        </header>
         <?php
         $APPLICATION->IncludeComponent(
             "bitrix:catalog.section.list",

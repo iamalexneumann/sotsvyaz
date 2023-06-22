@@ -35,7 +35,7 @@ $more_photos = $arResult['PROPERTIES']['MORE_PHOTO'];
                 </div>
                 <?php endif; ?>
 
-                <div class="carousel-inner">
+                <figure class="carousel-inner">
                     <div class="carousel-item active">
                         <a href="<?= $arResult['DETAIL_PICTURE']['SRC']; ?>"
                            class="carousel__img-link"
@@ -72,7 +72,7 @@ $more_photos = $arResult['PROPERTIES']['MORE_PHOTO'];
                         endforeach;
                     endif;
                     ?>
-                </div>
+                </figure>
 
                 <?php if ($more_photos['VALUE']): ?>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct" data-bs-slide="prev">

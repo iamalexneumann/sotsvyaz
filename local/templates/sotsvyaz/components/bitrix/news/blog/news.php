@@ -20,10 +20,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 $this->setFrameMode(true);
 use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\UI\Extension;
-
-if ($arResult['IBLOCK_SEO_TEXT_TOP'] || $arResult['IBLOCK_SEO_TEXT_BOTTOM']) {
-    Extension::load('ui.show_more');
-} ?>
+?>
 
 <?php if ($arResult['IBLOCK_SEO_TEXT_TOP']): ?>
 <div class="seo-text seo-text_top mb-5">

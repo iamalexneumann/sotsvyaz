@@ -32,13 +32,13 @@ use Bitrix\Main\Localization\Loc;
             ]
         );
     ?>
-    <div class="reviews-list__item" id="<?= $this->GetEditAreaId($arItem['ID']) ;?>">
-        <div class="reviews-list__header">
+    <div class="reviews-list__item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+        <header class="reviews-list__header">
             <time datetime="<?= $arItem['DATETIME']; ?>" class="reviews-list__date">
                 <?= $arItem['DATE'] . ' ' . Loc::getMessage('REVIEWS_LIST_DATE_Y'); ?>
             </time>
             <div class="reviews-list__name"><?= $arItem['NAME']; ?></div>
-        </div>
+        </header>
         <?php if ($arItem['DISPLAY_PROPERTIES']['ATT_PREVIEW_TEXT']['~VALUE']): ?>
         <div class="reviews-list__text">
             <?php

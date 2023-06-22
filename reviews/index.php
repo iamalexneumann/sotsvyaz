@@ -83,13 +83,9 @@ $APPLICATION->IncludeComponent(
     )
 ); ?>
 
-<div class="main-section bg-none pb-0">
-    <header class="main-section__header">
-        <div class="main-section__wrapper">
-            <h2 class="main-section__title">Оставьте отзыв</h2>
-            <div class="main-section__subtitle">Напишите отзыв о работе наших инженеров</div>
-        </div>
-    </header
+<div class="feedback-section">
+    <div class="feedback-section__title">Оставьте отзыв</div>
+    <div class="feedback-section__subtitle">Напишите отзыв о работе наших инженеров</div>
     <?php
     $APPLICATION->IncludeComponent(
         "bitrix:main.feedback",
@@ -97,7 +93,7 @@ $APPLICATION->IncludeComponent(
         Array(
             "COMPOSITE_FRAME_MODE" => "A",
             "COMPOSITE_FRAME_TYPE" => "AUTO",
-            "EMAIL_TO" => 'info@1click-oz.ru',
+            "EMAIL_TO" => $siteparam_email,
             "EVENT_MESSAGE_ID" => array("14"),
             "OK_TEXT" => "Спасибо за отзыв! Он будет промодерирован и добавлен на сайт.",
             "REQUIRED_FIELDS" => array("NAME", "MESSAGE"),

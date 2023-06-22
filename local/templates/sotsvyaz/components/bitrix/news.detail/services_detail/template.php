@@ -30,13 +30,15 @@ use Bitrix\Main\Localization\Loc;
                     $helper = new PHPInterface\ComponentHelper($component);
                     $helper->deferredCall('ShowNavChain', array('breadcrumb'));
                     ?>
-                    <?php if ($arResult['DISPLAY_PROPERTIES']['ATT_SUPTITLE']['~VALUE']): ?>
-                    <div class="first-screen__suptitle"><?= $arResult['DISPLAY_PROPERTIES']['ATT_SUPTITLE']['~VALUE']; ?></div>
-                    <?php endif; ?>
-                    <h1 class="first-screen__title"><?= $arResult['DISPLAY_PROPERTIES']['ATT_TITLE']['~VALUE'] ?: $arResult['NAME']; ?></h1>
-                    <?php if ($arResult['DISPLAY_PROPERTIES']['ATT_SUBTITLE']['~VALUE']): ?>
-                    <div class="first-screen__subtitle"><?= $arResult['DISPLAY_PROPERTIES']['ATT_SUBTITLE']['~VALUE']; ?></div>
-                    <?php endif; ?>
+                    <header class="first-screen__header">
+                        <?php if ($arResult['DISPLAY_PROPERTIES']['ATT_SUPTITLE']['~VALUE']): ?>
+                        <div class="first-screen__suptitle"><?= $arResult['DISPLAY_PROPERTIES']['ATT_SUPTITLE']['~VALUE']; ?></div>
+                        <?php endif; ?>
+                        <h1 class="first-screen__title"><?= $arResult['DISPLAY_PROPERTIES']['ATT_TITLE']['~VALUE'] ?: $arResult['NAME']; ?></h1>
+                        <?php if ($arResult['DISPLAY_PROPERTIES']['ATT_SUBTITLE']['~VALUE']): ?>
+                        <div class="first-screen__subtitle"><?= $arResult['DISPLAY_PROPERTIES']['ATT_SUBTITLE']['~VALUE']; ?></div>
+                        <?php endif; ?>
+                    </header>
                     <button type="button"
                             class="btn btn-success first-screen__btn"
                             data-bs-toggle="modal"
@@ -58,7 +60,9 @@ use Bitrix\Main\Localization\Loc;
             </div>
         </div>
     </div>
+
     <?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/features.php'); ?>
+
     <?php if ($arResult['DISPLAY_PROPERTIES']['ATT_DETAIL_TEXT']['~VALUE']): ?>
     <section class="main-section pt-0">
         <div class="container">

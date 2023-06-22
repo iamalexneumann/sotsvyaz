@@ -53,19 +53,6 @@ $services_patterns = [
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/main.js');
     $APPLICATION->ShowHead();
     ?>
-    <?php
-    $APPLICATION->IncludeComponent(
-        "vladrix:basket.api",
-        "",
-        Array(
-            "COMPOSITE_FRAME_MODE" => "A",
-            "COMPOSITE_FRAME_TYPE" => "AUTO"
-        ),
-        false,
-        Array(
-            "HIDE_ICONS" => "Y"
-        )
-    ); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="<?= SITE_TEMPLATE_PATH; ?>/img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?= SITE_TEMPLATE_PATH; ?>/img/favicons/favicon-32x32.png">
@@ -79,6 +66,19 @@ $services_patterns = [
 </head>
 <body>
     <?= $siteparam_scripts_body_before; ?>
+    <?php
+    $APPLICATION->IncludeComponent(
+        "vladrix:basket.api",
+        "",
+        Array(
+            "COMPOSITE_FRAME_MODE" => "A",
+            "COMPOSITE_FRAME_TYPE" => "AUTO"
+        ),
+        false,
+        Array(
+            "HIDE_ICONS" => "Y"
+        )
+    ); ?>
     <?php $APPLICATION->ShowPanel(); ?>
     <header class="main-header sticky-top">
         <nav class="navbar navbar-expand-xl">
@@ -157,6 +157,7 @@ $services_patterns = [
                             <?php endif; ?>
                         </div>
                     </div>
+                </div>
             </div>
         </nav>
     </header>

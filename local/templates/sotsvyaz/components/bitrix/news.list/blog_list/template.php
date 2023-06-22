@@ -40,7 +40,7 @@ $param_form_position = $arParams['FORM_POSITION'] ?? '3';
         );
     ?>
     <div class="col-lg-6 blog-list__col">
-        <article class="blog-item" id="<?= $this->GetEditAreaId($arItem['ID']) ;?>">
+        <article class="blog-item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
             <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>"
                class="blog-item__img-link"
                title="<?= $arItem['NAME']; ?>"
@@ -50,17 +50,19 @@ $param_form_position = $arParams['FORM_POSITION'] ?? '3';
                      class="blog-item__img lazyload blur-up"
                      alt="<?= $arItem['NAME']; ?>"
                      width="<?= $arItem['PICTURE']['WIDTH']; ?>"
-                     height="<?= $arItem['PICTURE']['HEIGHT']; ?>"></a>
+                     height="<?= $arItem['PICTURE']['HEIGHT']; ?>">
+            </a>
             <div class="blog-item__wrapper">
-                <?php if ($arItem['DATE_DATETIME'] && $arItem['DATE_FORMATTED']): ?>
-                <time datetime="<?= $arItem['DATE_DATETIME']; ?>" class="blog-item__date">
-                    <?= $arItem['DATE_FORMATTED']; ?>
-                </time>
-                <?php endif; ?>
-
-                <h<?=$param_small_card_tag_title; ?> class="blog-item__title">
-                    <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>" class="blog-item__link"><?= $arItem['NAME']; ?></a>
-                </h<?=$param_small_card_tag_title; ?>>
+                <header class="blog-item__header">
+                    <?php if ($arItem['DATE_DATETIME'] && $arItem['DATE_FORMATTED']): ?>
+                    <time datetime="<?= $arItem['DATE_DATETIME']; ?>" class="blog-item__date">
+                        <?= $arItem['DATE_FORMATTED']; ?>
+                    </time>
+                    <?php endif; ?>
+                    <h<?=$param_small_card_tag_title; ?> class="blog-item__title">
+                        <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>" class="blog-item__link"><?= $arItem['NAME']; ?></a>
+                    </h<?=$param_small_card_tag_title; ?>>
+                </header>
 
                 <?php if ($arItem['DISPLAY_PROPERTIES']['ATT_PREVIEW_TEXT']['~VALUE']): ?>
                 <div class="blog-item__preview-text">
@@ -79,9 +81,11 @@ $param_form_position = $arParams['FORM_POSITION'] ?? '3';
                 </div>
                 <?php endif; ?>
 
-                <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>"
-                   rel="nofollow"
-                   class="btn btn-sm btn-outline-primary blog-item__btn"><?= Loc::getMessage('BLOG_LIST_BTN_MORE_TEXT'); ?></a>
+                <footer class="blog-item__footer">
+                    <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>"
+                       rel="nofollow"
+                       class="btn btn-sm btn-outline-primary blog-item__btn"><?= Loc::getMessage('BLOG_LIST_BTN_MORE_TEXT'); ?></a>
+                </footer>
             </div>
         </article>
     </div>

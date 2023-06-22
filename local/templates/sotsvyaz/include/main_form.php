@@ -11,16 +11,18 @@ use Bitrix\Main\Localization\Loc;
 ?>
 <div class="main-section main-section_form">
     <div class="container">
-        <div class="main-section__suptitle"><?= Loc::getMessage('MAIN_FORM_SUPTITLE'); ?></div>
-        <div class="main-section__title"><?= Loc::getMessage('MAIN_FORM_TITLE'); ?></div>
-        <div class="main-section__subtitle"><?= Loc::getMessage('MAIN_FORM_SUBTITLE'); ?></div>
+        <div class="main-section__header">
+            <div class="main-section__suptitle"><?= Loc::getMessage('MAIN_FORM_SUPTITLE'); ?></div>
+            <div class="main-section__title"><?= Loc::getMessage('MAIN_FORM_TITLE'); ?></div>
+            <div class="main-section__subtitle"><?= Loc::getMessage('MAIN_FORM_SUBTITLE'); ?></div>
+        </div>
         <?php $APPLICATION->IncludeComponent(
             "custom.bitrix:main.feedback",
             "main_form",
             Array(
                 "COMPOSITE_FRAME_MODE" => "A",
                 "COMPOSITE_FRAME_TYPE" => "AUTO",
-                "EMAIL_TO" => "info@sotsvyaz.ru",
+                "EMAIL_TO" => $siteparam_email,
                 "EVENT_MESSAGE_ID" => array(
                     0 => "7",
                 ),

@@ -4,9 +4,11 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 }
 use Bitrix\Main\Localization\Loc;
 ?>
-<div class="main-section features">
+<section class="main-section features">
     <div class="container">
-        <div class="main-section__title"><?= Loc::getMessage('FEAUTURES_SECTION_TITLE'); ?></div>
+        <header class="main-section__header">
+            <h2 class="main-section__title"><?= Loc::getMessage('FEAUTURES_SECTION_TITLE'); ?></h2>
+        </header>
         <div class="row">
             <div class="col-lg-4 col-md-6">
                 <div class="features-item">
@@ -52,4 +54,4 @@ use Bitrix\Main\Localization\Loc;
             </div>
         </div>
     </div>
-</div>
+</section>

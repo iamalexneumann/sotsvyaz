@@ -118,8 +118,10 @@ $APPLICATION->IncludeComponent(
 
 <section class="main-section main-section_light-bg-color mt-50">
     <div class="container">
-        <h2 class="main-section__title"><?= Loc::getMessage('SERVICES_SECTION_TITLE'); ?></h2>
-        <div class="main-section__subtitle"><?= Loc::getMessage('SERVICES_SECTION_SUBTITLE'); ?> "<?= $arResult['SECTION_NAME']; ?>"</div>
+        <header class="main-section__header">
+            <h2 class="main-section__title"><?= Loc::getMessage('SERVICES_SECTION_TITLE'); ?></h2>
+            <div class="main-section__subtitle"><?= Loc::getMessage('SERVICES_SECTION_SUBTITLE'); ?> "<?= $arResult['SECTION_NAME']; ?>"</div>
+        </header>
         <?php
         $GLOBALS['servicesFilter'] = [
             '!CODE' => $arResult["VARIABLES"]["ELEMENT_CODE"]
@@ -190,9 +192,9 @@ $APPLICATION->IncludeComponent(
                 "HIDE_ICONS" => "Y"
             )
         ); ?>
-        <div class="main-section__btn-wrapper">
+        <footer class="main-section__footer">
             <a href="<?= $arResult['FOLDER'] . $arResult['VARIABLES']['SECTION_CODE']; ?>/#services-list"
                class="btn btn-outline-primary main-section__btn"><?= Loc::getMessage('SERVICES_SECTION_BTN_TEXT'); ?></a>
-        </div>
+        </footer>
     </div>
 </section>

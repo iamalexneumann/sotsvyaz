@@ -46,6 +46,10 @@
       }
     }
 
+    &__header {
+      margin-bottom: 30px;
+    }
+
     &__date {
       display: block;
       margin-bottom: 5px;
@@ -55,7 +59,7 @@
 
     &__title {
       font-size: 1.75rem;
-      margin: 0 0 30px;
+      margin: 0;
 
       @media (max-width: 1199.98px) {
         font-size: 1.5rem;
@@ -79,8 +83,12 @@
       }
     }
 
-    &__btn {
+    &__footer {
       margin-top: auto;
+    }
+
+    &__btn {
+
     }
   }
 }

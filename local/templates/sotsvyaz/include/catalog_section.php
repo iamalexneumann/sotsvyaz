@@ -6,8 +6,10 @@ use Bitrix\Main\Localization\Loc;
 ?>
 <div class="main-section">
     <div class="container">
-        <h2 class="main-section__title"><?= Loc::getMessage('CATALOG_SECTION_TITLE') ?></h2>
-        <div class="main-section__subtitle"><?= Loc::getMessage('CATALOG_SECTION_SUBTITLE') ?></div>
+        <div class="main-section__header">
+            <h2 class="main-section__title"><?= Loc::getMessage('CATALOG_SECTION_TITLE') ?></h2>
+            <div class="main-section__subtitle"><?= Loc::getMessage('CATALOG_SECTION_SUBTITLE') ?></div>
+        </div>
         <?php
         $APPLICATION->IncludeComponent(
             "bitrix:catalog.section.list",
