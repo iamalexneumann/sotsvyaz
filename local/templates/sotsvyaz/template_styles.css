@@ -203,6 +203,9 @@ h6,
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }
+    @media (min-width: 1200px) and (max-width: 1399.98px) {
+      .header-logo__description {
+        max-width: 180px; } }
     @media (max-width: 575.98px) {
       .header-logo__description {
         font-size: 12px;
@@ -212,6 +215,9 @@ h6,
     font-weight: bold;
     color: var(--dark-color);
     letter-spacing: -0.02em; }
+    @media (min-width: 1200px) and (max-width: 1399.98px) {
+      .header-logo__name {
+        font-size: 1.375rem; } }
     @media (max-width: 575.98px) {
       .header-logo__name {
         font-size: 1.25rem; } }
@@ -244,6 +250,9 @@ h6,
     margin-right: 15px; }
     .header-contacts__phone-link:hover {
       color: var(--secondary-color); }
+    @media (min-width: 1200px) and (max-width: 1399.98px) {
+      .header-contacts__phone-link {
+        font-size: 1.25rem; } }
   .header-contacts__callback-btn {
     padding: 0;
     border: none;
@@ -475,7 +484,7 @@ h6,
     font-family: "Proxima Nova Lt", Arial, serif;
     font-size: 1.25rem;
     font-weight: 300;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     max-width: 800px;
     margin: 0 auto 20px; }
   .main-section__subtitle {
@@ -796,7 +805,7 @@ h6,
     margin-bottom: 30px; }
   .page-contacts__map {
     flex-grow: 1;
-    width: 100%;
+    width: calc(100% - 30px);
     height: 600px;
     box-shadow: 0 50px 100px rgba(0, 0, 0, 0.1);
     border-radius: 8px;

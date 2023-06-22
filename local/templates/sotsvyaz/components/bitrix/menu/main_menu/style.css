@@ -6,6 +6,9 @@
     transition: all .25s ease-in-out;
     padding: 15px !important;
     font-weight: 600; }
+    @media (min-width: 1200px) and (max-width: 1399.98px) {
+      .navbar-nav .nav-link {
+        padding: 15px 10px !important; } }
     @media (max-width: 1198.98px) {
       .navbar-nav .nav-link {
         padding: 15px 0 !important; } }

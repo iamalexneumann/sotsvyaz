@@ -82,7 +82,7 @@ $services_patterns = [
     <?php $APPLICATION->ShowPanel(); ?>
     <header class="main-header sticky-top">
         <nav class="navbar navbar-expand-xl">
-            <div class="container-fluid">
+            <div class="container">
                 <a class="main-header__logo header-logo"
                    title="<?= htmlspecialchars($arSite['SITE_NAME']); ?>"
                     <?php if ($CurDir !== '/'): ?> href="/"<?php endif; ?>>
