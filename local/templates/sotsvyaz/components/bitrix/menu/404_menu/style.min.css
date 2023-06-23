@@ -1,0 +1,1 @@
+.sitemap ol{list-style:none;counter-reset:li;margin:0}.sitemap__list{padding-left:0}.sitemap__sub-list{margin-top:10px!important;padding-left:1rem}.sitemap__item::before{counter-increment:li;content:counters(li,".")". ";font-weight:700;margin-right:5px;color:var(--dark-color)}.sitemap__item{margin-bottom:10px}
