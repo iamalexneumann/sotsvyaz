@@ -17,9 +17,9 @@ $APPLICATION->IncludeComponent(
         "COMPOSITE_FRAME_MODE" => "A",
         "COMPOSITE_FRAME_TYPE" => "AUTO",
         "EVENT_MESSAGE_ID_FOR_ADMIN" => "12",
-        "EVENT_MESSAGE_ID_FOR_CLIENT" => "12",
+        "EVENT_MESSAGE_ID_FOR_CLIENT" => "13",
         "FIELDS" => array("NAME", "TEL", "EMAIL", "ADDRESS", "COMMENT"),
-        "FIELDS_REQUIRED" => array("NAME", "TEL", "EMAIL", "ADDRESS", "COMMENT"),
+        "FIELDS_REQUIRED" => array("NAME", "TEL", "EMAIL", "ADDRESS", ""),
         "ORDER_IBLOCK_ID" => "1",
         "SEND_MAIL_TO_ADMIN" => "Y",
         "SEND_MAIL_TO_CLIENT" => "Y"
