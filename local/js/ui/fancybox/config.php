@@ -7,5 +7,5 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  */
 return [
     'css' => './fancybox.css',
-    'js' => './fancybox.umd.js',
+    'js' => ['./fancybox.umd.js', './l10n/ru.umd.js'],
 ];

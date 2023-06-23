@@ -24,7 +24,11 @@ Extension::load(
         'ui.fancybox',
     ]
 );
-echo '<script>Fancybox.bind("[data-fancybox]", {});</script>';
+echo '<script>
+    Fancybox.bind("[data-fancybox]", {
+        l10n: Fancybox.l10n.ru
+    });
+</script>';
 ?>
 
 <?php if ($arResult['VIEW_COUNT']): ?>

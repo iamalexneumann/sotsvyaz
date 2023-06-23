@@ -87,15 +87,6 @@ $more_photos = $arResult['PROPERTIES']['MORE_PHOTO'];
             </div>
         </div>
         <div class="col-lg-6 catalog-detail__col catalog-detail__col_content">
-            <?php /*
-            <header class="catalog-detail__header">
-                <?php
-                $helper = new PHPInterface\ComponentHelper($component);
-                $helper->deferredCall('ShowNavChain', array('breadcrumb'));
-                ?>
-                <h1 class="catalog-detail__title"><?= $arResult['NAME']; ?></h1>
-            </header>
-            */ ?>
             <div class="catalog-detail__price price">
                 <div class="price__title"><?= Loc::getMessage('CATALOG_DETAIL_PRICE_TITLE'); ?></div>
                 <div class="price__val"><?= $arResult['DISPLAY_PROPERTIES']['ATT_PRICE']['VALUE'] . ' ' . Loc::getMessage('CATALOG_DETAIL_CURRENCY'); ?></div>
@@ -145,4 +136,3 @@ $more_photos = $arResult['PROPERTIES']['MORE_PHOTO'];
     </section>
     <?php endif; ?>
 </div>
-<?php //$helper->saveCache(); ?>

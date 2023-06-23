@@ -18,11 +18,14 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  * @var CBitrixComponent $component
  */
 use Bitrix\Main\UI\Extension;
-//PHPInterface\ComponentHelper::handle($this);
 
 Extension::load(
     [
         'ui.fancybox',
     ]
 );
-echo '<script>Fancybox.bind("[data-fancybox]", {});</script>';
+echo '<script>
+    Fancybox.bind("[data-fancybox]", {
+        l10n: Fancybox.l10n.ru
+    });
+</script>';
