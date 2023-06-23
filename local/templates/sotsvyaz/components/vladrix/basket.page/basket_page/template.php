@@ -74,7 +74,7 @@ use Bitrix\Main\Localization\Loc;
             <button href="javascript:void(0)" class="btn btn-sm btn-primary info__order-btn js-checkout-open"><?= Loc::getMessage('CONTINUE'); ?></button>
         </div>
     </div>
-    <?php endif; ?>
+    <?php else: echo Loc::getMessage('EMPTY_CART'); endif; ?>
 </div>
 <?php
 $checkoutComponent = new CBitrixComponent();
