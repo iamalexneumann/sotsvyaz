@@ -52,7 +52,7 @@ $param_small_card_tag_title = $arParams['SMALL_CARD_TAG_TITLE'] ?? '2';
                     <h<?=$param_small_card_tag_title; ?> class="catalog-item__title">
                         <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>" class="catalog-item__link"><?= $arItem['NAME']; ?></a>
                     </h<?=$param_small_card_tag_title; ?>>
-                    <div class="catalog-item__price"><?= $arItem['DISPLAY_PROPERTIES']['ATT_PRICE']['VALUE'] . ' ' . Loc::getMessage('CATALOG_LIST_CURRENCY'); ?></div>
+                    <div class="catalog-item__price"><?= number_format($arItem['DISPLAY_PROPERTIES']['ATT_PRICE']['VALUE'], 0, '', ' ') . ' ' . Loc::getMessage('CATALOG_LIST_CURRENCY'); ?></div>
                 </header>
                 <div class="catalog-item__btns">
                     <div class="catalog-item__quantity quantity">
