@@ -43,13 +43,13 @@ BX.ready(function () {
                 cache: false,
                 onsuccess: function (response) {
                     if (response.message) {
-                        document.querySelector('.js-checkout-ajax-form').innerHTML = response.message;
+                        document.querySelector('.js-checkout-ajax-form').innerHTML = '<div class="alert alert-success" role="alert">' + response.message + '</div>';
                         const actionWithDelay = delay(3000).then(() => location.reload());
                     }
                 },
                 onfailure: function () {
                     BASKET.alert(BX.message('ERROR'), function () {
-                        document.querySelector('.js-checkout-ajax-form').innerHTML = BX.message('ERROR');
+                        document.querySelector('.js-checkout-ajax-form').innerHTML = '<div class="alert alert-alert-danger" role="alert">' + BX.message('ERROR') + '</div>';
                         const actionWithDelay = delay(3000).then(() => location.reload());
                     });
                 }

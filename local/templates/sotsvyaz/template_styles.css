@@ -261,7 +261,6 @@ h6,
       color: var(--secondary-color-hover); }
   .header-contacts__cart-link {
     font-weight: 600;
-    letter-spacing: .05em;
     font-size: 14px;
     color: var(--secondary-color); }
     .header-contacts__cart-link:hover {
