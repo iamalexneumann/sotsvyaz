@@ -32,7 +32,7 @@ $services_patterns = [
     '#^/services/$#',
     '#^/services/([0-9a-zA-Z_-]+)/$#',
     '#^/services/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/$#',
-]
+];
 ?>
 <!DOCTYPE html>
 <html lang="<?= LANGUAGE_ID; ?>">
@@ -64,7 +64,7 @@ $services_patterns = [
     <meta name="msapplication-config" content="<?= SITE_TEMPLATE_PATH; ?>/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 </head>
-<body>
+<body id="body-area">
     <?= $siteparam_scripts_body_before; ?>
     <?php
     $APPLICATION->IncludeComponent(

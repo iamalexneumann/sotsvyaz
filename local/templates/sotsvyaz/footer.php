@@ -190,6 +190,6 @@ $patterns = [
     </div>
 
     <?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/svg_sprites.php'); ?>
-</svg>
+    <a href="#body-area" class="to-top-btn" title="<?= Loc::getMessage('FOOTER_TO_TOP_BTN_TEXT'); ?>"><i class="fa-solid fa-angle-up"></i></a>
 </body>
 </html>

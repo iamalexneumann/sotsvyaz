@@ -10,6 +10,7 @@ $MESS['FOOTER_COPYRIGHT_YEARS_TEXT'] = 'гг';
 $MESS['FOOTER_COPYRIGHT_RIGHTS_TEXT'] = 'Все права защищены';
 $MESS['FOOTER_COPYRIGHT_PRIVACY_LINK_TEXT'] = 'Политика конфиденциальности';
 $MESS['FOOTER_COPYRIGHT_SITEMAP_LINK_TEXT'] = 'Карта сайта';
+$MESS['FOOTER_TO_TOP_BTN_TEXT'] = 'Наверх';
 
 $MESS['MODAL_FORM_OK_TEXT'] = 'Спасибо. Мы перезвоним Вам в течение дня!';
 $MESS['CART_MODAL_TITLE'] = 'Товар добавлен в корзину';
