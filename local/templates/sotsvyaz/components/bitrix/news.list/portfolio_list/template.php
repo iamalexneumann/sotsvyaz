@@ -52,6 +52,7 @@ $param_small_card_tag_title = $arParams['SMALL_CARD_TAG_TITLE'] ?? '2';
                     <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>" class="portfolio-item__link"><?= $arItem['NAME']; ?></a>
                 </h<?=$param_small_card_tag_title; ?>>
             </header>
+
             <dl class="portfolio-item__properties properties">
                 <?php if ($arItem['DISPLAY_PROPERTIES']['ATT_ADDRESS']['VALUE']): ?>
                 <div class="properties__item" title="<?= Loc::getMessage('PORTFOLIO_LIST_ATT_ADDRESS_TITLE'); ?>">
@@ -82,18 +83,18 @@ $param_small_card_tag_title = $arParams['SMALL_CARD_TAG_TITLE'] ?? '2';
                     <dt class="properties__name">
                         <span class="sr-only"><?= Loc::getMessage('PORTFOLIO_LIST_ATT_TYPE_WORK_TITLE'); ?></span>
                         <?php
-                            switch ($arItem['DISPLAY_PROPERTIES']['ATT_TYPE_WORK']['VALUE_XML_ID']):
-                                case 'signal':
-                        ?>
+                        switch ($arItem['DISPLAY_PROPERTIES']['ATT_TYPE_WORK']['VALUE_XML_ID']):
+                            case 'signal':
+                                ?>
                         <i class="fa-solid fa-house-signal"></i>
                         <?php
                                 break;
-                                case 'video':
+                            case 'video':
                         ?>
                         <i class="fa-solid fa-house-laptop"></i>
                         <?php
                                 break;
-                            endswitch;
+                        endswitch;
                         ?>
                     </dt>
                     <dd class="properties__value">
@@ -176,6 +177,7 @@ $param_small_card_tag_title = $arParams['SMALL_CARD_TAG_TITLE'] ?? '2';
                     </div>
                 </section>
                 <?php endif; ?>
+            </div>
             <footer class="portfolio-item__footer">
                 <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>"
                    rel="nofollow"

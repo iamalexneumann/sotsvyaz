@@ -17,3 +17,15 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  * @var array $templateData
  * @var CBitrixComponent $component
  */
+use Bitrix\Main\UI\Extension;
+
+Extension::load(
+    [
+        'ui.fancybox',
+    ]
+);
+echo '<script>
+    Fancybox.bind("[data-fancybox]", {
+        l10n: Fancybox.l10n.ru
+    });
+</script>';

@@ -1,6 +1,3 @@
-.portfolio-list__col {
-  display: flex;
-  align-items: stretch; }
 .portfolio-list .portfolio-item {
   display: flex;
   width: 100%;
@@ -17,8 +14,6 @@
     display: block;
     position: relative;
     overflow: hidden;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
     flex-shrink: 0;
     z-index: 1; }
     @media (max-width: 991.98px) {
@@ -30,7 +25,13 @@
     transition: transform .25s ease-in-out;
     object-fit: cover;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px; }
+    @media (max-width: 991.98px) {
+      .portfolio-list .portfolio-item__img {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 4px; } }
   .portfolio-list .portfolio-item__wrapper {
     padding: 50px;
     display: flex;
