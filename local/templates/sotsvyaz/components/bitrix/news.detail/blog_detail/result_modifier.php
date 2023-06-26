@@ -14,7 +14,7 @@ use Bitrix\Main\Localization\Loc;
 
 $component = $this->__component;
 
-$arResult['VIEW_COUNT'] = get_views_with_declension(
+$arResult['VIEW_COUNT'] = get_text_with_declension(
     Loc::getMessage('BLOG_DETAIL_DECLENTION_ONE'),
     Loc::getMessage('BLOG_DETAIL_DECLENTION_FOUR'),
     Loc::getMessage('BLOG_DETAIL_DECLENTION_FIVE'),

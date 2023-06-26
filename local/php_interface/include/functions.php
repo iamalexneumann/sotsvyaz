@@ -191,14 +191,14 @@ function ShowNavChain(string $template = '.default')
 }
 
 /**
- * Фукцния возвращает строку количества просмотров статьи с правильным окончанием
+ * Фукцния возвращает строку числового количества с правильным склонением
  * @param string $one - склонение для "просмотр"
  * @param string $four - склонение для "просмотра"
  * @param string $five - склонение для "просмотров"
- * @param int $views_counter - число просмотров
+ * @param int $views_counter - число
  * @return string
  */
-function get_views_with_declension (string $one, string $four, string $five, int $views_counter = 0):string
+function get_text_with_declension (string $one, string $four, string $five, int $views_counter = 0):string
 {
     $viewsDeclension = new Declension($one, $four, $five);
     return $views_counter . ' ' . $viewsDeclension->get($views_counter);
