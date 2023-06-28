@@ -61,7 +61,10 @@
       .catalog-list .catalog-item__btns {
         flex-direction: column; } }
   .catalog-list .catalog-item__quantity {
-    width: 50%; }
+    width: 50%;
+    border-radius: 0; }
+    .catalog-list .catalog-item__quantity .btn {
+      border-radius: 0; }
     @media (max-width: 350px) {
       .catalog-list .catalog-item__quantity {
         width: 100%;

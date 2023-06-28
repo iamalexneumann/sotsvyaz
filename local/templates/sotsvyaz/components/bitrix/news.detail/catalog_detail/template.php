@@ -88,17 +88,28 @@ $more_photos = $arResult['PROPERTIES']['MORE_PHOTO'];
             </div>
         </div>
         <div class="col-lg-6 catalog-detail__col catalog-detail__col_content">
-            <div class="catalog-detail__price price">
-                <div class="price__title"><?= Loc::getMessage('CATALOG_DETAIL_PRICE_TITLE'); ?>:</div>
-                <div class="price__val"><?= number_format($arResult['DISPLAY_PROPERTIES']['ATT_PRICE']['VALUE'], 0, '', ' ') . ' ' . Loc::getMessage('CATALOG_DETAIL_CURRENCY'); ?></div>
-            </div>
-            <div class="catalog-detail__btns">
-                <div class="catalog-detail__quantity quantity">
-                    <input type="button" value="−" class="btn quantity__btn quantity__btn_minus" data-field="quantity">
-                    <input type="number" step="1" max="1000" value="1" min="1" name="quantity" class="quantity__field">
-                    <input type="button" value="+" class="btn quantity__btn quantity__btn_plus" data-field="quantity">
+            <div class="catalog-detail__main-info main-info">
+                <div class="main-info__wrapper">
+                    <div class="catalog-detail__price price">
+                        <div class="price__title"><?= Loc::getMessage('CATALOG_DETAIL_PRICE_TITLE'); ?>:</div>
+                        <div class="price__val"><?= number_format($arResult['DISPLAY_PROPERTIES']['ATT_PRICE']['VALUE'], 0, '', ' ') . ' ' . Loc::getMessage('CATALOG_DETAIL_CURRENCY'); ?></div>
+                    </div>
+                    <div class="catalog-detail__btns">
+                        <div class="catalog-detail__quantity quantity">
+                            <input type="button" value="−" class="btn quantity__btn quantity__btn_minus" data-field="quantity">
+                            <input type="number" step="1" max="1000" value="1" min="1" name="quantity" class="quantity__field">
+                            <input type="button" value="+" class="btn quantity__btn quantity__btn_plus" data-field="quantity">
+                        </div>
+                        <button class="btn btn-sm btn-primary catalog-detail__btn-order" id="order-btn" data-product-id="<?= $arResult['ID']; ?>"><?= Loc::getMessage('CATALOG_DETAIL_BTN_ORDER'); ?></button>
+                    </div>
                 </div>
-                <button class="btn btn-sm btn-primary catalog-detail__btn-order" id="order-btn" data-product-id="<?= $arResult['ID']; ?>"><?= Loc::getMessage('CATALOG_DETAIL_BTN_ORDER'); ?></button>
+                <?php if ($arResult['DISPLAY_PROPERTIES']['ATT_BRAND']['VALUE']): ?>
+                <button type="button" class="catalog-detail__brand-btn" data-bs-toggle="modal" data-bs-target="#brandModal">
+                    <img src="<?= $templateFolder; ?>/images/<?= $arResult['DISPLAY_PROPERTIES']['ATT_BRAND']['VALUE_XML_ID']; ?>.png"
+                         class="catalog-detail__brand-img"
+                         alt="<?= $arResult['DISPLAY_PROPERTIES']['ATT_BRAND']['VALUE']; ?>">
+                </button>
+                <?php endif; ?>
             </div>
 
             <?php if ($arResult['DISPLAY_PROPERTIES']['ATT_LINKED_PRODUCTS']['VALUE']): ?>
@@ -282,3 +293,22 @@ $more_photos = $arResult['PROPERTIES']['MORE_PHOTO'];
     </section>
     <?php endif; ?>
 </div>
+
+<?php if ($arResult['DISPLAY_PROPERTIES']['ATT_BRAND']['VALUE']): ?>
+<div class="modal fade" id="brandModal" tabindex="-1" aria-labelledby="brandModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title" id="brandModalLabel"><?= Loc::getMessage('CATALOG_DETAIL_BRAND_MODAL_TITLE'); ?> "<?= $arResult['DISPLAY_PROPERTIES']['ATT_BRAND']['VALUE']; ?>"</div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="<?= Loc::getMessage('BTN_CLOSE_LABEL'); ?>">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <?= Loc::getMessage('BRAND_TEXT_' . $arResult['DISPLAY_PROPERTIES']['ATT_BRAND']['VALUE_XML_ID']) ?:
+                    '<div class="alert alert-danger" role="alert">' . Loc::getMessage('CATALOG_DETAIL_NO_BRAND_FILE_MESSAGE') . '</div>'; ?>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endif; ?>
