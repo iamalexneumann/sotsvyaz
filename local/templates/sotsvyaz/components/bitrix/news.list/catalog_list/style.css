@@ -40,6 +40,10 @@
   .catalog-list .catalog-item__title {
     font-size: 1.5rem;
     margin: 0 0 30px; }
+  .catalog-list .catalog-item__brand {
+    font-size: var(--font-size-small);
+    margin-top: -25px;
+    margin-bottom: 30px; }
   .catalog-list .catalog-item__link {
     color: var(--dark-color); }
     .catalog-list .catalog-item__link:hover {
@@ -71,5 +75,16 @@
     @media (max-width: 350px) {
       .catalog-list .catalog-item__btn-order {
         width: 100%; } }
+  .catalog-list .catalog-item .products {
+    margin-bottom: 30px; }
+    .catalog-list .catalog-item .products__title {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--dark-color);
+      margin-bottom: 1rem; }
+    .catalog-list .catalog-item .products .products-item__name::after {
+      margin-left: 10px; }
+    .catalog-list .catalog-item .products .products-item__price {
+      margin-left: 10px; }
 
 /*# sourceMappingURL=style.css.map */

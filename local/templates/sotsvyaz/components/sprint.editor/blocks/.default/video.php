@@ -13,6 +13,8 @@ $preview = Sprint\Editor\Blocks\Image::getImage($block['preview'], array(
 */
 
 ?>
-<div class="sp-video">
-    <?= Sprint\Editor\Blocks\Video::getHtml($block) ?>
+<div class="figure-media">
+    <div class="adaptive-video-container">
+        <?= Sprint\Editor\Blocks\Video::getHtml($block); ?>
+    </div>
 </div>

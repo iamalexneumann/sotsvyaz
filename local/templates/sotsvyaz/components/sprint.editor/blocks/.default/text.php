@@ -4,4 +4,6 @@
  * @var CMain $APPLICATION
  */
 ?>
-<?= Sprint\Editor\Blocks\Text::getValue($block); ?>
+<div class="sp-text">
+    <?= Sprint\Editor\Blocks\Text::getValue($block); ?>
+</div>

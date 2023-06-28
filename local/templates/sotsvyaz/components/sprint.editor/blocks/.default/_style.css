@@ -187,3 +187,7 @@
 .sp-accordion-title__active:after {
     content: "\2796";
 }
+
+.sp-text li {
+    margin-bottom: 0.5rem;
+}

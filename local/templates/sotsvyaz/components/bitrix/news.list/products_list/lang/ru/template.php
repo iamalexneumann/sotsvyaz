@@ -1,0 +1,2 @@
+<?php
+$MESS['PRODUCTS_LIST_CURRENCY'] = 'руб.';

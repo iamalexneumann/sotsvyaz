@@ -56,6 +56,12 @@
       margin: 0 0 30px;
     }
 
+    &__brand {
+      font-size: var(--font-size-small);
+      margin-top: -25px;
+      margin-bottom: 30px;
+    }
+
     &__link {
       color: var(--dark-color);
 
@@ -103,6 +109,27 @@
 
       @media (max-width: 350px) {
         width: 100%;
+      }
+    }
+
+    .products {
+      margin-bottom: 30px;
+
+      &__title {
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: var(--dark-color);
+        margin-bottom: 1rem;
+      }
+
+      .products-item__name {
+        &::after {
+          margin-left: 10px;
+        }
+      }
+
+      .products-item__price {
+        margin-left: 10px;
       }
     }
   }
