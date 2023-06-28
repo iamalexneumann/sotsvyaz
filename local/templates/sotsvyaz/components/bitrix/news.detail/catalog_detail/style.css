@@ -41,6 +41,13 @@
   margin-bottom: 30px; }
 .catalog-detail__quanity {
   margin-bottom: 30px; }
+.catalog-detail .products {
+  margin-bottom: 30px; }
+  .catalog-detail .products__title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--dark-color); }
 .catalog-detail__btn-order {
   border-radius: 0 !important; }
 .catalog-detail__characteristics {

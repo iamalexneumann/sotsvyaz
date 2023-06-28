@@ -51,6 +51,7 @@ $services_patterns = [
         ]
     );
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/main.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/order.js');
     $APPLICATION->ShowHead();
     ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">

@@ -87,6 +87,17 @@
     margin-bottom: 30px;
   }
 
+  .products {
+    margin-bottom: 30px;
+
+    &__title {
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: var(--dark-color);
+    }
+  }
+
   &__btn-order {
     border-radius: 0 !important;
   }

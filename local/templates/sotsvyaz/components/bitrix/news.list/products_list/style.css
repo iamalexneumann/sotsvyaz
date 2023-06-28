@@ -3,6 +3,7 @@
   padding: 0;
   list-style: none; }
   .products-list .products-item {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 0.5rem; }

@@ -55,11 +55,8 @@ $param_small_card_tag_title = $arParams['SMALL_CARD_TAG_TITLE'] ?? '2';
                     <?php if ($arItem['DISPLAY_PROPERTIES']['ATT_BRAND']['VALUE']): ?>
                     <div class="catalog-item__brand"><?= Loc::getMessage('CATALOG_LIST_BRAND'); ?>: <?= $arItem['DISPLAY_PROPERTIES']['ATT_BRAND']['VALUE']; ?></div>
                     <?php endif; ?>
-                    <?php if ($arItem['DISPLAY_PROPERTIES']['ATT_SHOW_LINKED_PRODUCTS']['VALUE'] === 'Y'): ?>
+                    <?php if ($arItem['DISPLAY_PROPERTIES']['ATT_SHOW_LINKED_PRODUCTS']['VALUE'] === 'Y' && $arItem['DISPLAY_PROPERTIES']['ATT_LINKED_PRODUCTS']['VALUE']): ?>
                     <div class="catalog-item__products products">
-                        <?php /*
-                        <div class="products__title"><?= Loc::getMessage('CATALOG_LIST_PRODUCTS_TITLE'); ?>:</div>
-                        <?php */ ?>
                         <?php
                         $GLOBALS['productsFilter'] = [
                             '=ID' => $arItem['DISPLAY_PROPERTIES']['ATT_LINKED_PRODUCTS']['VALUE'],
@@ -135,7 +132,7 @@ $param_small_card_tag_title = $arParams['SMALL_CARD_TAG_TITLE'] ?? '2';
                         <input type="number" step="1" max="1000" value="1" min="1" name="quantity" class="quantity__field">
                         <input type="button" value="+" class="btn quantity__btn quantity__btn_plus" data-field="quantity">
                     </div>
-                    <button class="btn btn-sm btn-primary catalog-item__btn-order" data-product-id="<?= $arItem['ID']; ?>">
+                    <button class="btn btn-sm btn-primary catalog-item__btn-order" id="order-btn" data-product-id="<?= $arItem['ID']; ?>">
                         <?= Loc::getMessage('CATALOG_LIST_BTN_CART_TEXT'); ?>
                     </button>
                 </div>

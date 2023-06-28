@@ -20,7 +20,6 @@ BX.ready(function () {
         {className: 'js-basket-item-qnt-inc'},
         BX.proxy(function (e) {
             const qntInput = this.closest('.js-basket-item').querySelector('.js-basket-item-qnt-input');
-            qntInput.stepUp();
             BX.fireEvent(qntInput, 'change')
         })
     );
@@ -31,7 +30,6 @@ BX.ready(function () {
         {className: 'js-basket-item-qnt-dec'},
         BX.proxy(function (e) {
             const qntInput = this.closest('.js-basket-item').querySelector('.js-basket-item-qnt-input');
-            qntInput.stepDown();
             BX.fireEvent(qntInput, 'change')
         })
     );
