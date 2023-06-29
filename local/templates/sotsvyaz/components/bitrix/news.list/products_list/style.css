@@ -6,6 +6,7 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-end;
     margin-bottom: 0.5rem; }
     .products-list .products-item:last-of-type {
       margin-bottom: 0; }
