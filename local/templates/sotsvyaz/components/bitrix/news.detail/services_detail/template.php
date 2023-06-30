@@ -53,8 +53,12 @@ use Bitrix\Main\Localization\Loc;
                              data-src="<?= $arResult['PICTURE']['SRC']; ?>"
                              class="first-screen__img lazyload blur-up"
                              alt="<?= $arResult['DISPLAY_PROPERTIES']['ATT_TITLE']['~VALUE'] ?: $arResult['NAME']; ?>"
+                            <?php if ($arResult['PICTURE']['WIDTH']): ?>
                              width="<?= $arResult['PICTURE']['WIDTH']; ?>"
-                             height="<?= $arResult['PICTURE']['HEIGHT']; ?>">
+                            <?php endif; ?>
+                            <?php if ($arResult['PICTURE']['HEIGHT']): ?>
+                             height="<?= $arResult['PICTURE']['HEIGHT']; ?>"
+                            <?php endif; ?>>
                     </figure>
                 </div>
             </div>

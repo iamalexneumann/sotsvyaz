@@ -54,6 +54,7 @@ ErrorDocument 404 /404.php
   Redirect 301 /cables/ https://sotsvyaz.ru/catalog/kabeli/
   Redirect 301 /repeaters/ https://sotsvyaz.ru/catalog/repitery/
   Redirect 301 /connectors/ https://sotsvyaz.ru/catalog/razemy/
+  Redirect 301 /catalog/razemy/ https://sotsvyaz.ru/catalog/razemy-i-perekhodniki/
   Redirect 301 /splitters/ https://sotsvyaz.ru/catalog/razvetviteli/
   Redirect 301 /antennas/ https://sotsvyaz.ru/catalog/antenny/
 

@@ -1023,6 +1023,11 @@ h6,
   th {
     color: var(--dark-color);
   }
+
+  caption {
+    color: var(--dark-color);
+    font-weight: 700;
+  }
 }
 
 .quantity {

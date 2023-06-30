@@ -714,6 +714,9 @@ h6,
   --bs-table-color: var(--gray-color); }
   .table th {
     color: var(--dark-color); }
+  .table caption {
+    color: var(--dark-color);
+    font-weight: 700; }
 
 .quantity {
   display: flex;

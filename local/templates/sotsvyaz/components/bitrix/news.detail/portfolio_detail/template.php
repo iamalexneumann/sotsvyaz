@@ -46,8 +46,12 @@ $more_photos = $arResult['PROPERTIES']['MORE_PHOTO'];
                                  data-src="<?= $arResult['PICTURE']['SRC']; ?>"
                                  class="carousel__img lazyload blur-up"
                                  alt="<?= $arResult['NAME']; ?>"
+                                <?php if ($arResult['PICTURE']['WIDTH']): ?>
                                  width="<?= $arResult['PICTURE']['WIDTH']; ?>"
-                                 height="<?= $arResult['PICTURE']['HEIGHT']; ?>">
+                                <?php endif; ?>
+                                <?php if ($arResult['PICTURE']['HEIGHT']): ?>
+                                 height="<?= $arResult['PICTURE']['HEIGHT']; ?>"
+                                <?php endif; ?>>
                         </a>
                     </div>
                     <?php
@@ -64,8 +68,12 @@ $more_photos = $arResult['PROPERTIES']['MORE_PHOTO'];
                                  data-src="<?= $more_photos['PICTURE'][$key]['SRC']; ?>"
                                  class="carousel__img lazyload blur-up"
                                  alt="<?= $more_photos['DESCRIPTION'][$key] ?: $arResult['NAME'] . ' - ' . Loc::getMessage('PORTFOLIO_DETAIL_ALT_IMG_TEXT') . ' №' . $key + 1; ?>"
+                                <?php if ($more_photos['PICTURE']['WIDTH']): ?>
                                  width="<?= $more_photos['PICTURE']['WIDTH']; ?>"
-                                 height="<?= $more_photos['PICTURE']['HEIGHT']; ?>">
+                                <?php endif; ?>
+                                <?php if ($more_photos['PICTURE']['HEIGHT']): ?>
+                                 height="<?= $more_photos['PICTURE']['HEIGHT']; ?>"
+                                <?php endif; ?>>
                         </a>
                     </div>
                     <?php
