@@ -192,7 +192,7 @@ $more_photos = $arResult['PROPERTIES']['MORE_PHOTO'];
             <?php endif; ?>
 
             <?php if ($arResult['DISPLAY_PROPERTIES']['ATT_CHARACTERISTICS']['~VALUE']): ?>
-            <div class="catalog-detail__characteristics">
+            <div class="catalog-detail__characteristics table-responsive">
                 <?php
                 $APPLICATION->IncludeComponent(
                     "sprint.editor:blocks",

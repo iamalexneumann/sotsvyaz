@@ -1030,6 +1030,27 @@ h6,
   }
 }
 
+.sp-text {
+  &_higest {
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s ease;
+    height: 500px;
+
+    &::after {
+      content: "";
+      text-align: right;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 1.2em;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
+      pointer-events: none;
+    }
+  }
+}
+
 .quantity {
   display: flex;
   align-items: center;
