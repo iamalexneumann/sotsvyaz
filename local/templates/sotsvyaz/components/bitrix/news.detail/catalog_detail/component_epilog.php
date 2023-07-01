@@ -18,7 +18,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  * @var CBitrixComponent $component
  */
 use Bitrix\Main\UI\Extension;
-
+use Bitrix\Main\Localization\Loc;
 Extension::load(
     [
         'ui.fancybox',
@@ -29,3 +29,9 @@ echo '<script>
         l10n: Fancybox.l10n.ru
     });
 </script>';
+?>
+<script>
+    BX.message({
+        MORE_BTN_TEXT: '<?= Loc::getMessage('MORE_BTN_TEXT'); ?>'
+    });
+</script>

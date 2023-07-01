@@ -17,3 +17,10 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  * @var array $templateData
  * @var CBitrixComponent $component
  */
+use Bitrix\Main\Localization\Loc;
+?>
+<script>
+    BX.message({
+        MORE_BTN_TEXT: '<?= Loc::getMessage('MORE_BTN_TEXT'); ?>'
+    });
+</script>

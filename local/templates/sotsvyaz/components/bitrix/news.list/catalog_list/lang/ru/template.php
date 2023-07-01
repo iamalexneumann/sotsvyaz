@@ -5,3 +5,4 @@ $MESS['CATALOG_LIST_CURRENCY'] = 'руб.';
 $MESS['CATALOG_LIST_BTN_CART_TEXT'] = 'В корзину';
 $MESS['CATALOG_LIST_BRAND'] = 'Бренд';
 $MESS['CATALOG_LIST_PRODUCTS_TITLE'] = 'Связаные товары';
+$MESS['MORE_BTN_TEXT'] = 'Развернуть';
