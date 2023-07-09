@@ -51,6 +51,7 @@ ErrorDocument 404 /404.php
 
   Redirect 301 /internet/ https://sotsvyaz.ru/catalog/usiliteli-interneta/
   Redirect 301 /linearamplifiers/ https://sotsvyaz.ru/catalog/lineynye-usiliteli/
+  Redirect 301 /catalog/lineynye-usiliteli/ https://sotsvyaz.ru/catalog/usiliteli-svyazi/
   Redirect 301 /cables/ https://sotsvyaz.ru/catalog/kabeli/
   Redirect 301 /repeaters/ https://sotsvyaz.ru/catalog/repitery/
   Redirect 301 /connectors/ https://sotsvyaz.ru/catalog/razemy/

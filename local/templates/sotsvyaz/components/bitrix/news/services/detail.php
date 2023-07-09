@@ -19,6 +19,13 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  */
 $this->setFrameMode(true);
 use Bitrix\Main\Localization\Loc;
+
+use \Bitrix\Main\Config\Option;
+$siteparam_main_form_suptitle = Option::get('askaron.settings', 'UF_MAIN_FORM_SUPTITLE', '');
+$siteparam_main_form_title = Option::get('askaron.settings', 'UF_MAIN_FORM_TITLE', '');
+$siteparam_main_form_subtitle = Option::get('askaron.settings', 'UF_MAIN_FORM_SUBTITLE', '');
+$siteparam_email = Option::get('askaron.settings', 'UF_MAIN_EMAIL', '');
+
 ?>
 <?php
 $APPLICATION->IncludeComponent(
@@ -110,7 +117,39 @@ $APPLICATION->IncludeComponent(
 </ul>
 */ ?>
 
-<?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/main_form.php'); ?>
+<div class="main-section main-section_form">
+    <div class="container">
+        <div class="main-section__header">
+            <?php if ($siteparam_main_form_suptitle): ?>
+            <div class="main-section__suptitle"><?= $siteparam_main_form_suptitle; ?></div>
+            <?php endif; ?>
+            <div class="main-section__title"><?= $siteparam_main_form_title; ?></div>
+            <?php if ($siteparam_main_form_subtitle): ?>
+            <div class="main-section__subtitle"><?= $siteparam_main_form_subtitle; ?></div>
+            <?php endif; ?>
+        </div>
+        <?php $APPLICATION->IncludeComponent(
+            "custom.bitrix:main.feedback",
+            "main_form",
+            Array(
+                "COMPOSITE_FRAME_MODE" => "A",
+                "COMPOSITE_FRAME_TYPE" => "AUTO",
+                "EMAIL_TO" => $siteparam_email,
+                "EVENT_MESSAGE_ID" => array(
+                    0 => "7",
+                ),
+                "OK_TEXT" => Loc::getMessage('MAIN_FORM_OK_TEXT'),
+                "REQUIRED_FIELDS" => array("USER_PHONE"),
+                "USE_CAPTCHA" => "N",
+                "AJAX_MODE" => "Y",
+                "AJAX_OPTION_SHADOW" => "N",
+                "AJAX_OPTION_JUMP" => "N",
+                "AJAX_OPTION_STYLE" => "Y",
+                "AJAX_OPTION_HISTORY" => "N",
+            )
+        ); ?>
+    </div>
+</div>
 
 <?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/reviews_section.php'); ?>
 

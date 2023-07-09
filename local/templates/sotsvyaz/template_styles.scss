@@ -689,6 +689,11 @@ h6,
 
   &_form {
     background: var(--light-color);
+
+    .main-section__header ~ * {
+      max-width: 800px;
+      margin: 0 auto;
+    }
   }
 
   &__text-link-wrapper {

@@ -491,6 +491,9 @@ h6,
     margin-top: 20px; }
   .main-section_form {
     background: var(--light-color); }
+    .main-section_form .main-section__header ~ * {
+      max-width: 800px;
+      margin: 0 auto; }
   .main-section__text-link-wrapper {
     margin-top: 15px; }
   .main-section__footer {

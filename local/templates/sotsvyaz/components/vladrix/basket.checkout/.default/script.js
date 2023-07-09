@@ -44,6 +44,7 @@ BX.ready(function () {
                 onsuccess: function (response) {
                     if (response.message) {
                         document.querySelector('.js-checkout-ajax-form').innerHTML = '<div class="alert alert-success" role="alert">' + response.message + '</div>';
+                        ym(94079335,'reachGoal','order');
                         const actionWithDelay = delay(3000).then(() => location.reload());
                     }
                 },
