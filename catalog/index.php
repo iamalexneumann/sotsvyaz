@@ -68,7 +68,7 @@ $APPLICATION->IncludeComponent(
         "SET_STATUS_404" => "N",
         "SET_TITLE" => "Y",
         "SHOW_404" => "N",
-        "SORT_BY1" => "SORT",
+        "SORT_BY1" => "PROPERTY_ATT_PRICE",
         "SORT_BY2" => "ACTIVE_FROM",
         "SORT_ORDER1" => "ASC",
         "SORT_ORDER2" => "DESC",
