@@ -65,9 +65,9 @@ $APPLICATION->IncludeComponent(
             "section" => "#SECTION_CODE#/"
         ),
         "SET_LAST_MODIFIED" => "Y",
-        "SET_STATUS_404" => "N",
+        "SET_STATUS_404" => "Y",
         "SET_TITLE" => "Y",
-        "SHOW_404" => "N",
+        "SHOW_404" => "Y",
         "SHOW_FORM_BLOCK" => "N",
         "SMALL_CARD_TAG_TITLE" => "3",
         "SORT_BY1" => "SORT",

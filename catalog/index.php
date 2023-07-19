@@ -65,9 +65,9 @@ $APPLICATION->IncludeComponent(
             "section" => "#SECTION_CODE#/"
         ),
         "SET_LAST_MODIFIED" => "Y",
-        "SET_STATUS_404" => "N",
+        "SET_STATUS_404" => "Y",
         "SET_TITLE" => "Y",
-        "SHOW_404" => "N",
+        "SHOW_404" => "Y",
         "SORT_BY1" => "PROPERTY_ATT_PRICE",
         "SORT_BY2" => "ACTIVE_FROM",
         "SORT_ORDER1" => "ASC",
