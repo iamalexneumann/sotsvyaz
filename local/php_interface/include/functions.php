@@ -160,7 +160,7 @@ function is_empty_iblock (array $filter):array
  * @param array $patterns Массив паттернов регулярных выражений для сверки
  * @return bool
  */
-function use_wide_template (string $url, array $patterns):bool
+function use_wide_template (string $url = '/', array $patterns = []):bool
 {
     for ($i = 0; $i < count($patterns); $i++) {
         preg_match($patterns[$i], $url, $matches);

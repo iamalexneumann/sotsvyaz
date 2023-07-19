@@ -1,3 +1,3 @@
 <?php
-$MESS['SERVICES_DETAIL_FIRST_SCREEN_MODAL_TITLE'] = 'Заказать консультацию';
-$MESS['SERVICES_DETAIL_FIRST_SCREEN_BTN_TEXT'] = 'Получить консультацию';
+$MESS['SERVICES_DETAIL_FIRST_SCREEN_MODAL_TITLE'] = 'Оставить заявку';
+$MESS['SERVICES_DETAIL_FIRST_SCREEN_BTN_TEXT'] = 'Оставить заявку';

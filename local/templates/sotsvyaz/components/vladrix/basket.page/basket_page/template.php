@@ -34,7 +34,7 @@ use Bitrix\Main\Localization\Loc;
                     <div class="basket-item__price">
                         <?= number_format($item['PRICE'], 0, "", " "); ?> <?= Loc::getMessage('RUB')?>
                     </div>
-                    <button class="btn basket-item__remove-btn js-basket-item-remove" data-id="<?= $item['ID']; ?>"><?= Loc::getMessage('DELETE_FROM_BASKET') ?></button>
+                    <button type="button" class="btn basket-item__remove-btn js-basket-item-remove" data-id="<?= $item['ID']; ?>"><?= Loc::getMessage('DELETE_FROM_BASKET') ?></button>
                 </div>
             </div>
             <div class="basket-item__wrapper">
@@ -71,7 +71,7 @@ use Bitrix\Main\Localization\Loc;
         </div>
 
         <div class="info__buttons">
-            <button class="btn btn-sm btn-primary info__order-btn js-checkout-open"><?= Loc::getMessage('CONTINUE'); ?></button>
+            <button type="button" class="btn btn-sm btn-primary info__order-btn js-checkout-open"><?= Loc::getMessage('CONTINUE'); ?></button>
         </div>
     </div>
     <?php else: echo Loc::getMessage('EMPTY_CART'); endif; ?>

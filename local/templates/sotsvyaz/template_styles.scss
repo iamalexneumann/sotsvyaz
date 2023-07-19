@@ -824,7 +824,7 @@ h6,
 
   &__media {
     @media (max-width: 991.98px) {
-      margin-bottom: 30px;
+      display: none;
     }
   }
 
@@ -994,12 +994,18 @@ h6,
 .features {
   .features-item {
     margin-bottom: 50px;
+
     &__icon {
       font-size: 3rem;
       background: linear-gradient(90deg, #2653F7, #3a35ce);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 20px;
+
+      @media (max-width: 767.98px) {
+        font-size: 2rem;
+        margin-bottom: 15px;
+      }
     }
 
     &__title {
@@ -1010,13 +1016,26 @@ h6,
       line-height: 1.2;
       margin-bottom: 30px;
 
+      @media (max-width: 767.98px) {
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+      }
+
       span {
         display: block;
+
+        @media (max-width: 767.98px) {
+          display: inline;
+        }
       }
     }
 
     &__text {
-
+      @media (max-width: 767.98px) {
+        font-size: var(--font-size-small);
+      }
     }
   }
 }
