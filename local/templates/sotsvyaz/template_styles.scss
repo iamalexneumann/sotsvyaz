@@ -1227,11 +1227,12 @@ h6,
     height: 600px;
     box-shadow: 0 50px 100px rgba(0,0,0,.1);
     border-radius: 8px;
-    margin: 0 auto;
+    //margin: 0 auto;
 
-    & > ymaps {
+    & iframe {
       border-radius: 8px;
       overflow: hidden;
+      width: 100%;
     }
 
     @media (max-width: 991.98px) {

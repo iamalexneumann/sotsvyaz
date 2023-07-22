@@ -5,29 +5,9 @@ $APPLICATION->SetTitle("Контакты");
 
 <div class="page-contacts row">
     <div class="col-lg-7 col-xl-8">
-    <?php if ($siteparam_api_key_yandex_map): ?>
-        <script src="https://api-maps.yandex.ru/2.1?apikey=<?= $siteparam_api_key_yandex_map; ?>&lang=<?= LANGUAGE_ID; ?>"></script>
-        <script>
-            ymaps.ready(function () {
-                const mainMap = new ymaps.Map("main-map", {
-                    center: [<?= $siteparam_coors_yandex_map; ?>],
-                    zoom: <?= $siteparam_zoom_yandex_map; ?>
-                });
-
-                mainPlacemark = new ymaps.Placemark([<?= $siteparam_coors_yandex_map; ?>], {
-                    hintContent: "<?= htmlspecialchars($siteparam_logo_name); ?>",
-                }, {
-                    iconLayout: 'default#image',
-                    iconImageHref: '<?= SITE_TEMPLATE_PATH; ?>/img/pin.png',
-                    iconImageSize: [48, 64],
-                    iconImageOffset: [-24, -64],
-                });
-
-                mainMap.geoObjects.add(mainPlacemark);
-            });
-        </script>
-        <div id="main-map" class="page-contacts__map"></div>
-    <?php endif; ?>
+        <div id="main-map" class="page-contacts__map">
+            <iframe src="https://yandex.ru/map-widget/v1/?z=16&ol=biz&oid=117189714128" height="600"></iframe>
+        </div>
     </div>
 
     <div class="page-contacts__wrapper col-lg-5 col-xl-4">
