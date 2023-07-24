@@ -670,7 +670,8 @@ h6,
     height: 100%; }
 
 .share-section,
-.feedback-section {
+.feedback-section,
+.form-section {
   padding: 50px;
   background: var(--light-bg-color);
   border-radius: 8px;
@@ -679,20 +680,29 @@ h6,
   text-align: center; }
   @media (max-width: 767.98px) {
     .share-section,
-    .feedback-section {
+    .feedback-section,
+    .form-section {
       padding: 30px; } }
   .share-section__title,
-  .feedback-section__title {
+  .feedback-section__title,
+  .form-section__title {
     font-size: 1.75rem;
     font-weight: 700;
     margin-bottom: 15px;
     color: var(--dark-color); }
   .share-section__subtitle,
-  .feedback-section__subtitle {
+  .feedback-section__subtitle,
+  .form-section__subtitle {
     margin-bottom: 30px; }
     .share-section__subtitle span,
-    .feedback-section__subtitle span {
+    .feedback-section__subtitle span,
+    .form-section__subtitle span {
       display: block; }
+
+.form-section .modal-form {
+  text-align: left; }
+  .form-section .modal-form .form-control {
+    background: var(--white-color) !important; }
 
 .features .features-item {
   margin-bottom: 50px; }

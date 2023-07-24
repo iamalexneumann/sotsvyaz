@@ -1,3 +1,6 @@
-
+.services-detail__list-icon {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-right: 1rem; }
 
 /*# sourceMappingURL=style.css.map */

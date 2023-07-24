@@ -960,7 +960,8 @@ h6,
 }
 
 .share-section,
-.feedback-section {
+.feedback-section,
+.form-section {
   padding: 50px;
   background: var(--light-bg-color);
   border-radius: 8px;
@@ -988,6 +989,17 @@ h6,
 
   &__module {
 
+  }
+}
+
+.form-section {
+
+  .modal-form {
+    text-align: left;
+
+    .form-control {
+      background: var(--white-color) !important;
+    }
   }
 }
 
