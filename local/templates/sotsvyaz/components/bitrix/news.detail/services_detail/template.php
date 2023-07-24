@@ -65,10 +65,8 @@ use Bitrix\Main\Localization\Loc;
         </div>
     </div>
 
-    <?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/features.php'); ?>
-
     <?php if ($arResult['DISPLAY_PROPERTIES']['ATT_DETAIL_TEXT']['~VALUE']): ?>
-    <section class="main-section pt-0">
+    <section class="main-section">
         <div class="container">
             <?php
             $APPLICATION->IncludeComponent(
