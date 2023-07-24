@@ -155,9 +155,7 @@ $APPLICATION->IncludeComponent(
 
 <?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/reviews_section.php'); ?>
 
-<?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/catalog_section.php'); ?>
-
-<section class="main-section main-section_light-bg-color mt-50">
+<section class="main-section pb-0">
     <div class="container">
         <header class="main-section__header">
             <h2 class="main-section__title"><?= Loc::getMessage('SERVICES_SECTION_TITLE'); ?></h2>
@@ -239,3 +237,5 @@ $APPLICATION->IncludeComponent(
         </footer>
     </div>
 </section>
+
+<?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/catalog_section.php'); ?>
