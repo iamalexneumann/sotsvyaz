@@ -1,12 +1,16 @@
-<?php /** @var $block array */ ?>
-<div class="sp-contents">
-    <div class="sp-contents_title"><?= GetMessage('SPRINT_EDITOR_block_contents_title') ?></div>
-    <ul class="sp-contents_elements">
-        <?php foreach ($block['elements'] as $item) {
+<?php
+/** @var $block array */
+use Bitrix\Main\Localization\Loc;
+?>
+<div class="sprint-contents">
+    <div class="sprint-contents__title"><?= Loc::getMessage('SPRINT_EDITOR_CONTENTS_TITLE'); ?></div>
+    <ul class="sprint-contents__list">
+        <?php foreach ($block['elements'] as $item):
             $cssclass = 'level' . $item['level'];
-            $margin = ($item['level'] - 1) * 40;
-            ?>
-            <li class="<?= $cssclass ?>" style="margin-left:<?= $margin ?>px;"><a href="#<?= $item['anchor'] ?>"><?= $item['text'] ?></a></li>
-        <?php } ?>
+        ?>
+        <li class="sprint-contents__item <?= $cssclass ?>">
+            <a href="#<?= $item['anchor'] ?>" class="sprint-contents__link"><?= $item['text']; ?></a>
+        </li>
+        <?php endforeach; ?>
     </ul>
 </div>
