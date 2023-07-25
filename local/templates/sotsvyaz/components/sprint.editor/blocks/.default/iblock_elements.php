@@ -1,7 +1,4 @@
 <?php /** @var $block array */ ?><?php
-global $APPLICATION;
-$APPLICATION->SetAdditionalCss('/local/templates/sotsvyaz/components/bitrix/news.list/catalog_list/style.css');
-
 $elements = Sprint\Editor\Blocks\IblockElements::getList(
     $block, [
         'NAME',
