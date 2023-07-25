@@ -51,7 +51,7 @@ quantityFields.forEach((quantityField) => {
 });
 
 const cartModal = new bootstrap.Modal('#cartModal');
-const orderButtons = document.querySelectorAll('#order-btn');
+const orderButtons = document.querySelectorAll('[data-product-id]');
 
 orderButtons.forEach(orderButton => {
     orderButton.addEventListener('click', (event) => {

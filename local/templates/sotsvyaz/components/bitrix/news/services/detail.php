@@ -20,6 +20,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 $this->setFrameMode(true);
 use Bitrix\Main\Localization\Loc;
 $APPLICATION->SetAdditionalCss('/local/templates/sotsvyaz/components/bitrix/news.list/catalog_list/style.css');
+$APPLICATION->SetAdditionalCss('/local/templates/sotsvyaz/components/bitrix/news.list/tariff_list/style.css');
 
 use \Bitrix\Main\Config\Option;
 $siteparam_main_form_suptitle = Option::get('askaron.settings', 'UF_MAIN_FORM_SUPTITLE', '');

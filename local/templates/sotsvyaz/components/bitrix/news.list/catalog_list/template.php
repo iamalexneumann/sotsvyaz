@@ -132,7 +132,7 @@ $param_small_card_tag_title = $arParams['SMALL_CARD_TAG_TITLE'] ?? '2';
                         <input type="number" step="1" max="1000" value="1" min="1" name="quantity" class="quantity__field">
                         <input type="button" value="+" class="btn quantity__btn quantity__btn_plus" data-field="quantity">
                     </div>
-                    <button class="btn btn-sm btn-primary catalog-item__btn-order" id="order-btn" data-product-id="<?= $arItem['ID']; ?>">
+                    <button class="btn btn-sm btn-primary catalog-item__btn-order" data-product-id="<?= $arItem['ID']; ?>">
                         <?= Loc::getMessage('CATALOG_LIST_BTN_CART_TEXT'); ?>
                     </button>
                 </div>

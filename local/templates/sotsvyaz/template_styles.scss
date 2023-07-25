@@ -1078,11 +1078,17 @@ h6,
   }
 }
 
+.table-light {
+  --bs-table-color: var(--dark-color);
+  --bs-table-bg: var(--light-bg-color);
+  --bs-table-border-color: var(--border-color);
+}
+
 b, strong, .fw-bold {
   color: var(--dark-color);
 }
 
-.sp-text {
+.sprint-text {
   &_higest {
     overflow: hidden;
     position: relative;
@@ -1100,6 +1106,10 @@ b, strong, .fw-bold {
       background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
       pointer-events: none;
     }
+  }
+
+  li {
+    margin-bottom: 0.5rem;
   }
 }
 

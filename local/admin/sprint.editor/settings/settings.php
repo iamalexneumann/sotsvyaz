@@ -48,6 +48,7 @@ $settings = [
                     'alert-success' => 'Алерт зеленый',
                     'alert-danger' => 'Алерт красный',
                     'alert-warning' => 'Алерт желтый',
+                    'table-responsive' => 'Адаптивная таблица',
                 ],
             ],
         ],

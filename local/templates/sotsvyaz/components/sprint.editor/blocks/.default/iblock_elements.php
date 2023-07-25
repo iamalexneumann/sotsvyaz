@@ -69,7 +69,7 @@ switch ($template):
                             <input type="number" step="1" max="1000" value="1" min="1" name="quantity" class="quantity__field">
                             <input type="button" value="+" class="btn quantity__btn quantity__btn_plus" data-field="quantity">
                         </div>
-                        <button class="btn btn-sm btn-primary catalog-item__btn-order" id="order-btn" data-product-id="<?= $aItem['ID']; ?>">
+                        <button class="btn btn-sm btn-primary catalog-item__btn-order" data-product-id="<?= $aItem['ID']; ?>">
                             <?= Loc::getMessage('SPRINT_EDITOR_IBLOCK_ELEMENTS_BUY_BTN_TEXT'); ?>
                         </button>
                     </div>

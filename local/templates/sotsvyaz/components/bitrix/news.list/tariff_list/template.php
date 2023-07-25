@@ -20,16 +20,11 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  */
 $this->setFrameMode(true);
 use Bitrix\Main\Localization\Loc;
-
-$param_small_card_tag_title = $arParams['SMALL_CARD_TAG_TITLE'] ?? '2';
-$param_show_form_block = $arParams['SHOW_FORM_BLOCK'] ?? '';
-$param_form_iblock_type = $arParams['FORM_IBLOCK_TYPE'] ?? '';
-$param_form_iblock_id = $arParams['FORM_IBLOCK_ID'] ?? '';
-$param_form_element_id = $arParams['FORM_ELEMENT_ID'] ?? '';
-$param_form_position = $arParams['FORM_POSITION'] ?? '3';
+$date = date('Y-m-d', time());
+$percent = 10;
 ?>
 <?php if (count($arResult['ITEMS']) > 0): ?>
-<div class="news-list">
+<div class="tariff-list row">
     <?php
     foreach ($arResult['ITEMS'] as $arItem_key => $arItem):
         $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem['IBLOCK_ID'], 'ELEMENT_EDIT'));
@@ -39,79 +34,58 @@ $param_form_position = $arParams['FORM_POSITION'] ?? '3';
             ]
         );
     ?>
-    <article class="news-item" id="<?= $this->GetEditAreaId($arItem['ID']) ;?>">
-        <h<?=$param_small_card_tag_title; ?>>
-            <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>"><?= $arItem['NAME']; ?></a>
-        </h<?=$param_small_card_tag_title; ?>>
-    </article>
-    <?php
-    if ($param_show_form_block === 'Y' &&
-        $param_form_iblock_type &&
-        $param_form_iblock_id &&
-        $param_form_element_id &&
-        ++$arItem_key === (int) $param_form_position) {
-        $APPLICATION->IncludeComponent(
-            "bitrix:news.detail",
-            "form_inner",
-            Array(
-                "ACTIVE_DATE_FORMAT" => "d.m.Y",
-                "ADD_ELEMENT_CHAIN" => "N",
-                "ADD_SECTIONS_CHAIN" => "N",
-                "AJAX_MODE" => "N",
-                "AJAX_OPTION_ADDITIONAL" => "",
-                "AJAX_OPTION_HISTORY" => "N",
-                "AJAX_OPTION_JUMP" => "N",
-                "AJAX_OPTION_STYLE" => "Y",
-                "BROWSER_TITLE" => "-",
-                "CACHE_GROUPS" => "Y",
-                "CACHE_TIME" => "36000000",
-                "CACHE_TYPE" => "A",
-                "CHECK_DATES" => "Y",
-                "COMPONENT_TEMPLATE" => "form_inner",
-                "COMPOSITE_FRAME_MODE" => "A",
-                "COMPOSITE_FRAME_TYPE" => "AUTO",
-                "DETAIL_URL" => "",
-                "DISPLAY_BOTTOM_PAGER" => "N",
-                "DISPLAY_TOP_PAGER" => "N",
-                "ELEMENT_CODE" => "",
-                "ELEMENT_ID" => $param_form_element_id,
-                "FIELD_CODE" => array(0=>"",1=>"",),
-                "IBLOCK_ID" => $param_form_iblock_id,
-                "IBLOCK_TYPE" => $param_form_iblock_type,
-                "IBLOCK_URL" => "",
-                "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-                "MESSAGE_404" => "",
-                "META_DESCRIPTION" => "-",
-                "META_KEYWORDS" => "-",
-                "PAGER_BASE_LINK_ENABLE" => "N",
-                "PAGER_SHOW_ALL" => "N",
-                "PAGER_TEMPLATE" => ".default",
-                "PAGER_TITLE" => "Страница",
-                "PROPERTY_CODE" => array(0=>"ATT_SVG_ICON",1=>"ATT_DETAIL_TEXT",2=>"ATT_BTN_SHOW",3=>"ATT_BTN_LINK",4=>"ATT_BTN_TEXT",5=>"",),
-                "SET_BROWSER_TITLE" => "N",
-                "SET_CANONICAL_URL" => "N",
-                "SET_LAST_MODIFIED" => "N",
-                "SET_META_DESCRIPTION" => "N",
-                "SET_META_KEYWORDS" => "N",
-                "SET_STATUS_404" => "N",
-                "SET_TITLE" => "N",
-                "SHOW_404" => "N",
-                "STRICT_SECTION_CHECK" => "N",
-                "USE_PERMISSIONS" => "N",
-
-                "FORM_BACKGROUND_COLOR" => $arParams["FORM_BACKGROUND_COLOR"],
-            ),
-            $component,
-            Array(
-                "HIDE_ICONS" => "Y"
-            )
-        );
-    } ?>
+    <div class="col-md-4 tariff-list__col">
+        <div class="tariff-item" id="<?= $this->GetEditAreaId($arItem['ID']) ;?>">
+            <header class="tariff-item__header">
+                <div class="tariff-item__title"><?= $arItem['NAME']; ?></div>
+            </header>
+            <div class="tariff-item__content">
+                <?php if ($arItem['DISPLAY_PROPERTIES']['ATT_DETAIL_TEXT']['~VALUE']): ?>
+                <div class="tariff-item__detail-text">
+                    <?php
+                    $APPLICATION->IncludeComponent(
+                        "sprint.editor:blocks",
+                        ".default",
+                        Array(
+                            "JSON" => $arItem['DISPLAY_PROPERTIES']['ATT_DETAIL_TEXT']['~VALUE'],
+                        ),
+                        $component,
+                        Array(
+                            "HIDE_ICONS" => "Y"
+                        )
+                    ); ?>
+                </div>
+                <?php endif; ?>
+                <?php if ($arItem['DISPLAY_PROPERTIES']['ATT_OPTIONS']['~VALUE']): ?>
+                <div class="tariff-item__options options">
+                    <div class="options__title"><?= Loc::getMessage('TARIFF_LIST_OPTIONS_TITLE'); ?></div>
+                    <ul class="options__list">
+                        <?php foreach ($arItem['DISPLAY_PROPERTIES']['ATT_OPTIONS']['~VALUE'] as $key => $option_value): ?>
+                        <li class="options__item options__item_<?= $arItem['DISPLAY_PROPERTIES']['ATT_OPTIONS']['VALUE_XML_ID'][$key]; ?>">
+                            <?= $option_value; ?>
+                        </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+                <?php endif; ?>
+            </div>
+            <footer class="tariff-item__footer">
+                <div class="tariff-item__label">-<?= $percent; ?>%</div>
+                <div class="tariff-item__cta-text"><?= Loc::getMessage('TARIFF_LIST_CTA') . ' ' . FormatDate('j F', strtotime('sunday this week', strtotime($date))); ?></div>
+                <div class="tariff-item__prices">
+                    <div class="tariff-item__old-price"><?= Loc::getMessage('TARIFF_LIST_PRICE_BEFORE_TEXT') . ' ' . number_format($arItem['DISPLAY_PROPERTIES']['ATT_PRICE']['VALUE'], 0, '', ' ') . ' ' . Loc::getMessage('TARIFF_LIST_CURRENCY'); ?></div>
+                    <div class="tariff-item__price"><?= Loc::getMessage('TARIFF_LIST_PRICE_BEFORE_TEXT') . ' ' . number_format(($arItem['DISPLAY_PROPERTIES']['ATT_PRICE']['VALUE'] * (1 - $percent / 100)), 0, '', ' ') . ' ' . Loc::getMessage('TARIFF_LIST_CURRENCY'); ?></div>
+                </div>
+                <button type="button"
+                        class="btn btn-sm btn-primary tariff-item__btn"
+                        data-bs-toggle="modal"
+                        data-bs-target="#callbackModal"
+                        data-bs-modal-title="<?= Loc::getMessage('TARIFF_LIST_MODAL_TITLE') . ' ' . custom_lcfirst($arItem['NAME']) ?>">
+                    <?= Loc::getMessage('TARIFF_LIST_BTN_TEXT') ?>
+                </button>
+            </footer>
+        </div>
+    </div>
     <?php endforeach; ?>
 </div>
-<?php
-if ($arParams['DISPLAY_BOTTOM_PAGER']) {
-    echo $arResult['NAV_STRING'];
-}
-?>
 <?php endif; ?>

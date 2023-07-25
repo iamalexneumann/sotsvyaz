@@ -22,9 +22,10 @@ if (callbackModal) {
         const callbackModalTitleVal = callbackModalButton.getAttribute('data-bs-modal-title');
         const callbackModalTitle = callbackModal.querySelectorAll('.modal-title');
         const callbackFormBtn = callbackModal.querySelectorAll('.btn');
+        const callbackFormChekboxText = callbackModal.querySelectorAll('.form-check-label span');
         callbackModalTitle.forEach(element => element.innerHTML = callbackModalTitleVal);
-        callbackFormBtn.forEach(element => element.textContent = callbackModalTitleVal);
         callbackFormBtn.forEach(element => element.value = callbackModalTitleVal);
+        callbackFormChekboxText.forEach(element => element.textContent = callbackModalTitleVal);
     })
 }
 
