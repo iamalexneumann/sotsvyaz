@@ -19,6 +19,12 @@ $settings = [
                 ],
             ],
         ],
+        'iblock_sections' => array(
+            'enabled_iblocks' => [
+                'type'  => 'hidden',
+                'value' => [8],
+            ],
+        ),
         'iblock_elements' => array(
             'template' => array(
                 'type' => 'select',
