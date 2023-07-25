@@ -40,11 +40,17 @@
     flex-direction: column;
     align-items: flex-start;
     height: auto; }
+    @media (max-width: 991.98px) {
+      .services-list .services-item__wrapper {
+        padding: 25px 20px; } }
   .services-list .services-item__header {
     margin-bottom: 30px; }
   .services-list .services-item__title {
     font-size: 1.375rem;
     margin: 0; }
+    @media (max-width: 991.98px) {
+      .services-list .services-item__title {
+        font-size: 1.25rem; } }
   .services-list .services-item__link {
     color: var(--dark-color); }
     .services-list .services-item__link:hover {

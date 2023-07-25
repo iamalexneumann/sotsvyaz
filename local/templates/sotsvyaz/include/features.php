@@ -7,7 +7,7 @@ use Bitrix\Main\Localization\Loc;
 <section class="main-section features">
     <div class="container">
         <header class="main-section__header">
-            <h2 class="main-section__title"><?= Loc::getMessage('FEAUTURES_SECTION_TITLE'); ?></h2>
+            <h2 class="h2 main-section__title"><?= Loc::getMessage('FEAUTURES_SECTION_TITLE'); ?></h2>
         </header>
         <div class="row">
             <div class="col-lg-4 col-6">

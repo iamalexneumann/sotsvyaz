@@ -75,7 +75,7 @@ else:
                    class="form-control main-form__form-control" id="user-phone-<?= $six_digit_random_number; ?>"
                 <?php if(empty($arParams['REQUIRED_FIELDS']) || in_array('USER_PHONE', $arParams['REQUIRED_FIELDS'])): ?> required<?php endif; ?>>
         </div>
-        <input type="submit" name="submit" value="<?= Loc::getMessage('MAIN_FORM_SUBMIT_BTN_TEXT'); ?>" class="btn btn-success">
+        <input type="submit" name="submit" value="<?= Loc::getMessage('MAIN_FORM_SUBMIT_BTN_TEXT'); ?>" class="btn btn-primary">
     </div>
 
     <div class="form-check main-form__form-check">

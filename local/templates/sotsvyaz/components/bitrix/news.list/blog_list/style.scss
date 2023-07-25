@@ -43,12 +43,16 @@
       height: 100%;
 
       @media (max-width: 1199.98px) {
-        padding: 30px;
+        padding: 25px 20px;
       }
     }
 
     &__header {
       margin-bottom: 30px;
+
+      @media (max-width: 1199.98px) {
+        margin-bottom: 20px;
+      }
     }
 
     &__date {
@@ -81,6 +85,10 @@
 
       & > *:last-of-type {
         margin-bottom: 0;
+      }
+
+      @media (max-width: 1199.98px) {
+        margin-bottom: 30px;
       }
     }
 

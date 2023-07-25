@@ -39,7 +39,7 @@ $param_services_template = $arParams['SERVICES_TEMPLATE'] ?? 'VERTICAL_LIST';
         $GLOBALS['servicesFilter'] = ['SECTION_ID' => $arSection['ID']];
     ?>
     <div class="sections-item" id="<?= $this->GetEditAreaId($arSection['ID']); ?>">
-        <h3 class="sections-item__title">
+        <h3 class="h3 sections-item__title">
             <a href="<?= $arSection['SECTION_PAGE_URL']; ?>" class="sections-item__link"><?= $arSection['NAME']; ?></a>
         </h3>
         <?php if ($arSection['UF_PREVIEW_TEXT']): ?>

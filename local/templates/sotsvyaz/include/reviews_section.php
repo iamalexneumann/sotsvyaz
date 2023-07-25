@@ -7,7 +7,7 @@ use Bitrix\Main\Localization\Loc;
 <section class="main-section main-section_light-bg-color">
     <div class="container">
         <header class="main-section__header">
-            <h2 class="main-section__title"><?= Loc::getMessage('REVIEWS_SECTION_TITLE'); ?></h2>
+            <h2 class="h2 main-section__title"><?= Loc::getMessage('REVIEWS_SECTION_TITLE'); ?></h2>
         </header>
         <div class="page-reviews">
             <div class="page-reviews__widget widget">

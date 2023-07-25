@@ -53,6 +53,10 @@
       flex-direction: column;
       align-items: flex-start;
       height: auto;
+
+      @media (max-width: 991.98px) {
+        padding: 25px 20px;
+      }
     }
 
     &__header {
@@ -62,6 +66,10 @@
     &__title {
       font-size: 1.375rem;
       margin: 0;
+
+      @media (max-width: 991.98px) {
+        font-size: 1.25rem;
+      }
     }
 
     &__link {

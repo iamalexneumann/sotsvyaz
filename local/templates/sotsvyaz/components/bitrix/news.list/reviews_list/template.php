@@ -37,7 +37,7 @@ use Bitrix\Main\Localization\Loc;
             <time datetime="<?= $arItem['DATETIME']; ?>" class="reviews-list__date">
                 <?= $arItem['DATE'] . ' ' . Loc::getMessage('REVIEWS_LIST_DATE_Y'); ?>
             </time>
-            <div class="reviews-list__name"><?= $arItem['NAME']; ?></div>
+            <div class="h4 reviews-list__name"><?= $arItem['NAME']; ?></div>
         </header>
         <?php if ($arItem['DISPLAY_PROPERTIES']['ATT_PREVIEW_TEXT']['~VALUE']): ?>
         <div class="reviews-list__text">

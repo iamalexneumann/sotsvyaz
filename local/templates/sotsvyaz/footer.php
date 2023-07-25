@@ -44,7 +44,7 @@ $patterns = [
                 <?php if ($siteparam_main_form_suptitle): ?>
                 <div class="main-section__suptitle"><?= $siteparam_main_form_suptitle; ?></div>
                 <?php endif; ?>
-                <div class="main-section__title"><?= $siteparam_main_form_title; ?></div>
+                <div class="h2 main-section__title"><?= $siteparam_main_form_title; ?></div>
                 <?php if ($siteparam_main_form_subtitle): ?>
                 <div class="main-section__subtitle"><?= $siteparam_main_form_subtitle; ?></div>
                 <?php endif; ?>

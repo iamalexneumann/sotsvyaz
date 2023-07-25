@@ -648,6 +648,10 @@ h6,
 .main-section {
   padding: 100px 0;
 
+  @media (max-width: 991.98px) {
+    padding: 70px 0;
+  }
+
   &_light-bg-color {
     background: var(--light-bg-color);
   }
@@ -659,15 +663,13 @@ h6,
   }
 
   &__title {
-    font-size: 2rem;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.025em;
     color: var(--dark-color);
     margin: 0;
 
-    @media (max-width: 767.98px) {
-      font-size: 1.75rem;
+    @media (max-width: 991.98px) {
       hyphens: auto;
       -webkit-hyphens: auto;
     }
@@ -679,12 +681,20 @@ h6,
     font-weight: 300;
     color: var(--primary-color);
     margin: 0 auto 20px;
+
+    @media (max-width: 991.98px) {
+      font-size: 1.125rem;
+    }
   }
 
   &__subtitle {
     font-size: 1.125rem;
     color: var(--gray-color);
     margin-top: 20px;
+
+    @media (max-width: 991.98px) {
+      font-size: 1rem;
+    }
   }
 
   &_form {
@@ -833,6 +843,10 @@ h6,
 
     span {
       display: block;
+
+      @media (max-width: 991.98px) {
+        display: inline;
+      }
     }
   }
 
@@ -840,26 +854,34 @@ h6,
     font-size: 1.25rem;
     color: var(--primary-color);
     margin-bottom: 20px;
+
+    @media (max-width: 991.98px) {
+      font-size: 1.125rem;
+    }
   }
 
   &__title {
-    font-size: 2.5rem;
+    //font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
     margin: 0 0 40px;
 
-    @media (max-width: 991.98px) {
-      font-size: 2rem;
-    }
+    //@media (max-width: 991.98px) {
+    //  font-size: 2rem;
+    //}
 
-    @media (max-width: 991.98px) {
-      font-size: 1.75rem;
-    }
+    //@media (max-width: 991.98px) {
+    //  font-size: 1.75rem;
+    //}
   }
 
   &__subtitle {
     font-size: 1.125rem;
     margin: -20px auto 40px;
+
+    @media (max-width: 991.98px) {
+      font-size: 1rem;
+    }
   }
 
   &__btn {
@@ -969,8 +991,8 @@ h6,
   margin: 50px auto 0;
   text-align: center;
 
-  @media (max-width: 767.98px) {
-    padding: 30px;
+  @media (max-width: 991.98px) {
+    padding: 25px 20px;
   }
 
   &__title {
@@ -978,12 +1000,20 @@ h6,
     font-weight: 700;
     margin-bottom: 15px;
     color: var(--dark-color);
+
+    @media (max-width: 991.98px) {
+      font-size: 1.5rem;
+    }
   }
 
   &__subtitle {
     margin-bottom: 30px;
     span {
       display: block;
+
+      @media (max-width: 991.98px) {
+        display: inline;
+      }
     }
   }
 
@@ -997,8 +1027,20 @@ h6,
   .modal-form {
     text-align: left;
 
+    @media (max-width: 991.98px) {
+      text-align: center;
+    }
+
+    .form-check-label {
+      text-align: left;
+    }
+
     .form-control {
       background: var(--white-color) !important;
+    }
+
+    .btn {
+      width: 100%;
     }
   }
 }
@@ -1057,6 +1099,10 @@ h6,
   --bs-table-color: var(--gray-color);
   margin-bottom: 30px;
 
+  @media (max-width: 1199.98px) {
+    font-size: var(--font-size-small);
+  }
+
   th {
     color: var(--dark-color);
   }
@@ -1075,6 +1121,10 @@ h6,
 
   & > :not(caption) > * > * {
     padding: 1rem 1.25rem;
+
+    @media (max-width: 1199.98px) {
+      padding: 0.5rem 0.75rem;
+    }
   }
 }
 
@@ -1380,6 +1430,10 @@ b, strong, .fw-bold {
   max-width: 800px;
   margin-bottom: 30px;
   border-radius: 8px;
+
+  @media (max-width: 991.98px) {
+    padding: 25px 20px;
+  }
 
   &__title {
     font-size: 1.125rem;

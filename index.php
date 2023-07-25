@@ -34,7 +34,7 @@ $APPLICATION->SetTitle('Главная');
 <section class="main-section main-section_light-bg-color" id="services-list">
     <div class="container">
         <header class="main-section__header">
-            <h2 class="main-section__title">Наши услуги</h2>
+            <h2 class="h2 main-section__title">Наши услуги</h2>
         </header>
         <?php
         $APPLICATION->IncludeComponent(
@@ -74,7 +74,7 @@ $APPLICATION->SetTitle('Главная');
             <?php if ($siteparam_main_form_suptitle): ?>
             <div class="main-section__suptitle"><?= $siteparam_main_form_suptitle; ?></div>
             <?php endif; ?>
-            <div class="main-section__title"><?= $siteparam_main_form_title; ?></div>
+            <div class="h2 main-section__title"><?= $siteparam_main_form_title; ?></div>
             <?php if ($siteparam_main_form_subtitle): ?>
             <div class="main-section__subtitle"><?= $siteparam_main_form_subtitle; ?></div>
             <?php endif; ?>

@@ -125,7 +125,7 @@ $APPLICATION->IncludeComponent(
             <?php if ($siteparam_main_form_suptitle): ?>
             <div class="main-section__suptitle"><?= $siteparam_main_form_suptitle; ?></div>
             <?php endif; ?>
-            <div class="main-section__title"><?= $siteparam_main_form_title; ?></div>
+            <div class="h2 main-section__title"><?= $siteparam_main_form_title; ?></div>
             <?php if ($siteparam_main_form_subtitle): ?>
             <div class="main-section__subtitle"><?= $siteparam_main_form_subtitle; ?></div>
             <?php endif; ?>
@@ -209,7 +209,7 @@ $APPLICATION->IncludeComponent(
                 "PAGER_TEMPLATE" => ".default",
                 "PAGER_TITLE" => "",
                 "PARENT_SECTION" => "",
-                "PARENT_SECTION_CODE" => "",
+                "PARENT_SECTION_CODE" => $arResult["VARIABLES"]["SECTION_CODE"],
                 "PREVIEW_TRUNCATE_LEN" => "",
                 "PROPERTY_CODE" => array("", ""),
                 "SET_BROWSER_TITLE" => "N",

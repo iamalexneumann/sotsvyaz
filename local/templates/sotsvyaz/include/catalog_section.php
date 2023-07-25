@@ -7,7 +7,7 @@ use Bitrix\Main\Localization\Loc;
 <div class="main-section">
     <div class="container">
         <div class="main-section__header">
-            <h2 class="main-section__title"><?= Loc::getMessage('CATALOG_SECTION_TITLE') ?></h2>
+            <h2 class="h2 main-section__title"><?= Loc::getMessage('CATALOG_SECTION_TITLE') ?></h2>
             <div class="main-section__subtitle"><?= Loc::getMessage('CATALOG_SECTION_SUBTITLE') ?></div>
         </div>
         <?php

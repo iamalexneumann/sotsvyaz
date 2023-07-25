@@ -114,7 +114,7 @@ use Bitrix\Main\Localization\Loc;
 <section class="main-section main-section_light-bg-color mt-50">
     <div class="container">
         <header class="main-section__header">
-            <h2 class="main-section__title"><?= Loc::getMessage('BLOG_SECTION_TITLE'); ?></h2>
+            <h2 class="h2 main-section__title"><?= Loc::getMessage('BLOG_SECTION_TITLE'); ?></h2>
             <div class="main-section__subtitle"><?= Loc::getMessage('BLOG_SECTION_SUBTITLE'); ?></div>
         </header>
         <?php
