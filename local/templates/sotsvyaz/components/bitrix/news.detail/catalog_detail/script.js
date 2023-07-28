@@ -1,9 +1,9 @@
 BX.ready(function() {
-    const catalogChars = document.querySelectorAll('.catalog-detail__characteristics .sp-text');
+    const catalogChars = document.querySelectorAll('.catalog-detail__characteristics .sprint-text');
 
     catalogChars.forEach((charItem) => {
         if (charItem.offsetHeight > 500) {
-            charItem.classList.add('sp-text_higest');
+            charItem.classList.add('sprint-text_higest');
 
             const expandButton = document.createElement('button');
             expandButton.classList.add('btn', 'btn-sm', 'btn-outline-primary', 'mt-3', 'catalog-detail__chars-more-btn');
@@ -12,7 +12,7 @@ BX.ready(function() {
 
             expandButton.addEventListener('click', () => {
                 charItem.style.height = 'auto';
-                charItem.classList.remove('sp-text_higest');
+                charItem.classList.remove('sprint-text_higest');
                 charItem.parentNode.querySelector('.catalog-detail__chars-more-btn').remove();
             });
         }
