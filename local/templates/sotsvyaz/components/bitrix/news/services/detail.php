@@ -157,6 +157,42 @@ $APPLICATION->IncludeComponent(
 
 <?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/reviews_section.php'); ?>
 
+<?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/portfolio_section.php'); ?>
+
+<div class="main-section main-section_form">
+    <div class="container">
+        <div class="main-section__header">
+            <?php if ($siteparam_main_form_suptitle): ?>
+                <div class="main-section__suptitle"><?= $siteparam_main_form_suptitle; ?></div>
+            <?php endif; ?>
+            <div class="h2 main-section__title"><?= $siteparam_main_form_title; ?></div>
+            <?php if ($siteparam_main_form_subtitle): ?>
+                <div class="main-section__subtitle"><?= $siteparam_main_form_subtitle; ?></div>
+            <?php endif; ?>
+        </div>
+        <?php $APPLICATION->IncludeComponent(
+            "custom.bitrix:main.feedback",
+            "main_form",
+            Array(
+                "COMPOSITE_FRAME_MODE" => "A",
+                "COMPOSITE_FRAME_TYPE" => "AUTO",
+                "EMAIL_TO" => $siteparam_email,
+                "EVENT_MESSAGE_ID" => array(
+                    0 => "7",
+                ),
+                "OK_TEXT" => Loc::getMessage('MAIN_FORM_OK_TEXT'),
+                "REQUIRED_FIELDS" => array("USER_PHONE"),
+                "USE_CAPTCHA" => "N",
+                "AJAX_MODE" => "Y",
+                "AJAX_OPTION_SHADOW" => "N",
+                "AJAX_OPTION_JUMP" => "N",
+                "AJAX_OPTION_STYLE" => "Y",
+                "AJAX_OPTION_HISTORY" => "N",
+            )
+        ); ?>
+    </div>
+</div>
+
 <section class="main-section pb-0">
     <div class="container">
         <header class="main-section__header">

@@ -9,6 +9,10 @@
     border-radius: 4px;
     margin-bottom: 50px;
 
+    //&:last-of-type {
+    //  margin-bottom: 0;
+    //}
+
     @media (max-width: 991.98px) {
       flex-direction: column;
     }

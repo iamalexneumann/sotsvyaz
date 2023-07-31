@@ -36,7 +36,8 @@ use Bitrix\Main\Localization\Loc;
                 "SECTION_USER_FIELDS" => array("UF_SEO_TEXT_TOP", "UF_ICON", ""),
                 "TOP_DEPTH" => "2",
                 "CARD_TAG" => "h3",
-            )
+            ),
+            $component,
         ); ?>
     </div>
 </div>

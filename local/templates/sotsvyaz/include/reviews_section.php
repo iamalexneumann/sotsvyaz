@@ -91,7 +91,8 @@ use Bitrix\Main\Localization\Loc;
                         "ELEMENT_ID" => "ELEMENT_ID",
                         "SECTION_ID" => "SECTION_ID"
                     ),
-                )
+                ),
+                $component,
             ); ?>
         </div>
         <footer class="main-section__footer">

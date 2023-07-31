@@ -59,7 +59,7 @@ $more_photos = $arResult['PROPERTIES']['MORE_PHOTO'];
                         foreach ($more_photos['VALUE'] as $key => $more_photo):
                     ?>
                     <div class="carousel-item">
-                        <a href="<?= CFile::GetPath($more_photo); ?>"
+                        <a href="<?= $more_photo; ?>"
                            class="carousel__img-link"
                            data-fancybox="portfolio"
                            title="<?= $more_photos['DESCRIPTION'][$key] ?: $arResult['NAME'] . ' - ' . Loc::getMessage('PORTFOLIO_DETAIL_ALT_IMG_TEXT') . ' №' . $key + 1; ?>"
