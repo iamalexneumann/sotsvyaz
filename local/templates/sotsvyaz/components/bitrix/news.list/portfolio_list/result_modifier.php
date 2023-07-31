@@ -22,7 +22,7 @@ if ($arResult['ITEMS']) {
                     'width' => 650,
                     'height' => 455,
                 ],
-                BX_RESIZE_IMAGE_EXACT,
+                BX_RESIZE_IMAGE_PROPORTIONAL_ALT,
                 true
             );
 
@@ -32,7 +32,7 @@ if ($arResult['ITEMS']) {
                     'width' => 100,
                     'height' => 70,
                 ],
-                BX_RESIZE_IMAGE_EXACT,
+                BX_RESIZE_IMAGE_PROPORTIONAL_ALT,
                 true
             );
 

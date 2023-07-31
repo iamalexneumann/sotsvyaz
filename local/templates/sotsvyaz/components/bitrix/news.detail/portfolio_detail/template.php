@@ -25,7 +25,7 @@ $more_photos = $arResult['PROPERTIES']['MORE_PHOTO'];
 <div class="portfolio-detail">
     <div class="row portfolio-detail__row">
         <div class="col-lg-6 portfolio-detail__col portfolio-detail__col_photo">
-            <div id="carouselPortfolio" class="carousel carousel-dark slide carousel-fade">
+            <div id="carouselPortfolio" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
                 <?php if ($more_photos['VALUE']): ?>
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="<?= Loc::getMessage('PORTFOLIO_DETAIL_CAROUSEL_INDICATOR_TEXT'); ?> №1"></button>
@@ -36,7 +36,7 @@ $more_photos = $arResult['PROPERTIES']['MORE_PHOTO'];
                 <?php endif; ?>
 
                 <figure class="carousel-inner">
-                    <div class="carousel-item active">
+                    <div class="carousel-item active" data-bs-interval="3000">
                         <a href="<?= $arResult['DETAIL_PICTURE']['SRC']; ?>"
                            class="carousel__img-link"
                            data-fancybox="portfolio"

@@ -18,7 +18,7 @@ if ($item_picture) {
             'width' => 650,
             'height' => 455,
         ],
-        BX_RESIZE_IMAGE_EXACT,
+        BX_RESIZE_IMAGE_PROPORTIONAL_ALT,
         true
     );
 
@@ -28,7 +28,7 @@ if ($item_picture) {
             'width' => 100,
             'height' => 70,
         ],
-        BX_RESIZE_IMAGE_EXACT,
+        BX_RESIZE_IMAGE_PROPORTIONAL_ALT,
         true
     );
 
@@ -54,7 +54,7 @@ foreach ($more_photos['VALUE'] as $key => $more_photo) {
                 'width' => 650,
                 'height' => 455,
             ],
-            BX_RESIZE_IMAGE_EXACT,
+            BX_RESIZE_IMAGE_PROPORTIONAL_ALT,
             true
         );
 
@@ -64,7 +64,7 @@ foreach ($more_photos['VALUE'] as $key => $more_photo) {
                 'width' => 100,
                 'height' => 70,
             ],
-            BX_RESIZE_IMAGE_EXACT,
+            BX_RESIZE_IMAGE_PROPORTIONAL_ALT,
             true
         );
 

@@ -1021,4 +1021,9 @@ b, strong, .fw-bold {
     font-size: var(--font-size-small);
     color: var(--gray-color); }
 
+.carousel__img-link {
+  display: block; }
+.carousel__img {
+  width: 100%; }
+
 /*# sourceMappingURL=template_styles.css.map */

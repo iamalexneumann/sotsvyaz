@@ -1469,3 +1469,13 @@ b, strong, .fw-bold {
     color: var(--gray-color);
   }
 }
+
+.carousel {
+  &__img-link {
+    display: block;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
