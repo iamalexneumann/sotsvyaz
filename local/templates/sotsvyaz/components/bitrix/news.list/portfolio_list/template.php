@@ -185,8 +185,8 @@ $param_small_card_tag_title = $arParams['SMALL_CARD_TAG_TITLE'] ?? '2';
             </footer>
         </div>
     </article>
+    <?php endforeach; ?>
 </div>
-<?php endforeach; ?>
 <?php
 if ($arParams['DISPLAY_BOTTOM_PAGER']) {
     echo $arResult['NAV_STRING'];
