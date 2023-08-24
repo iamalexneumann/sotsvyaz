@@ -73,8 +73,8 @@ $percent = 10;
                 <div class="tariff-item__label">-<?= $percent; ?>%</div>
                 <div class="tariff-item__cta-text"><?= Loc::getMessage('TARIFF_LIST_CTA') . ' ' . FormatDate('j F', strtotime('sunday this week', strtotime($date))); ?></div>
                 <div class="tariff-item__prices">
-                    <div class="tariff-item__old-price"><?= Loc::getMessage('TARIFF_LIST_PRICE_BEFORE_TEXT') . ' ' . number_format($arItem['DISPLAY_PROPERTIES']['ATT_PRICE']['VALUE'], 0, '', ' ') . ' ' . Loc::getMessage('TARIFF_LIST_CURRENCY'); ?></div>
-                    <div class="tariff-item__price"><?= Loc::getMessage('TARIFF_LIST_PRICE_BEFORE_TEXT') . ' ' . number_format(($arItem['DISPLAY_PROPERTIES']['ATT_PRICE']['VALUE'] * (1 - $percent / 100)), 0, '', ' ') . ' ' . Loc::getMessage('TARIFF_LIST_CURRENCY'); ?></div>
+                    <div class="tariff-item__old-price"><?= Loc::getMessage('TARIFF_LIST_PRICE_BEFORE_TEXT') . ' ' . number_format(($arItem['DISPLAY_PROPERTIES']['ATT_PRICE']['VALUE'] * (1 + $percent / 100)), 0, '', ' ') . ' ' . Loc::getMessage('TARIFF_LIST_CURRENCY'); ?></div>
+                    <div class="tariff-item__price"><?= Loc::getMessage('TARIFF_LIST_PRICE_BEFORE_TEXT') . ' ' . number_format($arItem['DISPLAY_PROPERTIES']['ATT_PRICE']['VALUE'], 0, '', ' ') . ' ' . Loc::getMessage('TARIFF_LIST_CURRENCY'); ?></div>
                 </div>
                 <button type="button"
                         class="btn btn-sm btn-primary tariff-item__btn"
