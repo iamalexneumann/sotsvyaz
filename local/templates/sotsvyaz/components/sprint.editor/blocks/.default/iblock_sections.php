@@ -49,7 +49,7 @@ global $APPLICATION;
             "PARENT_SECTION" => $aItem['ID'],
             "PARENT_SECTION_CODE" => $aItem['SECTION_CODE'],
             "PREVIEW_TRUNCATE_LEN" => "",
-            "PROPERTY_CODE" => array("ATT_DETAIL_TEXT", "ATT_OPTIONS", "ATT_PRICE", ""),
+            "PROPERTY_CODE" => array("ATT_DETAIL_TEXT", "ATT_OPTIONS", "ATT_OPTIONS_DESCRIPTION", "ATT_PRICE", ""),
             "SET_BROWSER_TITLE" => "N",
             "SET_LAST_MODIFIED" => "N",
             "SET_META_DESCRIPTION" => "N",

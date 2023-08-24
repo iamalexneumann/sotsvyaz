@@ -60,9 +60,16 @@ $percent = 10;
                 <div class="tariff-item__options options">
                     <div class="options__title"><?= Loc::getMessage('TARIFF_LIST_OPTIONS_TITLE'); ?></div>
                     <ul class="options__list">
-                        <?php foreach ($arItem['DISPLAY_PROPERTIES']['ATT_OPTIONS']['~VALUE'] as $key => $option_value): ?>
-                        <li class="options__item options__item_<?= $arItem['DISPLAY_PROPERTIES']['ATT_OPTIONS']['VALUE_XML_ID'][$key]; ?>">
-                            <?= $option_value; ?>
+                        <?php
+                        foreach ($arItem['DISPLAY_PROPERTIES']['ATT_OPTIONS']['~VALUE'] as $key => $option_value):
+                            $value_xml_id_key = $arItem['DISPLAY_PROPERTIES']['ATT_OPTIONS']['VALUE_XML_ID'][$key];
+                            ?>
+                        <li class="options__item options__item_<?= $value_xml_id_key; ?>">
+                            <?= $option_value; ?> <?php
+                            $att_options_descriptions_key = $arItem['DISPLAY_PROPERTIES']['ATT_OPTIONS_DESCRIPTION']['VALUE'][$value_xml_id_key];
+                            if (isset($att_options_descriptions_key)) {
+                                 echo ' - ' . $arItem['DISPLAY_PROPERTIES']['ATT_OPTIONS_DESCRIPTION']['DESCRIPTION'][$att_options_descriptions_key];
+                            } ?>
                         </li>
                         <?php endforeach; ?>
                     </ul>
