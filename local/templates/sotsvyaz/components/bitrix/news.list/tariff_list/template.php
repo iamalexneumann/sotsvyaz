@@ -68,7 +68,7 @@ $percent = 10;
                             <?= $option_value; ?> <?php
                             $att_options_descriptions_key = $arItem['DISPLAY_PROPERTIES']['ATT_OPTIONS_DESCRIPTION']['VALUE'][$value_xml_id_key];
                             if (isset($att_options_descriptions_key)) {
-                                 echo ' - ' . $arItem['DISPLAY_PROPERTIES']['ATT_OPTIONS_DESCRIPTION']['DESCRIPTION'][$att_options_descriptions_key];
+                                 echo ' - <span>' . $arItem['DISPLAY_PROPERTIES']['ATT_OPTIONS_DESCRIPTION']['DESCRIPTION'][$att_options_descriptions_key] . '</span>';
                             } ?>
                         </li>
                         <?php endforeach; ?>

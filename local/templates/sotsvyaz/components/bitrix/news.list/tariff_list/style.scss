@@ -128,6 +128,11 @@
         margin-bottom: 0;
       }
 
+      span {
+        //font-weight: 700;
+        margin-left: 5px;
+      }
+
       &_repeater-900 {
         &::before {
           background-image: url('images/repeater-900.jpg');
@@ -161,6 +166,24 @@
       &_internal-antenna {
         &::before {
           background-image: url('images/internal-antenna.jpg');
+        }
+      }
+
+      &_adapter {
+        &::before {
+          background-image: url('images/adapter.jpg');
+        }
+      }
+
+      &_connector {
+        &::before {
+          background-image: url('images/connector.jpg');
+        }
+      }
+
+      &_splitter {
+        &::before {
+          background-image: url('images/splitter.jpg');
         }
       }
     }

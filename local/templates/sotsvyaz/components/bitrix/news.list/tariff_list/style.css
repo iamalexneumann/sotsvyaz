@@ -87,6 +87,8 @@
           height: 40px; } }
     .tariff-item .options__item:last-of-type {
       margin-bottom: 0; }
+    .tariff-item .options__item span {
+      margin-left: 5px; }
     .tariff-item .options__item_repeater-900::before {
       background-image: url("images/repeater-900.jpg"); }
     .tariff-item .options__item_repeater-900-1800::before {
@@ -99,6 +101,12 @@
       background-image: url("images/external-antenna.jpg"); }
     .tariff-item .options__item_internal-antenna::before {
       background-image: url("images/internal-antenna.jpg"); }
+    .tariff-item .options__item_adapter::before {
+      background-image: url("images/adapter.jpg"); }
+    .tariff-item .options__item_connector::before {
+      background-image: url("images/connector.jpg"); }
+    .tariff-item .options__item_splitter::before {
+      background-image: url("images/splitter.jpg"); }
   .tariff-item__footer {
     position: relative;
     margin-top: auto;
