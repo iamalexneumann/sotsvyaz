@@ -29,8 +29,6 @@ $APPLICATION->SetTitle('Главная');
     </div>
 </div>
 
-<?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/features.php'); ?>
-
 <section class="main-section main-section_light-bg-color" id="services-list">
     <div class="container">
         <header class="main-section__header">
@@ -67,6 +65,8 @@ $APPLICATION->SetTitle('Главная');
         );?>
     </div>
 </section>
+
+<?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/features.php'); ?>
 
 <div class="main-section main-section_form">
     <div class="container">
