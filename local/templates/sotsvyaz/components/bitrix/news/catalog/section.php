@@ -19,11 +19,38 @@ $this->setFrameMode(true);
 use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\UI\Extension;
 ?>
-<div class="row">
-    <aside class="col-lg-3 catalog-aside">
-
+<div class="catalog-section">
+    <aside class="catalog-section__aside catalog-aside">
+        <div class="catalog-aside__wrapper">
+            <div class="catalog-aside__item aside-item">
+                <div class="aside-item__title">Категории</div>
+                <?php
+                $APPLICATION->IncludeComponent(
+                    "bitrix:menu",
+                    "aside_menu",
+                    Array(
+                        "ALLOW_MULTI_SELECT" => "N",
+                        "CHILD_MENU_TYPE" => "",
+                        "COMPOSITE_FRAME_MODE" => "A",
+                        "COMPOSITE_FRAME_TYPE" => "AUTO",
+                        "DELAY" => "N",
+                        "MAX_LEVEL" => "1",
+                        "MENU_CACHE_GET_VARS" => array(""),
+                        "MENU_CACHE_TIME" => "3600",
+                        "MENU_CACHE_TYPE" => "A",
+                        "MENU_CACHE_USE_GROUPS" => "Y",
+                        "ROOT_MENU_TYPE" => "catalog_menu",
+                        "USE_EXT" => "Y"
+                    ),
+                    $component,
+                    Array(
+                        "HIDE_ICONS" => "Y"
+                    )
+                ); ?>
+            </div>
+        </div>
     </aside>
-    <div class="col-lg-9">
+    <div class="catalog-section__products">
         <?php
         $APPLICATION->IncludeComponent(
             "bitrix:news.list",

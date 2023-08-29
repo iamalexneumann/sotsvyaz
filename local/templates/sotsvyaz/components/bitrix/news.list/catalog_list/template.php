@@ -34,7 +34,7 @@ $param_small_card_tag_title = $arParams['SMALL_CARD_TAG_TITLE'] ?? '2';
             ]
         );
     ?>
-    <div class="col-xl-4 col-md-6 catalog-list__col">
+    <div class="col-xxl-4 col-xl-6 col-lg-4 col-md-6 catalog-list__col">
         <article class="catalog-item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
             <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>"
                class="catalog-item__img-link"
