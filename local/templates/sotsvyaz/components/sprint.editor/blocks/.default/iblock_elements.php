@@ -41,7 +41,7 @@ switch ($template):
             );
         ?>
         <div class="col-xl-3 col-md-6 catalog-list__col">
-            <article class="catalog-item catalog-item_small-card">
+            <article class="catalog-item">
                 <a href="<?= $aItem['DETAIL_PAGE_URL']; ?>"
                    class="catalog-item__img-link"
                    title="<?= $aItem['NAME']; ?>"

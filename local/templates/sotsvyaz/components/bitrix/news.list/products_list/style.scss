@@ -5,9 +5,6 @@
 
   .products-item {
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
     margin-bottom: 0.5rem;
 
     &:last-of-type {
@@ -19,31 +16,17 @@
       position: relative;
       overflow: hidden;
       color: var(--dark-color);
-      //font-weight: 700;
 
       &:hover {
         color: var(--secondary-color);
       }
     }
 
-    &__name {
-      &::after {
-        display: inline-block;
-        margin-left: 15px;
-        width: 0;
-        content: '..................................................................................................................................................................................................................................................................................................................................';
-        white-space: nowrap;
-        color: var(--gray-color);
-        font-weight: 400;
-      }
-    }
-
     &__price {
-      margin-left: 15px;
       font-weight: 700;
       color: var(--dark-color);
       width: auto;
-      font-size: 1.125rem;
+      font-size: 1rem;
     }
   }
 }

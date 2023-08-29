@@ -4,9 +4,6 @@
   list-style: none; }
   .products-list .products-item {
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
     margin-bottom: 0.5rem; }
     .products-list .products-item:last-of-type {
       margin-bottom: 0; }
@@ -17,19 +14,10 @@
       color: var(--dark-color); }
       .products-list .products-item__link:hover {
         color: var(--secondary-color); }
-    .products-list .products-item__name::after {
-      display: inline-block;
-      margin-left: 15px;
-      width: 0;
-      content: '..................................................................................................................................................................................................................................................................................................................................';
-      white-space: nowrap;
-      color: var(--gray-color);
-      font-weight: 400; }
     .products-list .products-item__price {
-      margin-left: 15px;
       font-weight: 700;
       color: var(--dark-color);
       width: auto;
-      font-size: 1.125rem; }
+      font-size: 1rem; }
 
 /*# sourceMappingURL=style.css.map */

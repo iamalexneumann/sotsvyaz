@@ -35,10 +35,8 @@ $param_small_card_tag_title = $arParams['SMALL_CARD_TAG_TITLE'] ?? '2';
         );
     ?>
     <li class="products-item">
-        <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>" class="products-item__link">
-            <span class="products-item__name"><?= $arItem['NAME']; ?></span>
-        </a>
-        <span class="products-item__price"><?= number_format($arItem['DISPLAY_PROPERTIES']['ATT_PRICE']['VALUE'], 0, '', ' ') . ' ' . Loc::getMessage('PRODUCTS_LIST_CURRENCY'); ?></span>
+        <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>" class="products-item__link"><?= $arItem['NAME']; ?></a>
+        <div class="products-item__price"><?= number_format($arItem['DISPLAY_PROPERTIES']['ATT_PRICE']['VALUE'], 0, '', ' ') . ' ' . Loc::getMessage('PRODUCTS_LIST_CURRENCY'); ?></div>
     </li>
     <?php endforeach; ?>
 </ul>

@@ -14,46 +14,6 @@
     width: 100%;
     border-radius: 4px;
 
-    @media (min-width: 1200px) {
-      &_small-card {
-        .catalog-item__img-link {
-          padding: 20px;
-        }
-
-        .catalog-item__title {
-          font-size: 1.125rem;
-          margin-bottom: 20px;
-        }
-
-        .catalog-item__brand {
-          margin-top: -15px;
-          margin-bottom: 20px;
-        }
-
-        .catalog-item__wrapper {
-          padding: 20px;
-        }
-
-        .catalog-item__price {
-          font-size: 1.375rem;
-        }
-
-        .catalog-item__btns {
-          flex-direction: column;
-          justify-content: stretch;
-        }
-
-        .catalog-item__quantity {
-          width: 100%;
-        }
-
-        .catalog-item__btn-order {
-          width: 100%;
-          margin-top: 10px;
-        }
-      }
-    }
-
     &__img-link {
       border-top-left-radius: 4px;
       border-top-right-radius: 4px;
@@ -62,13 +22,9 @@
       background: var(--white-color);
       aspect-ratio: 1 / 1;
       position: relative;
-      padding: 30px;
+      padding: 20px;
       overflow: hidden;
       flex-shrink: 0;
-
-      @media (max-width: 991.98px) {
-        padding: 25px 20px;
-      }
 
       &:hover .catalog-item__img {
         transform: scale(1.025);
@@ -83,14 +39,10 @@
     }
 
     &__wrapper {
-      padding: 30px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       height: 100%;
-
-      @media (max-width: 991.98px) {
-        padding: 25px 20px;
-      }
     }
 
     &__header {
@@ -101,18 +53,14 @@
     }
 
     &__title {
-      font-size: 1.5rem;
-      margin: 0 0 30px;
-
-      @media (max-width: 991.98px) {
-        font-size: 1.25rem;
-      }
+      font-size: 1.125rem;
+      margin: 0 0 20px;
     }
 
     &__brand {
       font-size: var(--font-size-small);
-      margin-top: -25px;
-      margin-bottom: 30px;
+      margin-top: -15px;
+      margin-bottom: 20px;
     }
 
     &__link {
@@ -124,36 +72,23 @@
     }
 
     &__price {
-      font-size: 1.75rem;
+      font-size: 1.375rem;
       font-weight: 700;
       color: var(--dark-color);
       margin-top: auto;
-
-      @media (max-width: 991.98px) {
-        font-size: 1.5rem;
-      }
     }
 
     &__btns {
-      display: flex;
-      align-items: center;
-
-      @media (max-width: 350px) {
-        flex-direction: column;
-      }
+      flex-direction: column;
+      justify-content: stretch;
     }
 
     &__quantity {
-      width: 50%;
+      width: 100%;
       border-radius: 0;
 
       .btn {
         border-radius: 0;
-      }
-
-      @media (max-width: 350px) {
-        width: 100%;
-        margin-bottom: 15px;
       }
 
       .quantity__btn {
@@ -161,17 +96,14 @@
       }
 
       .quantity__field {
-        width: 250px;
+        width: 500px;
       }
     }
 
     &__btn-order {
-      width: 50%;
+      width: 100%;
+      margin-top: 10px;
       border-radius: 0 !important;
-
-      @media (max-width: 350px) {
-        width: 100%;
-      }
     }
 
     .products {
@@ -212,16 +144,6 @@
         font-size: 1.25rem;
         color: var(--dark-color);
         margin-bottom: 1rem;
-      }
-
-      .products-item__name {
-        &::after {
-          margin-left: 10px;
-        }
-      }
-
-      .products-item__price {
-        margin-left: 10px;
       }
     }
   }
