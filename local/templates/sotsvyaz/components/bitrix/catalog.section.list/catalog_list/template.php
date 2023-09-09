@@ -43,14 +43,14 @@ use Bitrix\Main\Localization\Loc;
             <<?= $param_card_tag; ?> class="sections-item__title">
                 <a href="<?= $arSection['SECTION_PAGE_URL']; ?>" class="sections-item__link"><?= $arSection['NAME']; ?></a>
             </<?= $param_card_tag; ?>>
-            <?php if ($arSection['UF_SEO_TEXT_TOP']): ?>
+            <?php if ($arSection['UF_PREVIEW_TEXT']): ?>
             <div class="sections-item__text">
                 <?php
                 $APPLICATION->IncludeComponent(
                     "sprint.editor:blocks",
                     ".default",
                     Array(
-                        "JSON" => $arSection['~UF_SEO_TEXT_TOP'],
+                        "JSON" => $arSection['~UF_PREVIEW_TEXT'],
                     ),
                     $component,
                     Array(

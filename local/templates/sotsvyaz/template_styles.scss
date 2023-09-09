@@ -740,8 +740,8 @@ h6,
   border: 1px solid var(--border-color);
 
   &:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 .25rem rgba(67, 203, 131, .25);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 .25rem rgba(17,92,250,.25);
   }
 }
 
@@ -1528,5 +1528,19 @@ b, strong, .fw-bold {
     padding: 1rem 1.25rem;
     font-size: var(--font-size-small);
     color: var(--gray-color);
+  }
+}
+
+.show-more-btn {
+  padding: 0;
+  border: none;
+  margin-top: 10px;
+  background: transparent;
+  color: var(--secondary-color);
+  font-weight: 600;
+  transition: all .25s ease-in-out;
+
+  &:hover {
+    color: var(--secondary-color-hover);
   }
 }

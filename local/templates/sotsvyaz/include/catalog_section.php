@@ -33,7 +33,7 @@ use Bitrix\Main\Localization\Loc;
                 "SECTION_FIELDS" => array("", ""),
                 "SECTION_ID" => "",
                 "SECTION_URL" => "",
-                "SECTION_USER_FIELDS" => array("UF_SEO_TEXT_TOP", "UF_ICON", ""),
+                "SECTION_USER_FIELDS" => array("UF_PREVIEW_TEXT", "UF_ICON", ""),
                 "TOP_DEPTH" => "2",
                 "CARD_TAG" => "h3",
             ),

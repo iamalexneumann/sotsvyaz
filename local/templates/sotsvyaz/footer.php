@@ -166,7 +166,7 @@ $patterns = [
             </div>
         </div>
     </footer>
-    <?= $siteparam_scripts_body_after; ?>
+
     <div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -229,5 +229,13 @@ $patterns = [
 
     <?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/svg_sprites.php'); ?>
     <a href="#body-area" class="to-top-btn" title="<?= Loc::getMessage('FOOTER_TO_TOP_BTN_TEXT'); ?>"><i class="fa-solid fa-angle-up"></i></a>
+
+    <?= $siteparam_scripts_body_after; ?>
+    <script>
+        BX.message({
+            FOOTER_SHOW_MORE_MORE_BTN: '<?= Loc::getMessage('FOOTER_SHOW_MORE_MORE_BTN'); ?>',
+            FOOTER_SHOW_MORE_LESS_BTN: '<?= Loc::getMessage('FOOTER_SHOW_MORE_LESS_BTN'); ?>'
+        });
+    </script>
 </body>
 </html>

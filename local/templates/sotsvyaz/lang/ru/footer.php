@@ -18,3 +18,6 @@ $MESS['CART_MODAL_BTN_CLOSE_TEXT'] = 'Продолжить покупки';
 $MESS['CART_MODAL_BTN_CART_TEXT'] = 'Перейти в корзину';
 
 $MESS['MAIN_FORM_OK_TEXT'] = 'Спасибо. Мы перезвоним Вам в течение дня!';
+
+$MESS['FOOTER_SHOW_MORE_MORE_BTN'] = 'Развернуть';
+$MESS['FOOTER_SHOW_MORE_LESS_BTN'] = 'Свернуть';

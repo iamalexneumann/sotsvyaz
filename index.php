@@ -142,7 +142,7 @@ $APPLICATION->SetTitle('Главная');
 
 <?php require($_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/include/catalog_section.php'); ?>
 
-<section class="main-section">
+<section class="main-section pt-0">
     <div class="container">
         <?php
         $APPLICATION->IncludeComponent(

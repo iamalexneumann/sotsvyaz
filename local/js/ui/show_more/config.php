@@ -7,5 +7,5 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
  */
 
 return [
-    'js' => ['./js/showMore.min.js', './js/user.min.js'],
+    'js' => ['./js/showMore.min.js'],
 ];

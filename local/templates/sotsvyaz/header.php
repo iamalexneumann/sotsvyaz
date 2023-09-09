@@ -49,6 +49,7 @@ $services_patterns = [
             'ui.fonts.font-awesome',
             'ui.fonts.proxima_nova',
             'ui.lazysizes',
+            'ui.show_more',
         ]
     );
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/main.js');

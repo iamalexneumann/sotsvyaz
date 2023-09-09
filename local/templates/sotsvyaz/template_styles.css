@@ -522,8 +522,8 @@ h6,
   border-radius: 2px;
   border: 1px solid var(--border-color); }
   .form-control:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.25rem rgba(67, 203, 131, 0.25); }
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.25rem rgba(17, 92, 250, 0.25); }
 
 .alert {
   border-radius: 2px; }
@@ -1058,5 +1058,16 @@ b, strong, .fw-bold {
     padding: 1rem 1.25rem;
     font-size: var(--font-size-small);
     color: var(--gray-color); }
+
+.show-more-btn {
+  padding: 0;
+  border: none;
+  margin-top: 10px;
+  background: transparent;
+  color: var(--secondary-color);
+  font-weight: 600;
+  transition: all .25s ease-in-out; }
+  .show-more-btn:hover {
+    color: var(--secondary-color-hover); }
 
 /*# sourceMappingURL=template_styles.css.map */
