@@ -1,11 +1,12 @@
 <?php
 /** @var $block array */
 use Bitrix\Main\Localization\Loc;
+$elements = Sprint\Editor\Blocks\contents::getElements($block, $this);
 ?>
 <div class="sprint-contents">
     <div class="sprint-contents__title"><?= Loc::getMessage('SPRINT_EDITOR_CONTENTS_TITLE'); ?></div>
     <ul class="sprint-contents__list">
-        <?php foreach ($block['elements'] as $item):
+        <?php foreach ($elements as $item):
             $cssclass = 'level' . $item['level'];
         ?>
         <li class="sprint-contents__item <?= $cssclass ?>">
